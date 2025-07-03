@@ -43,7 +43,7 @@ const base = import.meta.env.BASE_URL;
 
   </head>
 
-  <body>
+  <body id="bg">
     <header>
       <img id="logo" src={`${base}images/white-logo.png`} alt="logo" />
       <nav>
@@ -57,17 +57,34 @@ const base = import.meta.env.BASE_URL;
 
     <slot />
 
-    <script is:inline>
-      function updateBlur() {
-  const maxScroll = 300;
-  const scrollTop = window.scrollY;
-  let blurRadius = (scrollTop / maxScroll) * 8;
-  if (blurRadius > 8) blurRadius = 8;
-  document.body.style.setProperty("--blur-radius", `${blurRadius}px`);
-}
+    <script>
+      const bgImages = [
+        "/images/bg1.webp",
+        "/images/bg2.webp",
+        "/images/bg3.webp"
+      ];
 
-window.addEventListener("scroll", updateBlur);
-window.addEventListener("load", updateBlur);
+      const bgElement = document.getElementById("bg");
+      let index = 1;
+
+      function preloadImage(src: string, callback: () => void): void {
+        const img = new Image();
+        img.onload = callback;
+        img.src = src;
+      }
+
+      function changeBackground(): void {
+        preloadImage(bgImages[index], () => {
+          if (bgElement) {
+            bgElement.style.backgroundImage = `url("${bgImages[index]}")`;
+            index = (index + 1) % bgImages.length;
+          }
+        });
+      }
+
+      if (bgElement) {
+        setInterval(changeBackground, 6000);
+      }
     </script>
   </body>
 </html>
@@ -81,44 +98,26 @@ window.addEventListener("load", updateBlur);
   }
 
   body {
-  width: 100%;
-  background-color: rgb(65, 41, 24);
-  background-image: url("/images/bg3.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-  position: relative; /* 🔁 Add this */
-  z-index: 0;
-}
-
-@media (max-width: 768px) {
+    width: 100%;
+    /* background-color: chocolate; */
+    background-image: url("/images/bg1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    transition: background-image 1s ease-in-out;
+  }
+  @media (max-width: 768px) {
   body {
     background-image: url("/images/bg1-tall.webp");
     background-position: center top;
-    background-attachment: fixed;
     overscroll-behavior: none;
+    background-attachment: fixed;
   }
-
-  body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Use CSS variable for blur radius */
-  backdrop-filter: blur(var(--blur-radius, 8px));
-  -webkit-backdrop-filter: blur(var(--blur-radius, 8px));
-  background-color: transparent;
-  opacity: 1;
-  z-index: -1;
-  pointer-events: none;
-  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  
 }
-
 
   header {
     display: flex;
@@ -178,10 +177,13 @@ window.addEventListener("load", updateBlur);
       text-align: center;
       padding: 12px;
       font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+
     }
 
     #logo {
-      height: 60px;
+      height: 160px;
     }
   }
 </style>
