@@ -36,7 +36,7 @@ const base = import.meta.env.BASE_URL;
     
     <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> -->
     
-    <link rel="preload" as="image" href={`${base}images/bg3-tall.jpg`} />
+    <!-- <link rel="preload" as="image" href={`${base}images/bg3-tall.jpg`} /> -->
 
     
 
@@ -58,33 +58,43 @@ const base = import.meta.env.BASE_URL;
     <slot />
 
     <script>
-      const bgImages = [
-        "/images/bg1.webp",
-        "/images/bg2.webp",
-        "/images/bg3.webp"
-      ];
+      const isMobile = window.innerWidth <= 768;
 
-      const bgElement = document.getElementById("bg");
-      let index = 1;
+const bgImagesDesktop = [
+  "/images/bg1.webp",
+  "/images/bg2.webp",
+  "/images/bg3.webp"
+];
 
-      function preloadImage(src: string, callback: () => void): void {
-        const img = new Image();
-        img.onload = callback;
-        img.src = src;
-      }
+const bgImagesMobile = [
+  
+  "/images/bg1-tall.webp",
+  "/images/bg2-tall.webp"
+];
 
-      function changeBackground(): void {
-        preloadImage(bgImages[index], () => {
-          if (bgElement) {
-            bgElement.style.backgroundImage = `url("${bgImages[index]}")`;
-            index = (index + 1) % bgImages.length;
-          }
-        });
-      }
+const bgImages = isMobile ? bgImagesMobile : bgImagesDesktop;
 
-      if (bgElement) {
-        setInterval(changeBackground, 6000);
-      }
+const bgElement = document.getElementById("bg");
+let index = 1;
+
+function preloadImage(src: string, callback: () => void): void {
+  const img = new Image();
+  img.onload = callback;
+  img.src = src;
+}
+
+function changeBackground(): void {
+  preloadImage(bgImages[index], () => {
+    if (bgElement) {
+      bgElement.style.backgroundImage = `url("${bgImages[index]}")`;
+      index = (index + 1) % bgImages.length;
+    }
+  });
+}
+
+if (bgElement) {
+  setInterval(changeBackground, 6000);
+}
     </script>
   </body>
 </html>
