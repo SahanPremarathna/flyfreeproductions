@@ -21,11 +21,7 @@
 
     transition: background-image 2.5s ease-in-out;
   }
-  @media (max-width: 768px) {
   
-  
-}
-
   header {
     display: flex;
     flex-wrap: wrap;
@@ -74,10 +70,13 @@
     transform: scale(1.1);
     background-color: rgba(20, 212, 68, 0.7);
   }
+
   nav a.active {
     color: #60b430; 
     background-color: #ffffff;
   }
+
+
 
   /* 👇 Responsive tweaks for mobile */
   @media (max-width: 768px) {
