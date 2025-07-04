@@ -7,14 +7,14 @@
   body {
     width: 100%;
     /* background-color: chocolate; */
-    background-image: url("/images/bg1.webp");
+    /* background-image: url("/images/bg1.webp"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    transition: background-image 1s ease-in-out;
+    transition: background-image 2.5s ease-in-out;
   }
   @media (max-width: 768px) {
   
