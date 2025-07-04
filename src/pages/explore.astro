@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/pageLayout.astro';
+---
+
+<Layout>
+    <div class="content"></div>
+</Layout>
+
+<style>
+    .content{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        background-color: aqua;
+        margin-top: 20px;
+        width: 80%;
+        height: 4000px;
+    }
+
+    @media (max-width: 768px){
+        .content{
+            width: 95%;
+        }
+    }
+</style>
