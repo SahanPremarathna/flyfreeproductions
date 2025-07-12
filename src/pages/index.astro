@@ -20,20 +20,22 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </div>
 
-    <div class="button-wrapper">
-      <svg viewBox="0 0 600 100" class="cutout-button">
-        <defs>
-          <mask id="text-mask">
-            <rect width="100%" height="100%" fill="white" rx="60" ry="60" />
-            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-              font-size="55" font-family="'Bebas Neue', sans-serif" fill="black" letter-spacing="4" font-weight="900">
-              Start Exploring
-            </text>
-          </mask>
-        </defs>
-        <rect width="100%" height="100%" fill="white" mask="url(#text-mask)" rx="60" ry="60" />
-      </svg>
-    </div>
+    <a href="/explore" class="button-link">
+      <div class="button-wrapper">
+        <svg viewBox="0 0 600 100" class="cutout-button">
+          <defs>
+            <mask id="text-mask">
+              <rect width="100%" height="100%" fill="white" rx="60" ry="60" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                font-size="55" font-family="'Bebas Neue', sans-serif" fill="black" letter-spacing="4" font-weight="900">
+                Start Exploring
+              </text>
+            </mask>
+          </defs>
+          <rect width="100%" height="100%" fill="white" mask="url(#text-mask)" rx="60" ry="60" />
+        </svg>
+      </div>
+    </a>
 
     
   </div>
@@ -112,6 +114,11 @@ import Layout from '../layouts/Layout.astro';
 
   .paragraph-container p:hover {
     background-color: rgba(75, 65, 53, 0.6);
+  }
+
+  .button-link {
+    text-decoration: none;
+    display: inline-block;
   }
 
   .button-wrapper {
