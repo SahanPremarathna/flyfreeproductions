@@ -36,44 +36,44 @@ const base = import.meta.env.BASE_URL;
     
     <script>
       
-      const isMobile = window.innerWidth <= 768;
+      // const isMobile = window.innerWidth <= 768;
 
-      const bgImagesDesktop = [
-          "/images/bg1.webp",
-          "/images/bg2.webp",
-          "/images/bg3.webp"
-          ];
+      // const bgImagesDesktop = [
+      //     "/images/bg1.webp",
+      //     "/images/bg2.webp",
+      //     "/images/bg3.webp"
+      //     ];
 
-      const bgImagesMobile = [
+      // const bgImagesMobile = [
       
-          "/images/bg1-tall.webp",
-          "/images/bg2-tall.webp"
-          ];
+      //     "/images/bg1-tall.webp",
+      //     "/images/bg2-tall.webp"
+      //     ];
 
-      const bgImages = isMobile ? bgImagesMobile : bgImagesDesktop;
+      // const bgImages = isMobile ? bgImagesMobile : bgImagesDesktop;
       const currentPath = window.location.pathname;
 
-      const bgElement = document.getElementById("bg");
-      let index = 1;
+      // const bgElement = document.getElementById("bg");
+      // let index = 1;
 
-      function preloadImage(src: string, callback: () => void): void {
-          const img = new Image();
-          img.onload = callback;
-          img.src = src;
-      }
+      // function preloadImage(src: string, callback: () => void): void {
+      //     const img = new Image();
+      //     img.onload = callback;
+      //     img.src = src;
+      // }
 
-      function changeBackground(): void {
-      preloadImage(bgImages[index], () => {
-          if (bgElement) {
-          bgElement.style.backgroundImage = `url("${bgImages[index]}")`;
-          index = (index + 1) % bgImages.length;
-          }
-      });
-      }
+      // function changeBackground(): void {
+      // preloadImage(bgImages[index], () => {
+      //     if (bgElement) {
+      //     bgElement.style.backgroundImage = `url("${bgImages[index]}")`;
+      //     index = (index + 1) % bgImages.length;
+      //     }
+      // });
+      // }
 
-      if (bgElement) {
-      setInterval(changeBackground, 6000);
-      }
+      // if (bgElement) {
+      // setInterval(changeBackground, 6000);
+      // }
 
       document.querySelectorAll("nav a").forEach((link) => {
         if (link.getAttribute("href") === currentPath) {

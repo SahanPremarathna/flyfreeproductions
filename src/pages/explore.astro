@@ -3,23 +3,252 @@ import Layout from '../layouts/pageLayout.astro';
 ---
 
 <Layout>
-    <div class="content"></div>
+    <div class="content">
+        <div id="title">
+            <h1>How we captured Mannar Flamingos 2025</h1>
+        </div>
+
+        <div class="img1"></div>
+    
+        <div class="mainpara">
+            <p>Flamingos are among the most iconic and captivating birds in the world. Each year, 
+                they migrate to Sri Lanka to escape the cold of their native regions, arriving between November and April. 
+                Interestingly, they are found almost exclusively in the northern region of Mannar, 
+                making it one of the only places in Sri Lanka where you can witness these elegant birds in their natural habitat. 
+                During this period, nature lovers and wildlife enthusiasts flock to Mannar to experience this rare and breathtaking spectacle. 
+                In 2025, we had the incredible opportunity to see these magnificent birds up close for the very first time. 
+                It was not only an unforgettable adventure but also marked our debut attempt at filming a wildlife documentary. 
+                The journey was filled with learning, discovery, and inspiration and we’re proud to say that the final outcome was a tremendous success.
+            </p>
+        </div>
+        <div class="steps">
+            <h2>Planning Your Flamingo Visit to Mannar?</h2>
+            <p id="stepsPara">If you're heading to Mannar to witness the flamingos, 
+                here are a few key things to keep in mind for a successful and respectful experience:
+            </p>
+            <ul>
+                <li>
+                    <h4>Arrive Early, Before Sunrise</h4>
+                    <p>Be there by <strong>5:00 AM</strong> at the latest. Flamingos are early risers, and the golden morning light creates a magical atmosphere over the lagoon, perfect for viewing and photography.</p>
+                </li>
+                
+                <li>
+                    <h4>Do Your Research</h4>
+                    <p>Learn about flamingo behavior before your visit. These birds tend to follow consistent routines, and understanding their patterns will greatly improve your chances of spotting them without causing disruption.</p>
+                </li>
+                
+                <li>
+                    <h4>Consider Hiring a Local Guide</h4>
+                    <p>Local guides are familiar with the best access points to the lagoon banks and understand the movement patterns of the flamingos. A guide can greatly enhance your experience while helping minimize disturbance to the birds.</p>
+                </li>
+                
+                <li>
+                    <h4>Be Patient and Respectful</h4>
+                    <p>Flamingos are highly sensitive to their environment. If they sense human presence too closely, they may retreat to the middle of the lagoon and remain there for the entire day. It's better to wait patiently than to disturb them. <br>Protecting their peace should always come first.</p>
+                </li>
+                
+                <li>
+                    <h4>Be Prepared</h4>
+                    <p>Bring plenty of water if you plan to stay for a while. A pair of boots is also helpful, especially when crossing muddy patches near the lagoon.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h2>Our Experience</h2>
+            
+            <p>Our journey to see the flamingos in Mannar wasn't a success on the first try. During our initial visit, 
+                we had done research on the bird itself but not enough about the lagoon, their local routines, or the specific behavior of flamingos in Mannar. 
+                As a result, we missed the opportunity to see them up close.
+                However, our second visit was a completely different story. This time, we went better prepared and had the support of a knowledgeable local guide. 
+                With his insights and familiarity with the area, we finally had a chance to witness the flamingos in their natural setting, resulting in some truly incredible shots and unforgettable memories.
+            </p>
+            <div class="ex-gallery">
+                <img src="/images/flamingo/flamingo-img1.webp" alt="img1">
+                <img src="/images/flamingo/flamingo-img2.webp" alt="img2">
+                <img src="/images/flamingo/flamingo-img3.webp" alt="img3">
+                <img src="/images/flamingo/flamingo-img4.webp" alt="img4">
+                <img src="/images/flamingo/flamingo-img5.webp" alt="img5">
+
+            </div>
+            <div class="mainImg">
+            </div>
+        </div>
+    </div>
 </Layout>
 
 <style>
+
+    /* overriding body content here */
+    body{
+        background-color: aqua;
+        background: linear-gradient(to right, aqua, rgb(223, 121, 209));
+    }
+    
+
     .content{
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-self: center;
         background-color: aqua;
         margin-top: 20px;
-        width: 80%;
-        height: 4000px;
+        padding: 10px;
+        height: 200%;
     }
 
     @media (max-width: 768px){
         .content{
-            width: 95%;
+            background-color: transparent;
+        }
+
+        body{
+            background-image: url("/images/flamingo/flamingo-banner.webp");
+            background-size: cover;
+            background-position: center top;
+            overscroll-behavior: none;
+            background-attachment: fixed;
         }
     }
+
+    #title{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        font-weight: 900;
+        color: white;
+        background-image: url("/images/flamingo/flamingo-banner.webp");
+        background-position: center ;
+        background-size: cover;
+        min-height: 60vh;
+        margin-bottom: 30px
+    }
+
+    #title h1{
+        border: 2px solid white;
+        backdrop-filter: blur(10px);
+        padding: 5px;
+    }
+
+    .img1{
+        display: none;
+    }
+
+    p{
+        font-size: 1.1em;
+    }
+    .mainpara{
+        padding: 15px;
+        background-color: rgb(255, 255, 255);
+        /* margin: 15px; */
+        font-size: 1.1em;
+        line-height: 1.5;
+        border-radius: 10px;
+
+    }
+
+    .steps{
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .steps h2{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 2em;
+    }
+    .steps #stepsPara{
+        margin-bottom: 20px;
+    }
+
+    .steps ul{
+        padding-left: 35px;
+        line-height: 1.5;
+    }
+
+    .steps ul li{
+        margin-bottom: 10px;
+    }
+
+    .steps ul li h4{
+        font-size: 1.4em;
+    }
+
+    .experience{
+        padding: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    .experience h2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 2em;
+    }
+
+    .experience p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    .ex-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+        background-color: aqua;
+        backdrop-filter: blur(10px);
+        padding: 20px;
+    }
+
+    .ex-gallery img {
+        width: 100%;
+        /* height: 80%; */
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .ex-gallery img:hover {
+        transform: scale(1.03);
+    }
+
+    @media (max-width: 768px){
+        #title{
+            margin-top: -30px;
+            background-image: none;
+            background-color: transparent;
+        }
+
+        #title h1{
+            border: none;
+            font-size: 1.8em;
+            font-weight: 900;
+            backdrop-filter: none;
+            background-color: transparent;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .mainpara{
+            border-radius: 10px;
+        }
+
+        .steps{
+            margin-top: 20px;
+            background-color: rgb(127, 255, 212, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+        }
+
+        .experience{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+    }
+
 </style>
