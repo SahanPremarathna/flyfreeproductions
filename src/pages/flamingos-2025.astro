@@ -21,45 +21,58 @@ import Layout from '../layouts/pageLayout.astro';
                 The journey was filled with learning, discovery, and inspiration and we’re proud to say that the final outcome was a tremendous success.
             </p>
         </div>
-        <div class="subscibe">
-            <a class="subscribe-btn" href="https://www.youtube.com/watch?v=f5ZqP-a70VA" target="_blank" rel="noopener">Add a Like & Subscribe</a>
-            <svg width="70" height="46" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 10px;">
+        
+
+        <a href="https://www.youtube.com/watch?v=f5ZqP-a70VA" target="_blank" rel="noopener" class="subscribe-link" id="sub">
+            <div class="subscribe">
+                <span class="subscribe-btn">Add a Like & Subscribe</span>
+                <svg width="70" height="46" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 10px;">
                 <rect x="0" y="0" width="100" height="70" rx="15" ry="15" fill="white" />
                 <polygon points="40,20 70,35 40,50" fill="#FF0000" />
-            </svg>
-        </div>
+                </svg>
+            </div>
+        </a>
 
         <div class="steps">
-            <h2>Planning Your Flamingo Visit to Mannar?</h2>
-            <p id="stepsPara">If you're heading to Mannar to witness the flamingos, 
-                here are a few key things to keep in mind for a successful and respectful experience:
-            </p>
-            <ul>
-                <li>
-                    <h4>Arrive Early, Before Sunrise</h4>
-                    <p>Be there by <strong>5:00 AM</strong> at the latest. Flamingos are early risers, and the golden morning light creates a magical atmosphere over the lagoon, perfect for viewing and photography.</p>
-                </li>
+            <div class="contentSteps">
+                <h2>Planning Your Flamingo Visit to Mannar?</h2>
+                <p id="stepsPara">If you're heading to Mannar to witness the flamingos, 
+                    here are a few key things to keep in mind for a successful and respectful experience:
+                </p>
+                <ul>
+                    <li>
+                        <h4>Arrive Early, Before Sunrise</h4>
+                        <p>Be there by <strong>5:00 AM</strong> at the latest. Flamingos are early risers, and the golden morning light creates a magical atmosphere over the lagoon, perfect for viewing and photography.</p>
+                    </li>
+                    
+                    <li>
+                        <h4>Do Your Research</h4>
+                        <p>Learn about flamingo behavior before your visit. These birds tend to follow consistent routines, and understanding their patterns will greatly improve your chances of spotting them without causing disruption.</p>
+                    </li>
+                    
+                    <li>
+                        <h4>Consider Hiring a Local Guide</h4>
+                        <p>Local guides are familiar with the best access points to the lagoon banks and understand the movement patterns of the flamingos. A guide can greatly enhance your experience while helping minimize disturbance to the birds.</p>
+                    </li>
+                    
+                    <li>
+                        <h4>Be Patient and Respectful</h4>
+                        <p>Flamingos are highly sensitive to their environment. If they sense human presence too closely, they may retreat to the middle of the lagoon and remain there for the entire day. It's better to wait patiently than to disturb them. <br>Protecting their peace should always come first.</p>
+                    </li>
+                    
+                    <li>
+                        <h4>Be Prepared</h4>
+                        <p>Bring plenty of water if you plan to stay for a while. A pair of boots is also helpful, especially when crossing muddy patches near the lagoon.</p>
+                    </li>
+                </ul>
+
                 
-                <li>
-                    <h4>Do Your Research</h4>
-                    <p>Learn about flamingo behavior before your visit. These birds tend to follow consistent routines, and understanding their patterns will greatly improve your chances of spotting them without causing disruption.</p>
-                </li>
-                
-                <li>
-                    <h4>Consider Hiring a Local Guide</h4>
-                    <p>Local guides are familiar with the best access points to the lagoon banks and understand the movement patterns of the flamingos. A guide can greatly enhance your experience while helping minimize disturbance to the birds.</p>
-                </li>
-                
-                <li>
-                    <h4>Be Patient and Respectful</h4>
-                    <p>Flamingos are highly sensitive to their environment. If they sense human presence too closely, they may retreat to the middle of the lagoon and remain there for the entire day. It's better to wait patiently than to disturb them. <br>Protecting their peace should always come first.</p>
-                </li>
-                
-                <li>
-                    <h4>Be Prepared</h4>
-                    <p>Bring plenty of water if you plan to stay for a while. A pair of boots is also helpful, especially when crossing muddy patches near the lagoon.</p>
-                </li>
-            </ul>
+            </div>
+
+            <div class="map-container">
+                <!-- Google Maps Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31532.948827882698!2d79.9198291803887!3d8.915003122506828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afdd13d4989f86d%3A0x94480956b0bb98bf!2sVankalai%20Bird%20Sanctuary!5e0!3m2!1sen!2slk!4v1752402852038!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
 
         <div class="experience">
@@ -149,42 +162,54 @@ import Layout from '../layouts/pageLayout.astro';
     .mainpara{
         padding: 15px;
         background-color: rgb(255, 255, 255);
-        /* margin: 15px; */
         font-size: 1.1em;
         line-height: 1.5;
         border-radius: 10px;
 
     }
 
-    .subscibe{
+    #sub{
         align-self: center;
         background-color: red;
         padding: 15px;
         border-radius: 15px;
         width: 330px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 50px;
         transition: transform 0.3s ease;
-        
+        text-decoration: none;
+
     }
-    .subscibe:hover{
+
+    
+    #sub:hover{
         transform: scale(1.03);
     }
 
-    .subscibe a{
+    .subscribe-btn{
         font-size: 1.2em;
         font-weight: 700;
-        text-decoration: none;
         color: white;
+        
     }
 
     .steps{
-        padding: 15px;
         border-radius: 10px;
+        background-color: rgb(238, 222, 222);
+        background-position: center;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentSteps{
+        padding: 20px;
+        background-color: rgb(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
     }
 
     .steps h2{
-        margin-top: 20px;
         margin-bottom: 10px;
         font-size: 2em;
     }
@@ -193,8 +218,11 @@ import Layout from '../layouts/pageLayout.astro';
     }
 
     .steps ul{
+        padding: 10px;
         padding-left: 35px;
         line-height: 1.5;
+        background-color: rgb(206, 131, 213, 0.2);
+        border-radius: 10px;
     }
 
     .steps ul li{
@@ -203,6 +231,16 @@ import Layout from '../layouts/pageLayout.astro';
 
     .steps ul li h4{
         font-size: 1.4em;
+    }
+
+    .map-container iframe{
+        margin: 20px;
+        border-radius: 15px;
+        transition: 0.3s ease;
+    }
+
+    .map-container iframe:hover{
+        transform: scale(1.03);
     }
 
     .experience{
@@ -235,7 +273,6 @@ import Layout from '../layouts/pageLayout.astro';
 
     .ex-gallery img {
         width: 100%;
-        /* height: 80%; */
         object-fit: cover;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -275,6 +312,25 @@ import Layout from '../layouts/pageLayout.astro';
             background-color: rgb(127, 255, 212, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 10px;
+            flex-direction: column;
+        }
+
+        .steps ul{
+            background-color: transparent;
+        }
+
+        .map-container {
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+        }
+
+        .map-container iframe{
+            width: 90%;
+            align-self: center;
+            margin: auto;
         }
 
         .experience{
@@ -284,6 +340,7 @@ import Layout from '../layouts/pageLayout.astro';
             background-color: rgb(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
         }
+
         .ex-gallery {
             border-radius: 10px;
         }
