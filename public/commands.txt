@@ -3,3 +3,6 @@ git pull
 git add .
 git commit -m "Refined homepage text and layout"
 git push
+
+
+hihi
