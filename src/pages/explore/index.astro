@@ -3,6 +3,8 @@ import Layout from '../../layouts/pageLayout.astro';
 ---
 
 <Layout>
+    
+
     <div class="image-panel">
         <img src="/images/explore/sl-yala.webp" alt="sl-yala-lpd-img" id="scrollImage">
         <h1 class="heading-switch">EXPLORE THE UNSEEN</h1>
@@ -15,17 +17,41 @@ import Layout from '../../layouts/pageLayout.astro';
 
         <div class="infopanel1">
             <div class="subinfopanel1">
+
                 <div class="latest-exp">
-                    <h2>Our Latest Exploration</h2>
-                    <p>cxxxxxxxxxxxffxxxxx</p>
+                    <h2>Latest Video</h2>
+                    <div class="ex-list">
+                        <div class="ex">
+                            <h3>Rhythm of Vankalai - Where Wings Carve Stories</h3>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="ongoing-exp">
-                    <h2>Onging Project</h2>
-                    <p>cxxxxxxxxxxxxxxxx</p>
+
+                <div class="hi-li-exp">
+                    <h2>Highlighted Explorations</h2>
+                    <div class="ex-list">
+                        <div class="ex">
+                            <h3>How We Captured Mannar Flamingos 2025</h3>
+                            <p></p>
+                        </div>
+                        <div class="ex">
+                            <h3>Rhythm of Vankalai - Where Wings Carve Stories</h3>
+                            <p></p>
+                        </div>
+                        <div class="ex">
+                            <h3>Winged Neighbours</h3>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
+
+                
+
+                
+                
             </div>
 
-            <div class="info-br-line"></div>
             
             
             <div class="map-content">
@@ -33,6 +59,72 @@ import Layout from '../../layouts/pageLayout.astro';
                 <div id="map"></div>
             </div> 
 
+        </div>
+        
+
+        <div class="all-panel" id="all-panel">
+            <div id="wild-exp-bg" class="exp-bg">
+                <div class="exps" id="wild">
+                    <h2>Stories of the Wild</h2>
+                    <p class="exps-para">Stories of the Wild brings you closer to the untamed beauty of nature, 
+                        sharing the incredible journeys and moments of wildlife that often go unnoticed. 
+                        Through vivid storytelling and captivating visuals, we reveal the raw emotions, struggles, 
+                        and triumphs of creatures living in their natural habitats. Dive into tales that celebrate the resilience 
+                        and wonder of the wild, inspiring a deeper connection with the environment and a passion to protect it for 
+                        generations to come.</p>
+                    <div class="ex-list">
+                        <div class="ex">
+                            <h3>How We Captured Mannar Flamingos 2025</h3>
+                        </div>
+                        <div class="ex">
+                            <h3>How We Captured Mannar Flamingos 2025</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="waterfall-exp-bg" class="exp-bg">
+                <div class="exps" id="waterfalls">
+                    <h2>Sri Lanka's Cascading Wonders</h2>
+                    <p class="exps-para">Sri Lanka's Cascading Wonders invites you to explore the mesmerizing beauty of the 
+                        island's waterfalls—nature's spectacular symphony of water, stone, and light. From hidden forest gems to majestic plunges, 
+                        each cascade tells a unique story shaped by time and terrain. Immerse yourself in the soothing sounds and breathtaking views 
+                        that capture the heart of Sri Lanka's wild landscapes, offering a refreshing escape and a chance to reconnect with nature's 
+                        purest essence.</p>
+                    <div class="ex-list">
+                        <div class="ex">
+                            <h3>How We Captured Mannar Flamingos 2025</h3>
+                        </div>
+                        <div class="ex">
+                            <h3>How We Captured Mannar Flamingos 2025</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="beach-exp-bg" class="exp-bg">
+                <div class="exps" id="beach">
+                    <h2>Coastal Gems of Sri Lanka</h2>
+                    <p class="exps-para">Discover the Coastal Gems of Sri Lanka—pristine beaches, turquoise waters, 
+                        and sun-kissed shores that stretch along this island paradise. Each coastline holds its own charm, 
+                        from tranquil bays teeming with marine life to vibrant fishing villages alive with culture and tradition. 
+                        Journey with us to these breathtaking coastal retreats where the rhythm of the waves meets the warmth of the sun, 
+                        inviting you to experience serenity, adventure, and the timeless beauty of Sri Lanka’s shores.</p>
+                    <div class="ex-list">
+                        <div class="ex">
+                            <h3>Temp</h3>
+                        </div>
+                        <div class="ex">
+                            <h3>Temp</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
             
 
@@ -42,8 +134,14 @@ import Layout from '../../layouts/pageLayout.astro';
 
 <style>
     body{
-        background: white;
+        /* background: white; */
+        /* background-color: #70966E; */
+        background-image: linear-gradient(135deg, #f0f0f0, #ffffff);
+        /* transition: background-image 4s ease-in-out; */
     }
+    
+ 
+
 
     .content{
         display: flex;
@@ -130,7 +228,7 @@ import Layout from '../../layouts/pageLayout.astro';
         height: 5px;
         width: 100%;
         margin-top: 25px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         background-color: #1B1205;
         justify-content: center;
         align-items: center;
@@ -153,13 +251,18 @@ import Layout from '../../layouts/pageLayout.astro';
 
     .infopanel1{
         display: flex;
+        justify-content: center;
     }
 
     .subinfopanel1{
+        background-color: #ecdecd;
+        margin-top: 10px;
+        border-radius: 15px;
         width: 49%;
         display: flex;
         flex-direction: column;
         padding: 10px;
+        margin: auto;
     }
     
 
@@ -175,6 +278,7 @@ import Layout from '../../layouts/pageLayout.astro';
         width: 100%;
         margin-top: 10px;
         margin-bottom: 20px;
+        margin-left: 20px;
     }
 
     .latest-exp p{
@@ -184,35 +288,193 @@ import Layout from '../../layouts/pageLayout.astro';
         margin-bottom: 20px;
     }
 
-    .ongoing-exp{
+    .hi-li-exp{
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-bottom: 30px;
     }
 
-    .ongoing-exp h2{
+    .hi-li-exp h2{
         margin-top: 10px;
+        margin-left: 20px;
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .ongoing-exp p{
+    .hi-li-exp p{
         width: 100%;
         font-size: 1em;
         margin-top: 10px;
         margin-bottom: 20px;
     }
+    .exp-bg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        justify-self: center;
+        margin-top: 50px;
+        border-radius: 15px;
+        overflow: hidden;
+        
+
+
+    }
+    
+    .exps{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* height: 100%; */
+        /* margin-bottom: 30px; */
+        border-radius: 15px;
+        background-color: rgba(252, 252, 252, 0.101);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        align-items: center;
+        /* transition: 1s ease; */
+    }
+
+    /* .exps:hover{
+        background-color: rgba(252, 252, 252, 0.101);
+        backdrop-filter: blur(2px);
+        transform: scale(1.02);
+
+
+    } */
+
+    .exps h2{
+        /* color: rgb(0, 0, 0); */
+        /* background-color: #ecdecd; */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 2em;
+        color: rgb(252, 234, 234);
+    }
+
+    .exps p{
+        background-color: rgb(255, 255, 255, 1);
+        padding: 20px;
+        /* backdrop-filter: blur(10px); */
+        /* color: #ffffff; */
+        width: 100%;
+        border-radius: 15px;
+
+        font-size: 1em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .ex-list{
+        /* background-color: white; */
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        margin-left: 5px;
+        border-radius: 15px;
+
+    } 
+
+    .exps .ex-list{
+        border: none;
+        backdrop-filter: none;
+        background-color: transparent;
+        width: 95%;
+    }
+    
+    .ex{
+        
+        width: 100%;
+        box-shadow: 0px 2px 2px 0px  black;
+        border-radius: 5px;
+        /* padding: 0px; */
+        /* margin: auto; */
+        margin-bottom: 15px;
+        background-color: rgb(244, 244, 244, 0.5);
+        /* backdrop-filter: blur(10px); */
+        transition: background-color 0.2s ease;
+        /* text-decoration: none; */
+        transition: 0.2s ease-in-out;
+        padding: 1px;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .ex:hover{
+        transform: scale(1.02);
+    }
+
+    .exps .ex{
+        color: rgb(52, 27, 27);
+        /* background-color: #1B1205; */
+       
+    }
+    
+
+    
+
+    .ex:hover{
+        background-color: rgb(244, 244, 244, 0.8);;
+    }
+
+    .ex h3{
+        margin-left: 5px;
+        padding: 3px;
+    }
+
+
+    #waterfall-exp-bg{
+        background-image: url("/images/explore/waterfall.webp");
+    }
+    #waterfall-exp-bg h2{
+        /* background-image: url("/images/explore/sl-yala.webp"); */
+    }
+
+    #wild-exp-bg{
+        background-image: url("/images/explore/sl-yala.webp");
+
+    }
+    #wild-exp-bg h2{
+        /* background-image: url("/images/explore/sl-yala.webp"); */
+
+    }
+
+    #beach-exp-bg{
+        background-image: url("/images/explore/beach.jpg");
+        
+    }
+    #beach-exp-bg h2{
+        /* background-image: url("/images/explore/sl-yala.webp"); */
+        
+    }
+
+
+
 
     .map-content{
         display: flex;
         flex-direction: column;
         background-color: #ecdecd;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        /* border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px; */
+        border-radius: 15px;
         padding: 10px;
-        width: 50%;
+        width: 49%;
         margin-top: 10px;
+        margin: auto;
+
+        height: 60vh;
+        /* height: width; */
+        /* aspect-ratio: 1 / 1; */
     }
 
     .map-content h2{
@@ -223,7 +485,7 @@ import Layout from '../../layouts/pageLayout.astro';
 
     #map{
         align-self: center;
-        height: 600px; 
+        height: 95vh;
         width: 95%; 
         border-radius: 12px; 
         margin-bottom: 2rem;
@@ -283,7 +545,7 @@ import Layout from '../../layouts/pageLayout.astro';
             padding: 10px;
         }
 
-        .ongoing-exp h2{
+        .hi-li-exp h2{
             align-self: center;
             text-align: center;
             color: #ffffff;
@@ -298,7 +560,7 @@ import Layout from '../../layouts/pageLayout.astro';
             border-radius: 10px;
         }
 
-        .ongoing-exp p{
+        .hi-li-exp p{
             align-self: center;
             text-align: center;
             background-color: rgba(255, 255, 255, 1) ;

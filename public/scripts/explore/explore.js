@@ -34,4 +34,81 @@ window.addEventListener('scroll', () => {
 
 
 
+// parent bg img change when hovering
+
+const wild = document.getElementById("wild-exp-bg");
+const waterfall = document.getElementById("waterfall-exp-bg");
+const beach = document.getElementById("beach-exp-bg");
+
+const fader1 = document.getElementById('bg-fader-1');
+const fader2 = document.getElementById('bg-fader-2');
+
+let activeFader = fader1;
+
+function crossfadeBackground(imageUrl) {
+  const nextFader = activeFader === fader1 ? fader2 : fader1;
+
+  // Set new image on hidden fader
+  nextFader.style.backgroundImage = `url('${imageUrl}')`;
+  nextFader.style.opacity = '1';
+
+  // Fade out old one
+  activeFader.style.opacity = '0';
+
+  // Swap references
+  activeFader = nextFader;
+}
+
+function clearBackground() {
+  fader1.style.opacity = '0';
+  fader2.style.opacity = '0';
+}
+wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/sl-yala.jpg'));
+wild.addEventListener("mouseleave", clearBackground);
+
+waterfall.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/waterfall.webp'));
+waterfall.addEventListener("mouseleave", clearBackground);
+
+beach.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/beach.jpg'));
+beach.addEventListener("mouseleave", clearBackground);
+
+
+
+
+
+
+// const wild = document.getElementById("wild");
+// const waterfall = document.getElementById("waterfalls");
+// const beach = document.getElementById("beach");
+// const allPanel = document.getElementById("all-panel");
+
+// function setBackground(image) {
+//   allPanel.style.backgroundImage = `url('${image}')`;
+//   allPanel.style.backgroundSize = "cover";
+//   allPanel.style.backgroundPosition = "center";
+//   allPanel.style.transition = "background-image 0.5s ease";
+// }
+
+// function clearBackground() {
+//   allPanel.style.backgroundImage = "none";
+// }
+
+// // Events for wild
+// wild.addEventListener("mouseenter", () => setBackground('/images/bg1.webp'));
+// wild.addEventListener("mouseleave", clearBackground);
+// wild.addEventListener("touchstart", () => setBackground('/images/bg1.webp'));
+// wild.addEventListener("touchend", clearBackground);
+
+// // Events for waterfall
+// waterfall.addEventListener("mouseenter", () => setBackground('/images/bg2.webp'));
+// waterfall.addEventListener("mouseleave", clearBackground);
+// waterfall.addEventListener("touchstart", () => setBackground('/images/bg2.webp'));
+// waterfall.addEventListener("touchend", clearBackground);
+
+// // Events for beach
+// beach.addEventListener("mouseenter", () => setBackground('/images/bg3.webp'));
+// beach.addEventListener("mouseleave", clearBackground);
+// beach.addEventListener("touchstart", () => setBackground('/images/bg3.webp'));
+// beach.addEventListener("touchend", clearBackground);
+
 

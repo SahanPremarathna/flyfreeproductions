@@ -29,6 +29,21 @@ body {
   /* transition: background-image 1s ease-in-out; */
 }
 
+.bg-fader {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+
+
 @media (max-width: 768px) {
   body {
     width: 100%;
