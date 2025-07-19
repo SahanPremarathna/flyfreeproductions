@@ -4,25 +4,28 @@ import Layout from '../../layouts/pageLayout.astro';
 
 <Layout>
     <div class="image-panel">
-        <img src="/images/explore/sl-yala.webp" alt="sl-yala-lpd-img">
+        <img src="/images/explore/sl-yala.webp" alt="sl-yala-lpd-img" id="scrollImage">
         <h1 class="heading-switch">EXPLORE THE UNSEEN</h1>
-        <h1 class="heading-switch"> UNFOLD THE STORY</h2>
+        <h1 class="heading-switch"> UNFOLD THE STORY</h1>
     </div>
 
     <div class="content">
-        <div class="img-br-line"></div>
+        <div class="img-br-line"><h2>FLY FREE PRODUCTIONS</h2></div>
+
 
         <div class="infopanel1">
             <div class="subinfopanel1">
                 <div class="latest-exp">
                     <h2>Our Latest Exploration</h2>
-                    <p>cxxxxxxxxxxxffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffxxxxx</p>
+                    <p>cxxxxxxxxxxxffxxxxx</p>
                 </div>
                 <div class="ongoing-exp">
                     <h2>Onging Project</h2>
                     <p>cxxxxxxxxxxxxxxxx</p>
                 </div>
             </div>
+
+            <div class="info-br-line"></div>
             
             
             <div class="map-content">
@@ -63,6 +66,7 @@ import Layout from '../../layouts/pageLayout.astro';
         width: 100%;
         height: 75%;
         overflow: hidden;
+        background-color: #030201;
     }
 
     .image-panel img {
@@ -70,6 +74,10 @@ import Layout from '../../layouts/pageLayout.astro';
         height: 100%;
         object-fit: cover;
         display: block;
+        transition: 1s ease;
+    }
+    .image-panel img:hover {
+        transform: scale(1.02);
     }
 
     .heading-switch {
@@ -108,6 +116,7 @@ import Layout from '../../layouts/pageLayout.astro';
         .image-panel{
             margin-top: 0%;
             height: 30%;
+            background-color: transparent;
         }
 
         .image-panel img {
@@ -125,19 +134,40 @@ import Layout from '../../layouts/pageLayout.astro';
     /* styles for the content inside the content div class */
 
     .img-br-line{
+        position: relative;
         height: 5px;
         width: 100%;
-        /* position: absolute; */
-        margin-top: 10px;
+        margin-top: 25px;
+        margin-bottom: 30px;
         background-color: #1B1205;
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
+
+    .img-br-line h2{
+        width: 400px;
+        position: absolute;
+        text-align: center;
+        background-color: #1B1205;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+        transition: 1s ease;
+    }
+    .img-br-line h2:hover{
+        transform: scale(1.02);
+    }
+
+
+
 
     .infopanel1{
         display: flex;
     }
 
     .subinfopanel1{
-        width: 40%;
+        width: 49%;
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -178,6 +208,7 @@ import Layout from '../../layouts/pageLayout.astro';
 
     .ongoing-exp h2{
         margin-top: 10px;
+        width: 100%;
         /* font-size: 2em; */
 
         margin-bottom: 20px;
@@ -199,9 +230,8 @@ import Layout from '../../layouts/pageLayout.astro';
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
 
-        backdrop-filter: blur(10px);
         padding: 10px;
-        width: 60%;
+        width: 50%;
         margin-top: 10px;
     }
 
@@ -210,6 +240,7 @@ import Layout from '../../layouts/pageLayout.astro';
         font-weight: 700;
         /* margin: 20px; */
         margin-top: 10px;
+
         margin-bottom: 20px;
     }
 
@@ -219,6 +250,10 @@ import Layout from '../../layouts/pageLayout.astro';
         width: 95%; 
         border-radius: 12px; 
         margin-bottom: 2rem;
+        transition: 0.3s ease;
+    }
+    #map:hover{
+        transform: scale(1.02);
     }
 
     
@@ -233,11 +268,10 @@ import Layout from '../../layouts/pageLayout.astro';
         }
 
         .infopanel1{
-            width: 100%;
+            width: 95%;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 10px;
 
         }
 
@@ -245,13 +279,45 @@ import Layout from '../../layouts/pageLayout.astro';
             width: 100%;
             display: flex;
             flex-direction: column;
-            /* padding: 10px; */
+            padding: 10px;
+            background-color: aqua;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(82, 148, 51, 0.5);
+            
+            
 
         }
         .map-content{
             width: 100%;
             border-radius: 15px;
             margin: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            background-color: rgb(255, 255, 255, 0.2);
+
+
+
+        }
+
+        .map-content h2{
+            align-self: center;
+
+
+        }
+
+        .latest-exp h2{
+            align-self: center;
+            text-align: center;
+
+
+        }
+
+        .ongoing-exp h2{
+            align-self: center;
+            text-align: center;
+
+
 
         }
         
@@ -261,7 +327,8 @@ import Layout from '../../layouts/pageLayout.astro';
 </style>
 
 
-<script type="module" src="/scripts/map.js"></script>
+<script type="module" src="/scripts/explore/map.js"></script>
+<script src="/scripts/explore/explore.js" is:inline></script>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -292,5 +359,12 @@ import Layout from '../../layouts/pageLayout.astro';
             }, 750);
         }, 4500);
     });
+
+
+
+
+    
+
+    
 
 </script>
