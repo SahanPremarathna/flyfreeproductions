@@ -31,3 +31,7 @@ window.addEventListener('scroll', () => {
 
         image.style.opacity = opacity;
         });
+
+
+
+
