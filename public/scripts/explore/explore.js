@@ -34,11 +34,13 @@ window.addEventListener('scroll', () => {
 
 
 
-// parent bg img change when hovering
+// body bg img change when hovering
 
 const wild = document.getElementById("wild-exp-bg");
 const waterfall = document.getElementById("waterfall-exp-bg");
 const beach = document.getElementById("beach-exp-bg");
+const topImg = document.getElementById("top-img");
+
 
 const fader1 = document.getElementById('bg-fader-1');
 const fader2 = document.getElementById('bg-fader-2');
@@ -48,14 +50,13 @@ let activeFader = fader1;
 function crossfadeBackground(imageUrl) {
   const nextFader = activeFader === fader1 ? fader2 : fader1;
 
-  // Set new image on hidden fader
-  nextFader.style.backgroundImage = `url('${imageUrl}')`;
-  nextFader.style.opacity = '1';
+  nextFader.style.backgroundImage = imageUrl
+    ? `url('${imageUrl}')`
+    : 'linear-gradient(135deg, #f0f0f0, #ffffff)';
 
-  // Fade out old one
+  nextFader.style.opacity = '1';
   activeFader.style.opacity = '0';
 
-  // Swap references
   activeFader = nextFader;
 }
 
@@ -63,52 +64,35 @@ function clearBackground() {
   fader1.style.opacity = '0';
   fader2.style.opacity = '0';
 }
-wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/sl-yala.jpg'));
-wild.addEventListener("mouseleave", clearBackground);
 
+wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/wild.webp'));
 waterfall.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/waterfall.webp'));
-waterfall.addEventListener("mouseleave", clearBackground);
-
-beach.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/beach.jpg'));
-beach.addEventListener("mouseleave", clearBackground);
+beach.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/beach.webp'));
 
 
 
+// mobile body bg changing js
+
+const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+topImg.addEventListener("mouseenter", () => {
+  if (isMobile) {
+    crossfadeBackground('/images/explore/sl-yala-tall.webp');
+  } else {
+    crossfadeBackground();
+  }
+});
 
 
+// screen top default bg
 
-// const wild = document.getElementById("wild");
-// const waterfall = document.getElementById("waterfalls");
-// const beach = document.getElementById("beach");
-// const allPanel = document.getElementById("all-panel");
+if (isMobile) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY === 0) {
+      crossfadeBackground('/images/explore/sl-yala-tall.webp');
+    }
+  });
+}
 
-// function setBackground(image) {
-//   allPanel.style.backgroundImage = `url('${image}')`;
-//   allPanel.style.backgroundSize = "cover";
-//   allPanel.style.backgroundPosition = "center";
-//   allPanel.style.transition = "background-image 0.5s ease";
-// }
-
-// function clearBackground() {
-//   allPanel.style.backgroundImage = "none";
-// }
-
-// // Events for wild
-// wild.addEventListener("mouseenter", () => setBackground('/images/bg1.webp'));
-// wild.addEventListener("mouseleave", clearBackground);
-// wild.addEventListener("touchstart", () => setBackground('/images/bg1.webp'));
-// wild.addEventListener("touchend", clearBackground);
-
-// // Events for waterfall
-// waterfall.addEventListener("mouseenter", () => setBackground('/images/bg2.webp'));
-// waterfall.addEventListener("mouseleave", clearBackground);
-// waterfall.addEventListener("touchstart", () => setBackground('/images/bg2.webp'));
-// waterfall.addEventListener("touchend", clearBackground);
-
-// // Events for beach
-// beach.addEventListener("mouseenter", () => setBackground('/images/bg3.webp'));
-// beach.addEventListener("mouseleave", clearBackground);
-// beach.addEventListener("touchstart", () => setBackground('/images/bg3.webp'));
-// beach.addEventListener("touchend", clearBackground);
 
 
