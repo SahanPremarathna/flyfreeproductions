@@ -4,72 +4,17 @@ import Layout from '../layouts/pageLayout.astro';
 
 <Layout>
 
-    <div class="image-panel" id="top-img">
+    <div class="image-panel-pc" id="top-img">
         <img src="/images/about-us/about-us-img.JPG" alt="abt-us-img" id="scrollImage">
         <h1 id="img-title">About FlyFreeProductions</h1>
-        
-
-        
     </div>
         
     <div class="content">
-<h1 id="img-title">About FlyFreeProductions</h1>
+        <h1 id="img-title-mobile">About FlyFreeProductions</h1>
 
-        <h1 id="img-title">About FlyFreeProductions</h1>
 
-        <h1 id="img-title">About FlyFreeProductions</h1>
 
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
-
-        <h1 id="img-title">About FlyFreeProductions</h1>
+        
 
 
         
@@ -87,41 +32,48 @@ import Layout from '../layouts/pageLayout.astro';
 
     }
 
-    .image-panel {
+    .image-panel-pc {
         position: relative;
         margin-top: -100px;
         width: 100%;
-        height: 75%;
+        height: 35%;
         overflow: hidden;
         /* background-color: #030201; */
         /* background-image: linear-gradient(90Deg,#383e37, #000000); */
 
     }
 
-    .image-panel img {
+    .image-panel-pc img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 50% 35%;
+        object-position: 50% 25%;
         display: block;
         transition: 1s ease;
         /* display: none; */
 
     }
-    .image-panel img:hover {
+    .image-panel-pc img:hover {
         transform: scale(1.02);
     }
 
-    .image-panel #img-title{
+    .image-panel-pc #img-title{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -20%);
         font-size: clamp(2em, 5vw, 3em);
-        background-color: #ffffff;
+        background-color: rgb(255, 255, 255, 0.1);
         width: 100%;
         text-align: center;
         padding: 10px;
+        backdrop-filter: blur(5px);
+        box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5);
+        color: rgb(220, 236, 227);
+
+    }
+    #img-title-mobile{
+        display: none;
     }
 
     .content{
@@ -134,7 +86,17 @@ import Layout from '../layouts/pageLayout.astro';
     }
 
     @media (max-width: 768px){
+        body{
+            background-image: url("/images/about-us/about-us-img.JPG");
+        }
 
+        .image-panel-pc  {
+            display: none;
+        }
+        
+        #img-title-mobile{
+        display: inline;
+    }
     }
 
 
