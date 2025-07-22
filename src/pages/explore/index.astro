@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/pageLayout.astro';
+import Layout from '../../layouts/as.astro';
 ---
 
 <Layout>
@@ -170,6 +170,8 @@ import Layout from '../../layouts/pageLayout.astro';
 
 
     </div>
+
+
 </Layout>
 
 <style>
@@ -180,6 +182,8 @@ import Layout from '../../layouts/pageLayout.astro';
     .content{
         display: flex;
         flex-direction: column;
+  /* scroll-behavior: smooth; */
+
     }
 
     .image-panel {
@@ -237,7 +241,7 @@ import Layout from '../../layouts/pageLayout.astro';
 
         .image-panel{
             margin-top: 0%;
-            height: 30%;
+            height: 40%;
             background-color: transparent;
         }
 
@@ -249,7 +253,7 @@ import Layout from '../../layouts/pageLayout.astro';
             width: 100%;
             left: 50%;
             padding: 10px;
-            font-size: 4em;
+            font-size: clamp(4em, 5vw, 6em);
         }
     }
 
@@ -669,8 +673,11 @@ import Layout from '../../layouts/pageLayout.astro';
 </style>
 
 
+
 <script type="module" src="/scripts/explore/map.js"></script>
-<script src="/scripts/explore/explore.js" is:inline></script>
+<script type="module" src="/scripts/explore/explore.js"></script>
+
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
@@ -701,5 +708,8 @@ import Layout from '../../layouts/pageLayout.astro';
             }, 750);
         }, 4500);
     });
+
+
+    
 
 </script>

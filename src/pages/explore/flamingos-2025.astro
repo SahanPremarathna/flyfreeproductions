@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/contentLayout.astro';
+import Layout from '../../layouts/as.astro';
 ---
 
 <Layout>
@@ -132,14 +132,14 @@ import Layout from '../../layouts/contentLayout.astro';
         /* background: radial-gradient(#ffffff, #f2f2f2); */
         /* background: radial-gradient(#f0faff, #f6eaf3); */
         /* background: radial-gradient(#f6eaf3, #f0faff); */
-        background: rgb(240, 240, 240);
+        background: rgb(255, 255, 255);
         position: relative;
         /* background: linear-gradient(to left, rgb(243, 243, 243), transparent); */
         /* background: radial-gradient(transparent, rgba(226, 186, 220, 1)); */
         /* background: linear-gradient(to bottom left, rgba(226, 186, 220, 1), transparent 150px); */
     }
 
-    body::before {
+    /* body::before {
         content: "";
         position: absolute;
         top: 0;
@@ -148,7 +148,7 @@ import Layout from '../../layouts/contentLayout.astro';
         height: 50%;  
         background-image: radial-gradient(rgb(222, 196, 224), transparent);
         z-index: -1; 
-    }
+    } */
     
 
     .content{
@@ -187,7 +187,7 @@ import Layout from '../../layouts/contentLayout.astro';
         justify-content: center;
         font-size: 2em;
         font-weight: 900;
-        color: rgb(240, 240, 240);
+        color: white;
         background-image: url("/images/flamingo/flamingo-banner.webp");
         background-position: center ;
         background-size: cover;
@@ -196,7 +196,7 @@ import Layout from '../../layouts/contentLayout.astro';
     }
 
     #title h1{
-        border: 2px solid white;
+        border: 2px solid rgb(240, 240, 240);
         backdrop-filter: blur(10px);
         padding: 5px;
     }
@@ -243,7 +243,7 @@ import Layout from '../../layouts/contentLayout.astro';
     .subscribe-btn{
         font-size: 1.2em;
         font-weight: 700;
-        color: rgb(240, 240, 240);
+        color: rgb(255, 255, 255);
         
     }
 
@@ -260,7 +260,7 @@ import Layout from '../../layouts/contentLayout.astro';
 
 
         border-radius: 10px;
-        background-color: rgb(255, 229, 229);
+        background-color: rgb(230, 230, 230);
         background-position: center;
         margin-bottom: 60px;
         display: flex;
@@ -336,7 +336,7 @@ import Layout from '../../layouts/contentLayout.astro';
         padding-top: 0%;
         padding-bottom: 3%;
         /* padding: 15px; */
-        background-color: rgb(240, 240, 240);
+        background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
 
@@ -427,10 +427,13 @@ import Layout from '../../layouts/contentLayout.astro';
 
 
     @media (max-width: 768px){
+        
+
         #title{
             margin-top: -30px;
             background-image: none;
             background-color: transparent;
+            text-align: center;
         }
 
         #title h1{
@@ -456,7 +459,7 @@ import Layout from '../../layouts/contentLayout.astro';
 
 
         .steps{
-            width: 95%;
+            /* width: 95%; */
             margin-top: 20px;
             background-color: rgb(127, 255, 212, 0.2);
             backdrop-filter: blur(10px);
