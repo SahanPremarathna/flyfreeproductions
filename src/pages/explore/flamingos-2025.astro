@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/pageLayout.astro';
+import Layout from '../../layouts/contentLayout.astro';
 ---
 
 <Layout>
@@ -8,17 +8,24 @@ import Layout from '../../layouts/pageLayout.astro';
             <h1>How We Captured Mannar Flamingos 2025</h1>
         </div>
 
-        <div class="img1"></div>
     
         <div class="mainpara">
-            <p>Flamingos are among the most iconic and captivating birds in the world. Each year, 
+            <!-- <p>Flamingos are among the most iconic and captivating birds in the world. <br>Each year, 
                 they migrate to Sri Lanka to escape the cold of their native regions, arriving between November and April. 
-                Interestingly, they are found almost exclusively in the northern region of Mannar, 
+                <br>Interestingly, they are found almost exclusively in the northern region of Mannar, 
                 making it one of the only places in Sri Lanka where you can witness these elegant birds in their natural habitat. 
-                During this period, nature lovers and wildlife enthusiasts flock to Mannar to experience this rare and breathtaking spectacle. 
-                In 2025, we had the incredible opportunity to see these magnificent birds up close for the very first time. 
-                It was not only an unforgettable adventure but also marked our debut attempt at filming a wildlife documentary. 
-                The journey was filled with learning, discovery, and inspiration and we’re proud to say that the final outcome was a tremendous success.
+                <br>During this period, nature lovers and wildlife enthusiasts flock to Mannar to experience this rare and breathtaking spectacle. 
+                <br>In 2025, we had the incredible opportunity to see these magnificent birds up close for the very first time. 
+                <br>It was not only an unforgettable adventure but also marked our debut attempt at filming a wildlife documentary. 
+                <br>The journey was filled with learning, discovery, and inspiration and we’re proud to say that the final outcome was a tremendous success.
+            </p> -->
+
+            <p >
+            Flamingos are iconic birds that migrate to Sri Lanka every year,
+            arriving between November and April to the northern region of Mannar.
+            This area is one of the few places where you can see them in their natural habitat.
+            In 2025, we had the amazing chance to film these elegant birds up close
+            for our very first wildlife documentary. A journey full of learning and inspiration.
             </p>
         </div>
         
@@ -92,18 +99,57 @@ import Layout from '../../layouts/pageLayout.astro';
                 <img src="/images/flamingo/flamingo-img5.webp" alt="img5">
 
             </div>
-            <div class="mainImg">
+
+
+            <div class="carousel-wrapper">
+                <button class="arr left" id="leftBtn">&#8592;</button>
+
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img1.webp" alt="img1"></div>
+                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img2.webp" alt="img2"></div>
+                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img3.webp" alt="img3"></div>
+                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img4.webp" alt="img4"></div>
+                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img5.webp" alt="img5"></div>
+                </div>
+
+                <button class="arr right" id="rightBtn">&#8594;</button>
             </div>
+
         </div>
     </div>
+
+    <footer>
+
+    </footer>
 </Layout>
 
 <style>
 
     /* overriding body content here */
     body{
-        background-color: aqua;
-        background: linear-gradient(to right, aqua, rgb(223, 121, 209));
+        /* background-color: aqua; */
+        /* background: radial-gradient(aqua, rgb(226, 186, 220)); */
+        /* background: radial-gradient(#ffffff, #f2f2f2); */
+        /* background: radial-gradient(#f0faff, #f6eaf3); */
+        /* background: radial-gradient(#f6eaf3, #f0faff); */
+        background: white;
+        position: relative;
+        /* background: linear-gradient(to left, rgb(243, 243, 243), transparent); */
+        /* background: radial-gradient(transparent, rgba(226, 186, 220, 1)); */
+        /* background: linear-gradient(to bottom left, rgba(226, 186, 220, 1), transparent 150px); */
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;  
+        height: 20%;  
+        /* background-color: rgba(226, 186, 220, 1); */
+        background-image: linear-gradient(rgb(222, 196, 224), transparent);
+        z-index: -1; 
+        border-bottom-left-radius: 50px;
     }
     
 
@@ -111,15 +157,16 @@ import Layout from '../../layouts/pageLayout.astro';
         display: flex;
         flex-direction: column;
         justify-self: center;
-        background-color: aqua;
+        /* background-color: aqua; */
         margin-top: 20px;
-        padding: 10px;
+        /* padding: 10px; */
         height: 200%;
     }
 
     @media (max-width: 768px){
         .content{
             background-color: transparent;
+            align-items: center;
         }
 
         body{
@@ -129,9 +176,13 @@ import Layout from '../../layouts/pageLayout.astro';
             overscroll-behavior: none;
             background-attachment: fixed;
         }
+        body::before {
+            display: none;
+        }
     }
 
     #title{
+        
         display: flex;
         text-align: center;
         align-items: center;
@@ -143,7 +194,7 @@ import Layout from '../../layouts/pageLayout.astro';
         background-position: center ;
         background-size: cover;
         min-height: 60vh;
-        margin-bottom: 30px
+        /* margin-bottom: 30px */
     }
 
     #title h1{
@@ -152,19 +203,23 @@ import Layout from '../../layouts/pageLayout.astro';
         padding: 5px;
     }
 
-    .img1{
-        display: none;
-    }
-
     p{
         font-size: 1.1em;
     }
+
     .mainpara{
-        padding: 15px;
-        background-color: rgb(255, 255, 255);
-        font-size: 1.1em;
-        line-height: 1.5;
+        padding: 10%;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        margin-top: 20px;
+        /* background-color: rgb(255, 255, 255, 0.2); */
+        /* color: antiquewhite; */
+        /* color: ; */
+        /* backdrop-filter: blur(10px); */
+        font-size: 1.2em;
+        line-height: 1.6;
         border-radius: 10px;
+        text-align: center;
 
     }
 
@@ -174,10 +229,11 @@ import Layout from '../../layouts/pageLayout.astro';
         padding: 15px;
         border-radius: 15px;
         width: 330px;
-        margin-top: 30px;
+        /* margin-top: 30px; */
         margin-bottom: 50px;
         transition: transform 0.3s ease;
         text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
     }
 
@@ -194,8 +250,19 @@ import Layout from '../../layouts/pageLayout.astro';
     }
 
     .steps{
+        
+        width: 100%;
+        /* margin-left: 50px; */
+        /* margin-right: 50px; */
+
+        padding: 10%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+
+
         border-radius: 10px;
-        background-color: rgb(238, 222, 222);
+        background-color: rgb(244, 244, 244);
         background-position: center;
         margin-bottom: 60px;
         display: flex;
@@ -204,37 +271,60 @@ import Layout from '../../layouts/pageLayout.astro';
     }
 
     .contentSteps{
-        padding: 20px;
-        background-color: rgb(255, 255, 255, 0.3);
+        width: 80%;
+        /* padding: 20px; */
+        /* background-color: rgb(255, 255, 255, 0.3); */
         backdrop-filter: blur(5px);
     }
 
     .steps h2{
-        margin-bottom: 10px;
+        margin-bottom: 5%;
+        margin-top: 2%;
         font-size: 2em;
+        /* line-height: 2; */
     }
     .steps #stepsPara{
         margin-bottom: 20px;
+        line-height: 1.5;
     }
 
     .steps ul{
-        padding: 10px;
+        padding: 15px;
         padding-left: 35px;
+        padding-right: 0px;
         line-height: 1.5;
-        background-color: rgb(206, 131, 213, 0.2);
+        /* background-color: rgb(206, 131, 213, 0.2); */
         border-radius: 10px;
     }
 
     .steps ul li{
         margin-bottom: 10px;
+        padding: 15px;
+
     }
 
     .steps ul li h4{
         font-size: 1.4em;
     }
 
+    .steps ul li p{
+        text-align: justify;
+        /* background-color: rgb(73, 52, 52); */
+    }
+
+    .map-container{
+        width: 50%;
+        height: auto;
+        /* background-color: blue; */
+        align-self: flex-start;
+        /* margin: auto; */
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+
     .map-container iframe{
-        margin: 20px;
+        width: 100%;
+        /* margin: 20px; */
         border-radius: 15px;
         transition: 0.3s ease;
     }
@@ -244,44 +334,99 @@ import Layout from '../../layouts/pageLayout.astro';
     }
 
     .experience{
-        padding: 15px;
+        padding: 10%;
+        padding-top: 0%;
+        padding-bottom: 3%;
+        /* padding: 15px; */
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
     }
 
     .experience h2{
-        margin-top: 10px;
-        margin-bottom: 10px;
+        /* margin-top: 10px; */
+        margin-bottom: 3%;
         font-size: 2em;
     }
 
     .experience p{
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 0%;
+        /* margin-bottom: 5%; */
         line-height: 1.5;
     }
 
-    .ex-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
-        margin-top: 1.5rem;
-        background-color: aqua;
-        backdrop-filter: blur(10px);
-        padding: 20px;
+    .ex-gallery {        
+        display: none;
     }
+    
 
-    .ex-gallery img {
+    
+
+   
+
+
+    .carousel-wrapper {
+        justify-self: center;
+        margin-top: 3%;
+        position: relative;
         width: 100%;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        /* max-width: 1000px; */
+        overflow: hidden;
     }
 
-    .ex-gallery img:hover {
-        transform: scale(1.03);
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
     }
+
+    .carousel-slide {
+      flex: 0 0 33.333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.8);
+      opacity: 0.5;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .carousel-slide.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .carousel-slide img {
+      width: 90%;
+      /* max-width: 300px; */
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .arr {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    .arr.left {
+      left: 10px;
+    }
+
+    .arr.right {
+      right: 10px;
+    }
+
+    .arr:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
 
     @media (max-width: 768px){
         #title{
@@ -304,19 +449,40 @@ import Layout from '../../layouts/pageLayout.astro';
             border-radius: 10px;
             background-color: rgb(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
+            width: 95%;
 
         }
+        #sub{
+            margin-top: 10%;
+        }
+
 
         .steps{
+            width: 95%;
             margin-top: 20px;
-            background-color: rgb(127, 255, 212, 0.1);
+            background-color: rgb(127, 255, 212, 0.2);
             backdrop-filter: blur(10px);
             border-radius: 10px;
             flex-direction: column;
         }
 
-        .steps ul{
+        .contentSteps{
+            width: 100%;
             background-color: transparent;
+            backdrop-filter: none;
+            
+        }
+
+        .steps ul{
+            background-color: rgb(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            /* padding: 0%; */
+        }
+
+        .steps ul li p{
+            line-height: 1.2;
+            text-align:left;
+            padding: none;
         }
 
         .map-container {
@@ -324,11 +490,13 @@ import Layout from '../../layouts/pageLayout.astro';
             display: flex;
             margin-top: 20px;
             margin-bottom: 20px;
+            margin-left: 0%;
+            align-self: center;
             
         }
 
         .map-container iframe{
-            width: 90%;
+            width: 100%;
             align-self: center;
             margin: auto;
         }
@@ -341,9 +509,108 @@ import Layout from '../../layouts/pageLayout.astro';
             backdrop-filter: blur(10px);
         }
 
+        .experience h2{
+            margin-top: 10%;
+        }
+
+        .experience p{
+            margin-top: 10%;
+            /* line-height: 1.2; */
+
+        }
+
         .ex-gallery {
             border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            /* background-color: aqua; */
+            backdrop-filter: blur(10px);
+            padding: 20px;
+        }
+
+        .ex-gallery img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+         .ex-gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .carousel-wrapper{
+            display: none;
         }
     }
 
 </style>
+
+
+<script is:inline>
+    const track = document.getElementById('carouselTrack');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const total = slides.length;
+      const visible = 3;
+
+      // prevent overflow
+      leftBtn.disabled = currentIndex <= 0;
+      rightBtn.disabled = currentIndex >= total - 1;
+
+      // Calculate offset so that the currentIndex image is centered
+      let offsetIndex = Math.max(0, currentIndex - 1);
+      track.style.transform = `translateX(-${offsetIndex * (100 / visible)}%)`;
+
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function slideLeft() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    }
+
+    function slideRight() {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    }
+
+    leftBtn.addEventListener('click', slideLeft);
+    rightBtn.addEventListener('click', slideRight);
+
+    // Add click & hover events to each slide
+    slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+        // if you want click to slide
+        // currentIndex = index;
+        // updateCarousel();
+    });
+
+    // Optional: make hover also activate
+    slide.addEventListener('mouseenter', () => {
+        // only if you want hover to slide
+        currentIndex = index;
+        updateCarousel();
+    });
+    });
+
+
+    updateCarousel();
+</script>

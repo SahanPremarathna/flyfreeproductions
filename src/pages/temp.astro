@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/contentLayout.astro';
+---
+
+<Layout>
+
+    <div class="content">
+
+    <div class="carousel-wrapper">
+    <button class="nav left" id="leftBtn">&#8592;</button>
+
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img1.webp" alt="img1"></div>
+      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img2.webp" alt="img2"></div>
+      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img3.webp" alt="img3"></div>
+      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img4.webp" alt="img4"></div>
+      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img5.webp" alt="img5"></div>
+    </div>
+
+    <button class="nav right" id="rightBtn">&#8594;</button>
+  </div>
+
+
+
+
+    </div>
+
+</Layout>
+
+
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f0f0f0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-slide {
+      flex: 0 0 33.333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.8);
+      opacity: 0.5;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .carousel-slide.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    .nav.left {
+      left: 10px;
+    }
+
+    .nav.right {
+      right: 10px;
+    }
+
+    .nav:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+</style>
+
+
+
+<script is:inline>
+
+const track = document.getElementById('carouselTrack');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const total = slides.length;
+      const visible = 3;
+
+      // prevent overflow
+      leftBtn.disabled = currentIndex <= 0;
+      rightBtn.disabled = currentIndex >= total - 1;
+
+      // Calculate offset so that the currentIndex image is centered
+      let offsetIndex = Math.max(0, currentIndex - 1);
+      track.style.transform = `translateX(-${offsetIndex * (100 / visible)}%)`;
+
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function slideLeft() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    }
+
+    function slideRight() {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    }
+
+    leftBtn.addEventListener('click', slideLeft);
+    rightBtn.addEventListener('click', slideRight);
+
+    updateCarousel();
+</script>
