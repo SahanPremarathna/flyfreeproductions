@@ -1,10 +1,12 @@
 ---
-import Layout from '../layouts/contentLayout.astro';
+import Layout from '../layouts/contentLayout2.astro';
 ---
 
 <Layout>
 
     <div class="content">
+
+      <div class="yo">yoo</div>
 
     <div class="carousel-wrapper">
     <button class="nav left" id="leftBtn">&#8592;</button>
@@ -30,20 +32,26 @@ import Layout from '../layouts/contentLayout.astro';
 
 
 <style>
+    
+
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      background: #f0f0f0;
+      background: rgb(240, 240, 240);
       font-family: sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-
+    .yo{
+      width: 100%;
+      height: 50vh;
+      background-color: antiquewhite;
+    }
     .carousel-wrapper {
       position: relative;
       width: 100%;

@@ -132,7 +132,7 @@ import Layout from '../../layouts/contentLayout.astro';
         /* background: radial-gradient(#ffffff, #f2f2f2); */
         /* background: radial-gradient(#f0faff, #f6eaf3); */
         /* background: radial-gradient(#f6eaf3, #f0faff); */
-        background: white;
+        background: rgb(240, 240, 240);
         position: relative;
         /* background: linear-gradient(to left, rgb(243, 243, 243), transparent); */
         /* background: radial-gradient(transparent, rgba(226, 186, 220, 1)); */
@@ -145,11 +145,9 @@ import Layout from '../../layouts/contentLayout.astro';
         top: 0;
         right: 0;
         width: 100%;  
-        height: 20%;  
-        /* background-color: rgba(226, 186, 220, 1); */
-        background-image: linear-gradient(rgb(222, 196, 224), transparent);
+        height: 50%;  
+        background-image: radial-gradient(rgb(222, 196, 224), transparent);
         z-index: -1; 
-        border-bottom-left-radius: 50px;
     }
     
 
@@ -189,7 +187,7 @@ import Layout from '../../layouts/contentLayout.astro';
         justify-content: center;
         font-size: 2em;
         font-weight: 900;
-        color: white;
+        color: rgb(240, 240, 240);
         background-image: url("/images/flamingo/flamingo-banner.webp");
         background-position: center ;
         background-size: cover;
@@ -245,7 +243,7 @@ import Layout from '../../layouts/contentLayout.astro';
     .subscribe-btn{
         font-size: 1.2em;
         font-weight: 700;
-        color: white;
+        color: rgb(240, 240, 240);
         
     }
 
@@ -262,7 +260,7 @@ import Layout from '../../layouts/contentLayout.astro';
 
 
         border-radius: 10px;
-        background-color: rgb(244, 244, 244);
+        background-color: rgb(255, 229, 229);
         background-position: center;
         margin-bottom: 60px;
         display: flex;
@@ -338,7 +336,7 @@ import Layout from '../../layouts/contentLayout.astro';
         padding-top: 0%;
         padding-bottom: 3%;
         /* padding: 15px; */
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(240, 240, 240);
         border-radius: 10px;
     }
 
@@ -375,7 +373,7 @@ import Layout from '../../layouts/contentLayout.astro';
 
     .carousel-track {
       display: flex;
-      transition: transform 0.6s ease-in-out;
+      transition: transform 1.25s ease-in-out;
     }
 
     .carousel-slide {
@@ -385,7 +383,7 @@ import Layout from '../../layouts/contentLayout.astro';
       align-items: center;
       transform: scale(0.8);
       opacity: 0.5;
-      transition: transform 0.6s ease, opacity 0.6s ease;
+      transition: transform 1.25s ease, opacity 1.25s ease;
     }
 
     .carousel-slide.active {
@@ -404,7 +402,7 @@ import Layout from '../../layouts/contentLayout.astro';
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgb(240, 240, 240, 0.9);
       border: none;
       font-size: 2rem;
       cursor: pointer;
