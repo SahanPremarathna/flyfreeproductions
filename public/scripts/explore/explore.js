@@ -40,6 +40,9 @@ const wild = document.getElementById("wild-exp-bg");
 const waterfall = document.getElementById("waterfall-exp-bg");
 const beach = document.getElementById("beach-exp-bg");
 const topImg = document.getElementById("top-img");
+const map = document.getElementById("mapBox");
+const panels = document.getElementById("all-panel");
+
 
 
 const fader1 = document.getElementById('bg-fader-1');
@@ -52,7 +55,8 @@ function crossfadeBackground(imageUrl) {
 
   nextFader.style.backgroundImage = imageUrl
     ? `url('${imageUrl}')`
-    : 'linear-gradient(135deg, #f0f0f0, #ffffff)';
+    : 'linear-gradient(135deg, #ffffffff, #ffffff)';
+    // :'white';
 
   nextFader.style.opacity = '1';
   activeFader.style.opacity = '0';
@@ -69,6 +73,13 @@ wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/w
 waterfall.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/waterfall.webp'));
 beach.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/beach.webp'));
 
+wild.addEventListener("mouseenter", () => {panels.style.backgroundImage = url("/images/explore/wild.webp")});
+
+// beach.addEventListener("mouseleave", () => crossfadeBackground());
+// waterfall.addEventListener("mouseleave", () => crossfadeBackground());
+
+// wild.addEventListener("mouseleave", () => crossfadeBackground());
+
 
 
 // mobile body bg changing js
@@ -84,7 +95,12 @@ topImg.addEventListener("mouseenter", () => {
 });
 
 
-// screen top default bg
+
+
+
+
+
+// screen top default bg mobile
 
 if (isMobile) {
   window.addEventListener("scroll", () => {
@@ -93,6 +109,19 @@ if (isMobile) {
     }
   });
 }
+
+
+// width of the map adjusting in pc
+
+// const map = document.getElementById("map");
+// const subinfopanel = document.getElementById("subinfopanel");
+
+// map.addEventListener("mouseenter", () => {
+//     // subinfopanel.style.width = "10%";
+// });
+// map.addEventListener("mouseleave", () => {
+//     // subinfopanel.style.display = "flex";
+// });
 
 
 

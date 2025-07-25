@@ -16,7 +16,7 @@ import Layout from '../../layouts/as.astro';
 
 
         <div class="infopanel1">
-            <div class="subinfopanel1">
+            <div class="subinfopanel1" id="subinfopanel">
 
                 <div class="latest-exp">
                     <h2>Latest Video</h2>
@@ -62,7 +62,7 @@ import Layout from '../../layouts/as.astro';
 
             
             
-            <div class="map-content">
+            <div class="map-content" id="mapBox">
                 <h2>Our Journey Across Sri Lanka📍</h2>
                 <div id="map"></div>
             </div> 
@@ -71,6 +71,7 @@ import Layout from '../../layouts/as.astro';
         
 
         <div class="all-panel" id="all-panel">
+            <h1>All Our Explorations</h1>
             <div id="wild-exp-bg" class="exp-bg">
                 <div class="exps" id="wild">
                     <h2>Stories of the Wild</h2>
@@ -176,12 +177,15 @@ import Layout from '../../layouts/as.astro';
 
 <style>
     body{
-        background-image: linear-gradient(135deg, #f0f0f0, #ffffff);
+        /* background-image: linear-gradient(135deg, #f0f0f0, #ffffff); */
+        background-color: #ffffff;
     }
     
     .content{
         display: flex;
         flex-direction: column;
+        background-color: transparent;
+        height: auto;
   /* scroll-behavior: smooth; */
 
     }
@@ -289,26 +293,29 @@ import Layout from '../../layouts/as.astro';
 
     .infopanel1{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-self: center;
-        width: 90%;
+        width: 80%;
+        /* background-color: #1B1205; */
     }
 
     .subinfopanel1{
-        background-color: #ecdecd;
+        background-color: #ffffff;
         margin-top: 10px;
         border-radius: 15px;
-        width: 60%;
+        /* width: 60%; */
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         padding: 10px;
         margin: auto;
         transition: 0.6s ease;
-        box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); */
     }
 
     .subinfopanel1:hover{
-        background-color: #d4c8b9;
+        /* background-color: #d4c8b9; */
     }
 
     .latest-exp{
@@ -354,15 +361,18 @@ import Layout from '../../layouts/as.astro';
     }
 
     .all-panel {
+        background-color: aquamarine;
         display: flex;
         flex-wrap: wrap;
+        align-self: center;
+        width: 80%;
         gap: 20px;
-        padding: 30px;
+        /* padding: 30px; */
         margin-top: 50px;
         justify-content: center; 
     }
 
-    .all-panel > * {
+    /* .all-panel > * {
         flex: 1 1 calc(50% - 20px); 
         box-sizing: border-box;
     }
@@ -371,7 +381,7 @@ import Layout from '../../layouts/as.astro';
         flex: 0 0 60%;
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 
     .exp-bg{
         display: flex;
@@ -384,11 +394,11 @@ import Layout from '../../layouts/as.astro';
         border-radius: 15px;
         overflow: hidden;
         transition: 0.6s ease;
-        box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5); */
     }
 
     .exp-bg:hover{
-        box-shadow: 12px 12px 20px rgba(0, 0, 0, 1);
+        /* box-shadow: 12px 12px 20px rgba(0, 0, 0, 1); */
     }
     
     .exps{
@@ -428,7 +438,7 @@ import Layout from '../../layouts/as.astro';
 
     .exps p{
         background-color: rgb(255, 255, 255, 0.1);
-        color:#ffffff;
+        color:#000000;
         padding: 20px;
         width: 100%;
         border-radius: 15px;
@@ -495,15 +505,15 @@ import Layout from '../../layouts/as.astro';
     }
 
     #waterfall-exp-bg{
-        background-image: url("/images/explore/waterfall.webp");
+        /* background-image: url("/images/explore/waterfall.webp"); */
     }
 
     #wild-exp-bg{
-        background-image: url("/images/explore/wild.webp");
+        /* background-image: url("/images/explore/wild.webp"); */
     }
     
     #beach-exp-bg{
-        background-image: url("/images/explore/beach.webp");
+        /* background-image: url("/images/explore/beach.webp"); */
     }
 
 
@@ -511,22 +521,24 @@ import Layout from '../../layouts/as.astro';
     .map-content{
         display: flex;
         flex-direction: column;
-        background-color: #ecdecd;
+        /* background-color: rgb(245, 245, 245); */
         border-radius: 15px;
         padding: 10px;
-        width: 30%;
+        width: 100%;
         margin-top: 10px;
         margin: auto;
-        box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5);
-        height: 60vh;
+        /* box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); */
+        height: 100vh;
         transition: 0.6s ease;
     }
 
+
     .map-content:hover{
-        background-color: #d4c8b9;
+        /* background-color: #d4c8b9; */
     }
 
     .map-content h2{
+        background-color: #ffffff;
         font-weight: 700;
         margin-top: 10px;
         margin-bottom: 20px;
@@ -536,7 +548,7 @@ import Layout from '../../layouts/as.astro';
     #map{
         align-self: center;
         height: 95vh;
-        width: 95%; 
+        width: 100%; 
         border-radius: 12px; 
         margin-bottom: 2rem;
         transition: 0.3s ease;
