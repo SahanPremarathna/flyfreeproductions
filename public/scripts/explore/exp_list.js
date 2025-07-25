@@ -1,6 +1,7 @@
 export const exploreSections = [
   {
     title: "Beauty of Sri Lanka",
+    msg: "Discover the stories and moments captured through the camera's eye.",
     items: [
       {
         title: "Yala National Park",
@@ -47,6 +48,7 @@ export const exploreSections = [
   },
   {
     title: "Wildlife and Wilderness",
+    msg: "Explore the untamed beauty and incredible creatures of nature.",
     items: [
       {
         title: "Wilpattu Safari",
@@ -61,18 +63,11 @@ export const exploreSections = [
     ]
   },
   {
-    title: "Behind the Lens",
+    title: "Behind the Lens (Coming Soon)",
+    msg: "Experience the stunning landscapes and vibrant culture of Sri Lanka.",
+
     items: [
-      {
-        title: "Making of Elegance in White",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
-      {
-        title: "Drone Diaries",
-        image: "/images/bg1-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
+      
     ]
   }
 ];

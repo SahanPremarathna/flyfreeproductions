@@ -1,0 +1,86 @@
+/* General layout */
+.category-section {
+  margin-bottom: 40px;
+  background: transparent;
+}
+
+.category-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Scroll wrapper styling */
+.scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  background: transparent;
+  color: black;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left-btn {
+  margin-right: 10px;
+}
+
+.right-btn {
+  margin-left: 10px;
+}
+
+/* Scroll area */
+.scroll-area {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scroll-area::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Explore card */
+.explore-card {
+  display: block;
+  min-width: 30vh;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.explore-card:hover{
+  transform: scale(1.02);
+}
+
+/* Card title */
+.card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  transition: transform 0.3s ease;
+}

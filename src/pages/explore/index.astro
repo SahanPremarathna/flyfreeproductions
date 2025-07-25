@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/as.astro';
+import '../../styles/explore/ex.css';
+
 ---
 
 <Layout>
@@ -74,7 +76,7 @@ import Layout from '../../layouts/as.astro';
 
         <div class="all-panel" id="all-panel">
             <h1>Our Explorations</h1>
-            <div id="wild-exp-bg" class="exp-bg">
+            <!-- <div id="wild-exp-bg" class="exp-bg">
                 <div class="exps" id="wild">
                     <h2>Stories of the Wild</h2>
                     <p class="exps-para">Stories of the Wild brings you closer to the untamed beauty of nature, 
@@ -167,13 +169,14 @@ import Layout from '../../layouts/as.astro';
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+            <div class="explore-container" id="exploreContainer"></div>
+
 
         </div>
 
-        <div class="explorations">
-            
-        </div>
+
 
 
     </div>
@@ -368,13 +371,21 @@ import Layout from '../../layouts/as.astro';
     .all-panel {
         background-color: rgb(255, 255, 255);
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         align-self: center;
-        width: 100%;
+        text-align: center;
+        width: 80%;
         gap: 20px;
         /* padding: 30px; */
         margin-top: 50px;
         justify-content: center; 
+        
+    }
+
+    .explore-container{
+        width: 100%;
+        /* background-color: #333; */
     }
 
     /* .all-panel > * {
@@ -616,14 +627,19 @@ import Layout from '../../layouts/as.astro';
         .img-br-line{
             display: none;
         }
-        .all-panel > * {
-            flex: 1 1 100%; /* Full width on small screens */
+        /* .all-panel > * {
+            flex: 1 1 100%;
         }
 
         .all-panel > *:nth-last-child(1):nth-child(odd) {
             flex: 0 0 100%;
             margin-left: auto;
             margin-right: auto;
+        } */
+
+        .all-panel{
+            width: 95%;
+            border-radius: 15px;
         }
 
         .infopanel1{
@@ -633,19 +649,28 @@ import Layout from '../../layouts/as.astro';
             justify-content: center;
         }
 
+
         .subinfopanel1{
             width: 100%;
             display: flex;
             flex-direction: column;
             padding: 10px;
-            background-color: aqua;
             border-radius: 15px;
             backdrop-filter: blur(10px);
-            background-color: rgba(139, 201, 110, 0.2);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .subinfopanel1 .latest-exp h2{
+            color: #000000;
+        }
+
+        .subinfopanel1 .hi-li-exp h2{
+            color: #000000;
         }
 
         .map-content{
             width: 100%;
+            height: 70vh;   
             border-radius: 15px;
             margin: 20px;
             border-radius: 15px;
@@ -737,6 +762,12 @@ import Layout from '../../layouts/as.astro';
 
 <script type="module" src="/scripts/explore/map.js"></script>
 <script type="module" src="/scripts/explore/explore.js"></script>
+<script type="module">
+  import { loadExploreSections } from '/scripts/explore/exp_panell.js';
+  window.addEventListener('DOMContentLoaded', () => {
+    loadExploreSections();
+  });
+</script>
 
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
