@@ -40,7 +40,6 @@ const wild = document.getElementById("wild-exp-bg");
 const waterfall = document.getElementById("waterfall-exp-bg");
 const beach = document.getElementById("beach-exp-bg");
 const topImg = document.getElementById("top-img");
-const map = document.getElementById("mapBox");
 const panels = document.getElementById("all-panel");
 
 
@@ -69,16 +68,23 @@ function clearBackground() {
   fader2.style.opacity = '0';
 }
 
-wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/wild.webp'));
-waterfall.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/waterfall.webp'));
-beach.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/beach.webp'));
+// wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/wild.webp'));
+// waterfall.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/waterfall.webp'));
+// beach.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/beach.webp'));
 
-wild.addEventListener("mouseenter", () => {panels.style.backgroundImage = url("/images/explore/wild.webp")});
+// wild.addEventListener("mouseenter", () => {panels.style.backgroundImage = url("/images/explore/wild.webp")});
 
 // beach.addEventListener("mouseleave", () => crossfadeBackground());
 // waterfall.addEventListener("mouseleave", () => crossfadeBackground());
 
 // wild.addEventListener("mouseleave", () => crossfadeBackground());
+
+
+// wild.addEventListener("mouseenter", () => {
+//   wild.style.backgroundImage = "url('/images/explore/wild.webp')";
+// });
+
+
 
 
 
@@ -123,5 +129,14 @@ if (isMobile) {
 //     // subinfopanel.style.display = "flex";
 // });
 
+const map = document.getElementById('map');
+  const mapContent = document.querySelector('.map-content');
 
+  map.addEventListener('mouseenter', () => {
+    mapContent.classList.add('hide-instruction');
+  });
+
+  map.addEventListener('mouseleave', () => {
+    mapContent.classList.remove('hide-instruction');
+  });
 

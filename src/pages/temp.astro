@@ -3,172 +3,260 @@ import Layout from '../layouts/as.astro';
 ---
 
 <Layout>
+  <div class="explore-container" id="exploreContainer"></div>
 
-    <div class="content">
+  
 
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
-      <div class="yo">yoo</div>
 
-    <div class="carousel-wrapper">
-    <button class="nav left" id="leftBtn">&#8592;</button>
+  <script type="module">
+    import { exploreSections } from '/scripts/explore/exploreList.js';
 
-    <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img1.webp" alt="img1"></div>
-      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img2.webp" alt="img2"></div>
-      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img3.webp" alt="img3"></div>
-      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img4.webp" alt="img4"></div>
-      <div class="carousel-slide"><img src="/images/flamingo/flamingo-img5.webp" alt="img5"></div>
-    </div>
-
-    <button class="nav right" id="rightBtn">&#8594;</button>
-  </div>
+    
 
 
 
 
-    </div>
+
+    window.addEventListener("DOMContentLoaded", () => {
+
+// const exploreSections = [
+//   {
+//     title: "Beauty of Sri Lanka",
+//     items: [
+//       {
+//         title: "Yala National Park",
+//         image: "/images/bg2-tall.webp",
+//         link: "/explore/flamingos-2025"
+//       },
+//       {
+//         title: "Sigiriya Rock",
+//         image: "/images/bg2-tall.webp",
+//         link: "/explore/flamingos-2025"
+//       },
+//     ]
+//   },
+//   {
+//     title: "Wildlife and Wilderness",
+//     items: [
+//       {
+//         title: "Wilpattu Safari",
+//         image: "/images/explore/sl-yala-tall.webp",
+//         link: "/explore/flamingos-2025"
+//       },
+//       {
+//         title: "Minneriya Elephants",
+//         image: "/images/bg2-tall.webp",
+//         link: "/explore/flamingos-2025"
+//       },
+//     ]
+//   },
+//   {
+//     title: "Behind the Lens",
+//     items: [
+//       {
+//         title: "Making of Elegance in White",
+//         image: "/images/bg2-tall.webp",
+//         link: "/explore/flamingos-2025"
+//       },
+//       {
+//         title: "Drone Diaries",
+//         image: "/images/bg2-tall.webp",
+//         link: "/explore/flamingos-2025"
+//       },
+//     ]
+//   }
+// ];
+
+
+//   const container = document.getElementById("exploreContainer");
+
+//   exploreSections.forEach((section, index) => {
+//     const sectionDiv = document.createElement("div");
+//     sectionDiv.classList.add("category-section"); 
+
+//     const title = document.createElement("h2");
+//     title.textContent = section.title;
+//     sectionDiv.appendChild(title);
+
+//     const scrollWrapper = document.createElement("div");
+//     scrollWrapper.className = "scroll-wrapper";
+    
+
+//     const leftBtn = document.createElement("button");
+//     leftBtn.textContent = "◀";
+//     leftBtn.className = "scroll-btn left-btn";
+
+//     const rightBtn = document.createElement("button");
+//     rightBtn.textContent = "▶";
+//     rightBtn.className = "scroll-btn right-btn";
+
+//     const scrollArea = document.createElement("div");
+//     scrollArea.className = "scroll-area";
+//     scrollArea.id = `scrollArea-${index}`;
+
+//     section.items.forEach(item => {
+//       console.log("went here 1")
+//       const card = document.createElement("a");
+//       card.className = "explore-card";
+//       card.href = item.link;
+//       card.style.textDecoration = "none";
+//       card.style.backgroundColor = "green";
+//       // card.style.backgroundImage = `url("${item.image}")`;
+//       card.innerHTML = `<div class="card-title">${item.title}</div>`;
+//       scrollArea.appendChild(card);
+//       console.log("went here 2")
+//     });
+
+//     leftBtn.onclick = () => scrollArea.scrollBy({ left: -300, behavior: 'smooth' });
+//     rightBtn.onclick = () => scrollArea.scrollBy({ left: 300, behavior: 'smooth' });
+
+//     scrollWrapper.appendChild(leftBtn);
+//     scrollWrapper.appendChild(scrollArea);
+//     scrollWrapper.appendChild(rightBtn);
+
+//     sectionDiv.appendChild(scrollWrapper);
+//     container.appendChild(sectionDiv);
+//   });
+// });
+const container = document.getElementById("exploreContainer");
+
+exploreSections.forEach((section, index) => {
+  const sectionDiv = document.createElement("div");
+  sectionDiv.classList.add("category-section");
+  sectionDiv.style.marginBottom = "40px";
+  sectionDiv.style.backgroundColor = "#000000";
+  sectionDiv.style.background = "transparent";
+
+  const title = document.createElement("h2");
+  title.textContent = section.title;
+  title.style.fontSize = "24px";
+  title.style.marginBottom = "10px";
+  title.style.color = "white";
+  sectionDiv.appendChild(title);
+  sectionDiv.style.background = "transparent";
+
+  const scrollWrapper = document.createElement("div");
+  scrollWrapper.className = "scroll-wrapper";
+  scrollWrapper.style.backgroundColor = "aqua";
+  scrollWrapper.style.position = "relative";
+  scrollWrapper.style.display = "flex";
+  scrollWrapper.style.alignItems = "center";
+  scrollWrapper.style.background = "transparent";
+
+  const leftBtn = document.createElement("button");
+  leftBtn.textContent = "◀";
+  leftBtn.className = "scroll-btn left-btn";
+  leftBtn.style.background = "transparent";
+  leftBtn.style.color = "black";
+  leftBtn.style.border = "none";
+  leftBtn.style.fontSize = "20px"; // Large size
+  leftBtn.style.padding = "10px";
+  leftBtn.style.cursor = "pointer";
+  leftBtn.style.marginRight = "10px";
+  leftBtn.style.zIndex = "2";
+
+  const rightBtn = document.createElement("button");
+  rightBtn.textContent = "▶";
+  rightBtn.className = "scroll-btn right-btn";
+  rightBtn.style.background = "transparent";
+  rightBtn.style.color = "black";
+  rightBtn.style.border = "none";
+  rightBtn.style.fontSize = "20px";
+  rightBtn.style.padding = "10px";
+  rightBtn.style.cursor = "pointer";
+  rightBtn.style.marginLeft = "10px";
+  rightBtn.style.zIndex = "2";
+
+  const scrollArea = document.createElement("div");
+  scrollArea.className = "scroll-area";
+  scrollArea.id = `scrollArea-${index}`;
+  scrollArea.style.display = "flex";
+  scrollArea.style.overflowX = "auto";
+  scrollArea.style.scrollBehavior = "smooth";
+  scrollArea.style.gap = "20px";
+  scrollArea.style.padding = "10px 0";
+  scrollArea.style.scrollbarWidth = "none"; // Firefox
+scrollArea.style.msOverflowStyle = "none";
+
+
+scrollArea.setAttribute("style", scrollArea.getAttribute("style") + `
+  &::-webkit-scrollbar { display: none; }
+`);
+
+  section.items.forEach(item => {
+  const card = document.createElement("a");
+  card.className = "explore-card";
+  card.href = item.link;
+  card.style.display = "block";
+  card.style.minWidth = "30vh";
+  card.style.height = "30vh";
+  card.style.backgroundSize = "cover";
+  card.style.backgroundPosition = "center";
+  card.style.borderRadius = "12px";
+  card.style.position = "relative";
+  card.style.flexShrink = "0";
+  card.style.transition = "transform 0.3s ease";
+  card.style.textDecoration = "none";
+  card.style.backgroundImage = `url("${item.image}")`;
+
+  const cardTitle = document.createElement("div");
+  cardTitle.className = "card-title";
+  cardTitle.textContent = item.title;
+  cardTitle.style.position = "absolute";
+  cardTitle.style.bottom = "0";
+  cardTitle.style.width = "100%";
+  cardTitle.style.background = "rgba(0, 0, 0, 0.5)";
+  cardTitle.style.textAlign = "center";
+  cardTitle.style.padding = "8px";
+  cardTitle.style.fontSize = "16px";
+  cardTitle.style.color = "white";
+  cardTitle.style.borderRadius = "0 0 12px 12px";
+  cardTitle.style.transition = "transform 0.3s ease";
+
+  // ✅ Add hover event listeners here
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.02)";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
+  });
+
+  card.appendChild(cardTitle);
+  scrollArea.appendChild(card);
+});
+
+  leftBtn.onclick = () => scrollArea.scrollBy({ left: -300, behavior: 'smooth' });
+  rightBtn.onclick = () => scrollArea.scrollBy({ left: 300, behavior: 'smooth' });
+
+  scrollWrapper.appendChild(leftBtn);
+  scrollWrapper.appendChild(scrollArea);
+  scrollWrapper.appendChild(rightBtn);
+
+  sectionDiv.appendChild(scrollWrapper);
+  container.appendChild(sectionDiv);
+});
+
+
+
+
+    })
+  
+  </script>
+
+  
+
+
+  
+
+
+
 
 </Layout>
 
 
-
 <style>
-    
-
-    /* /* * {
-      box-sizing: border-box;
-    } */
-
-    body {
-      /* margin: 0; */
-      /* background: rgb(255, 255, 255); */
-      font-family: sans-serif;
-      /* display: flex; */
-      /* justify-content: center; */
-      /* align-items: center; */
-      /* height: 100vh; */
-    }
-    /* .yo{
-      width: 100%;
-      height: 50vh;
-      background-color: antiquewhite;
-    } */
-    /* .carousel-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      overflow: hidden;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .carousel-slide {
-      flex: 0 0 33.333%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: scale(0.8);
-      opacity: 0.5;
-      transition: transform 0.6s ease, opacity 0.6s ease;
-    }
-
-    .carousel-slide.active {
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.9);
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 10px 15px;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 10;
-    }
-
-    .nav.left {
-      left: 10px;
-    }
-
-    .nav.right {
-      right: 10px;
-    }
-
-    .nav:disabled {
-      opacity: 0.4;
-      cursor: default;
-    } */ */
-
+  body{
+    background-color: white;
+  }
 </style>
-
-
-
-<script is:inline>
-
-const track = document.getElementById('carouselTrack');
-    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-    const leftBtn = document.getElementById('leftBtn');
-    const rightBtn = document.getElementById('rightBtn');
-
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      const total = slides.length;
-      const visible = 3;
-
-      // prevent overflow
-      leftBtn.disabled = currentIndex <= 0;
-      rightBtn.disabled = currentIndex >= total - 1;
-
-      // Calculate offset so that the currentIndex image is centered
-      let offsetIndex = Math.max(0, currentIndex - 1);
-      track.style.transform = `translateX(-${offsetIndex * (100 / visible)}%)`;
-
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === currentIndex) {
-          slide.classList.add('active');
-        }
-      });
-    }
-
-    function slideLeft() {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    }
-
-    function slideRight() {
-      if (currentIndex < slides.length - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-    }
-
-    leftBtn.addEventListener('click', slideLeft);
-    rightBtn.addEventListener('click', slideRight);
-
-    updateCarousel();
-</script>

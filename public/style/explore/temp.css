@@ -1,0 +1,80 @@
+
+  body {
+  background-color: #ad4d4d;
+  color: rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-area {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: rgb(40, 46, 37);
+}
+
+.explore-card {
+  display: block;
+  min-width: 250px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  background-color: rgb(76, 202, 18);
+}
+
+.explore-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+.scroll-btn {
+  background: rgba(211, 43, 43, 0.6);
+  color: rgb(255, 252, 252);
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left-btn {
+  margin-right: 10px;
+  font-size: 4em;
+}
+
+.right-btn {
+  margin-left: 10px;
+}

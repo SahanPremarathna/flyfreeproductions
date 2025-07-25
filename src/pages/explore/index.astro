@@ -63,15 +63,17 @@ import Layout from '../../layouts/as.astro';
             
             
             <div class="map-content" id="mapBox">
-                <h2>Our Journey Across Sri Lanka📍</h2>
+                
+                <h1>Our Journey Across Sri Lanka📍</h1>
                 <div id="map"></div>
+                
             </div> 
 
         </div>
         
 
         <div class="all-panel" id="all-panel">
-            <h1>All Our Explorations</h1>
+            <h1>Our Explorations</h1>
             <div id="wild-exp-bg" class="exp-bg">
                 <div class="exps" id="wild">
                     <h2>Stories of the Wild</h2>
@@ -167,6 +169,10 @@ import Layout from '../../layouts/as.astro';
                 </div>
             </div>
 
+        </div>
+
+        <div class="explorations">
+            
         </div>
 
 
@@ -294,9 +300,8 @@ import Layout from '../../layouts/as.astro';
     .infopanel1{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-self: center;
-        width: 80%;
+        width: 100%;
         /* background-color: #1B1205; */
     }
 
@@ -305,7 +310,7 @@ import Layout from '../../layouts/as.astro';
         margin-top: 10px;
         border-radius: 15px;
         /* width: 60%; */
-        width: 100%;
+        width: 80%;
         display: flex;
         /* flex-direction: column; */
         padding: 10px;
@@ -361,11 +366,11 @@ import Layout from '../../layouts/as.astro';
     }
 
     .all-panel {
-        background-color: aquamarine;
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-wrap: wrap;
         align-self: center;
-        width: 80%;
+        width: 100%;
         gap: 20px;
         /* padding: 30px; */
         margin-top: 50px;
@@ -387,13 +392,15 @@ import Layout from '../../layouts/as.astro';
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 99%;
-        margin:auto;
+        width: 100%;
+        /* height: 50vh; */
+        /* margin:auto; */
         justify-self: center;
         /* margin-top: 50px; */
-        border-radius: 15px;
+        /* border-radius: 15px; */
         overflow: hidden;
         transition: 0.6s ease;
+        margin-bottom: 0%;
         /* box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5); */
     }
 
@@ -407,55 +414,60 @@ import Layout from '../../layouts/as.astro';
         flex-direction: column;
         width: 100%;
         border-radius: 15px;
-        background-color: rgba(255, 255, 255, 0.101);
-        backdrop-filter: blur(5px);
-        padding: 20px;
+        /* background-color: rgba(255, 255, 255, 0.101); */
+        /* backdrop-filter: blur(5px); */
+        /* padding: 20px; */
         align-items: center;
         transition: 0.6s ease;
     }
 
     .exps:hover{
-        background-color: rgb(59, 47, 47, 0.1);
+        background-color: rgba(107, 100, 100, 0.1);
         backdrop-filter: blur(10px);
     }
 
     .exps h2{
+        width: 100%;
         align-items: center;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 50px;
         margin-bottom: 20px;
         padding: 10px;
         padding-left: 20px;
         padding-right: 20px;
-        font-size: 2em;
-        color: rgb(0, 0, 0);
-        background-color: rgb(240, 240, 240, 0.9);
-        border-radius: 25px;
+        font-size: 1.8em;
+        color: rgb(255, 255, 255);
+        background-color: #000000;  
+        /* border-radius: 25px; */
         font-weight: 600;
-        box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5);
-
+        /* box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5); */
     }
 
     .exps p{
-        background-color: rgb(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 1);
+        padding-left: 10%;
+        padding-right: 10%;
+        padding: 10%;
+
         color:#000000;
-        padding: 20px;
+        /* padding: 20px; */
         width: 100%;
-        border-radius: 15px;
+        /* border-radius: 15px; */
         font-size: 1em;
         margin-top: 10px;
         margin-bottom: 20px;
-        line-height: 1.5;
+        /* line-height: 1.5; */
         font-size: 1.3em;
         font-weight: 600;
         text-align: center;
+        
     }
 
     .ex-list{
         background: rgba(255, 255, 255, 1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); */
         padding: 15px;
         margin-left: 5px;
         border-radius: 15px;
@@ -482,7 +494,7 @@ import Layout from '../../layouts/as.astro';
         background-color: rgb(244, 244, 244, 0.5);
         transition: background-color 0.2s ease;
         transition: 0.2s ease-in-out;
-        padding: 1px;
+        /* padding: 1px; */
         justify-content: center;
         align-items: center;
     }
@@ -501,20 +513,21 @@ import Layout from '../../layouts/as.astro';
 
     .ex h3{
         margin-left: 5px;
-        padding: 3px;
+        /* padding: 3px; */
     }
 
-    #waterfall-exp-bg{
-        /* background-image: url("/images/explore/waterfall.webp"); */
+    /* #waterfall-exp-bg{
+        background-image: url("/images/explore/waterfall.webp");
+        background-position: center;
     }
 
     #wild-exp-bg{
-        /* background-image: url("/images/explore/wild.webp"); */
+        background-image: url("/images/explore/wild.webp");
     }
     
     #beach-exp-bg{
-        /* background-image: url("/images/explore/beach.webp"); */
-    }
+        background-image: url("/images/explore/beach.webp");
+    } */
 
 
 
@@ -522,14 +535,21 @@ import Layout from '../../layouts/as.astro';
         display: flex;
         flex-direction: column;
         /* background-color: rgb(245, 245, 245); */
-        border-radius: 15px;
-        padding: 10px;
+        /* border-radius: 15px; */
+        padding: 1%;
+        padding-bottom: 4%;
         width: 100%;
+        height: auto;
+
         margin-top: 10px;
         margin: auto;
         /* box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); */
         height: 100vh;
         transition: 0.6s ease;
+        background-color: rgb(255, 239, 239);
+        align-items: center;
+        position: relative;
+
     }
 
 
@@ -537,26 +557,55 @@ import Layout from '../../layouts/as.astro';
         /* background-color: #d4c8b9; */
     }
 
-    .map-content h2{
-        background-color: #ffffff;
+    
+
+    .map-content h1{
+        /* background-color: #ffffff; */
         font-weight: 700;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        /* margin-top: 1%; */
+        margin-bottom: 2%;
         text-align: center;
+        width: 80%;
+        
     }
 
     #map{
         align-self: center;
-        height: 95vh;
-        width: 100%; 
+        height: 70vh;
+        /* height: auto; */
+        /* width: 80%;  */
+        width: 80%;
         border-radius: 12px; 
         margin-bottom: 2rem;
         transition: 0.3s ease;
+        /* margin: 8vh; */
+        z-index: 0;
     }
 
     #map:hover{
         transform: scale(1.02);
     }
+
+.map-content::before {
+    content: "🧭 Navigate through the map by clicking the pins!";
+    position: absolute;
+    top: 15vh; /* Adjust as needed below the heading */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    z-index: 10;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Disappear on hover */
+.map-content.hide-instruction::before {
+    opacity: 0;
+}
     
 
 
@@ -604,7 +653,7 @@ import Layout from '../../layouts/as.astro';
             background-color: rgb(255, 255, 255, 0.2);
         }
 
-        .map-content h2{
+        .map-content h1{
             align-self: center;
             color: white;
         }
