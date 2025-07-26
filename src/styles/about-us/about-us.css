@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    /* align-self: center; */
+    justify-self: center;
+    align-items: center;
+}
+
+.title{
+    /* font-size: clamp(3em, 5vw, 3em);; */
+    font-size: 3rem;
+    margin-top: 0%;
+}
+
+.top-title{
+    font-size: 1em;
+    /* margin-bottom: -100px; */
+}
+
+.wide-image{
+    width: 100%;
+    height: 40vh;
+}
+
+/* .flyfreetext{
+    font-size: 1.2em;
+}
+
+.line .firstletter{
+    font-size: 100px;
+} */
+
+
+
+
+/* Css for the Bihind FlyFree (Team) */
+
+.behindFlyFree{
+    width: 100%;
+}
+.team{
+    display: flex;
+    width: 100%;
+}
+.team .person{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.person .person-dp{
+    width: 60%;
+    border-radius: 50%;
+}
+.person .person-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Css for the whats next div */
+
+.whatsnext{
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-image: url("/images/about-us/about-us-img.JPG");
+    }
+
+
+}

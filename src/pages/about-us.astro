@@ -1,107 +1,148 @@
 ---
-import Layout from '../layouts/as.astro';
+import Layout from "../layouts/as.astro";
+import "../styles/about-us/about-us.css";
 ---
 
 <Layout>
+    <div class="about-us-content">
+        <p class="top-title">Enter the Wild, Let Nature Be Your Guide</p>
+        <h1 class="title">About FlyFree</h1>
 
-    <div class="image-panel-pc" id="top-img">
-        <img src="/images/about-us/about-us-img.JPG" alt="abt-us-img" id="scrollImage">
-        <h1 id="img-title">About FlyFreeProductions</h1>
+        <img
+            src="images/about-us/about-us-img.JPG"
+            alt="abt-us img"
+            class="wide-image"
+        />
+
+        <!-- <div class="flyfreetext">
+            <div class="line">
+                <span class="fristletter">F</span><span class="sentence"
+                    >reedom inspires every frame we capture.</span
+                >
+            </div>
+            <div class="line">
+                <span class="fristletter">L</span><span class="sentence"
+                    >ight reveals the unseen beauty of nature.</span
+                >
+            </div>
+            <div class="line">
+                <span class="fristletter">Y</span><span class="sentence"
+                    >earning to explore drives our journey.</span
+                >
+            </div>
+            <div class="line">
+                <span class="fristletter">F</span><span class="sentence"
+                    >light connects the earth and sky.</span
+                >
+            </div>
+            <div class="line">
+                <span class="fristletter">R</span><span class="sentence"
+                    >ivers and forests whisper ancient stories.</span
+                >
+            </div>
+            <div class="line">
+                <span class="fristletter">E</span><span class="sentence"
+                    >very moment holds a story waiting to be told.</span
+                >
+            </div>
+            <div class="line">
+                <span class="fristletter">E</span><span class="sentence"
+                    >arth’s wonders are our endless muse.</span
+                >
+            </div>
+        </div> -->
+
+        <!-- <div>
+            <p>
+                FlyFree invites you to experience the graceful flight of birds,
+                the vibrant life of wildlife, and the stunning beauty of Sri
+                Lanka’s most scenic wonders. From serene lagoons and winding
+                rivers to lush forests and cascading waterfalls, our videos
+                capture the magic of these wild places. Through cinematic
+                storytelling and breathtaking visuals, we share moments of quiet
+                wonder that connect us all to the natural world. More than a
+                channel, FlyFree is a celebration of nature’s freedom and
+                beauty.
+            </p>
+        </div> -->
+
+        <div>
+            <h2>Our Vision</h2>
+            <p>
+                To reveal the hidden beauty of Sri Lanka’s wild and scenic
+                places, capturing moments that inspire connection with nature.
+            </p>
+        </div>
+
+        <div>
+            <h2>Our Story</h2>
+            <p>
+                FlyFree began with a homemade drone and a simple camera,
+                capturing aerial glimpses of our village. The early footage was
+                shaky, but it sparked something special. Over time, we were able
+                to upgrade to a professional drone, and FlyFree officially took
+                flight as an aerial footage channel based in Sri Lanka. Soon
+                after, we invested in a camera and essential gear—opening new
+                doors to explore more than just skies. From birds in the
+                wetlands to hidden wildlife trails, our journey expanded into
+                the rich natural wonders of Sri Lanka. We're still learning,
+                growing, and capturing. This is only the beginning of our path
+                to uncover the unseen and share the quiet beauty of the world
+                around us.
+            </p>
+        </div>
+
+        <div class="behindFlyFree">
+            <h2>Who is behind FlyFree</h2>
+            <div class="team">
+                <div class="person">
+                    <!-- <img src="images/about-us/sahandp.webp" alt="SahanPreamarathna"> -->
+                    <img
+                        src="images/about-us/about-us-img.JPG"
+                        alt="SahanPreamarathna"
+                        class="person-dp"
+                    />
+                    <div class="person-info">
+                        <div class="name">Sahan Premarathna</div>
+                        <div class="profession">
+                            Computer Science Under Graduate Student
+                        </div>
+                        <div class="messege">i love nature.</div>
+                    </div>
+                </div>
+                <div class="person">
+                    <!-- <img src="images/about-us/sahandp.webp" alt="SahanPreamarathna"> -->
+                    <img
+                        src="images/about-us/about-us-img.JPG"
+                        alt="SahanPreamarathna"
+                        class="person-dp"
+                    />
+                    <div class="person-info">
+                        <div class="name">Sahan Premarathna</div>
+                        <div class="profession">
+                            Computer Science Under Graduate Student
+                        </div>
+                        <div class="messege">i love nature.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsnext">
+            <h2>what's Next</h2>
+            <p>
+                We’re just getting started. At FlyFree, we strive to grow with
+                every step — enhancing our skills, upgrading our tools, and
+                pushing creative boundaries. Our journey will take us to
+                uncharted corners of Sri Lanka, uncovering rare wildlife, hidden
+                landscapes, and untold stories. We aim to deliver content that
+                is both entertaining and educational, connecting people deeply
+                to the natural world. Looking ahead, we hope to expand our
+                horizons and travel the whole world, capturing its incredible
+                diversity and sharing its beauty with you.
+            </p>
+        </div>
     </div>
-        
-    <div class="content">
-        <h1 id="img-title-mobile">About FlyFreeProductions</h1>
 
-
-
-        
-
-
-        
-    </div>
+    <script src="/scripts/about-us/ab-us.js" is:inline></script>
 </Layout>
-
-
-
-<style>
-    body{
-        background-color: rgb(255, 255, 255);
-        /* background-image: linear-gradient(135deg,#48b729, #000000); */
-        
-        
-
-    }
-
-    .image-panel-pc {
-        position: relative;
-        margin-top: -100px;
-        width: 100%;
-        height: 35%;
-        overflow: hidden;
-        /* background-color: #030201; */
-        /* background-image: linear-gradient(90Deg,#383e37, #000000); */
-
-    }
-
-    .image-panel-pc img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 25%;
-        display: block;
-        transition: 1s ease;
-        /* display: none; */
-
-    }
-    .image-panel-pc img:hover {
-        transform: scale(1.02);
-    }
-
-    .image-panel-pc #img-title{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -20%);
-        font-size: clamp(2em, 5vw, 3em);
-        background-color: rgb(255, 255, 255, 0.1);
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        backdrop-filter: blur(5px);
-        box-shadow: 7px 8px 20px rgba(0, 0, 0, 0.5);
-        color: rgb(220, 236, 227);
-
-    }
-    #img-title-mobile{
-        display: none;
-    }
-
-    .content{
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        /* background-color: #00674F; */
-        /* background-color: #2E6F40; */
-
-    }
-
-    @media (max-width: 768px){
-        body{
-            background-image: url("/images/about-us/about-us-img.JPG");
-        }
-
-        .image-panel-pc  {
-            display: none;
-        }
-        
-        #img-title-mobile{
-        display: inline;
-    }
-    }
-
-
-</style>
-
-
-
-<script src="/scripts/about-us/ab-us.js" is:inline></script>
