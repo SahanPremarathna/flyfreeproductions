@@ -176,7 +176,48 @@ import "../../styles/explore/exTopPanel.css";
             <div class="explore-container" id="exploreContainer"></div>
         </div>
     </div>
-</Layout>
+
+    <script type="module" src="/scripts/explore/map.js"></script>
+<script type="module" src="/scripts/explore/explore.js"></script>
+<script type="module">
+    import { loadExploreSections } from "/scripts/explore/exp_panell.js";
+    window.addEventListener("DOMContentLoaded", () => {
+        loadExploreSections();
+    });
+</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const headings = Array.from(
+            document.querySelectorAll(".heading-switch"),
+        );
+        let current = 0;
+
+        function showHeading(index: number) {
+            headings.forEach((el, i) => {
+                if (el instanceof HTMLElement) {
+                    el.style.opacity = i === index ? "1" : "0";
+                }
+            });
+        }
+
+        showHeading(current);
+
+        setInterval(() => {
+            const currentEl = headings[current];
+            if (currentEl instanceof HTMLElement) {
+                currentEl.style.opacity = "0";
+            }
+
+            setTimeout(() => {
+                current = (current + 1) % headings.length;
+                showHeading(current);
+            }, 750);
+        }, 4500);
+    });
+</script>
 
 <style>
     body {
@@ -406,44 +447,9 @@ import "../../styles/explore/exTopPanel.css";
     }
 </style>
 
-<script type="module" src="/scripts/explore/map.js"></script>
-<script type="module" src="/scripts/explore/explore.js"></script>
-<script type="module">
-    import { loadExploreSections } from "/scripts/explore/exp_panell.js";
-    window.addEventListener("DOMContentLoaded", () => {
-        loadExploreSections();
-    });
-</script>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</Layout>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const headings = Array.from(
-            document.querySelectorAll(".heading-switch"),
-        );
-        let current = 0;
 
-        function showHeading(index: number) {
-            headings.forEach((el, i) => {
-                if (el instanceof HTMLElement) {
-                    el.style.opacity = i === index ? "1" : "0";
-                }
-            });
-        }
 
-        showHeading(current);
 
-        setInterval(() => {
-            const currentEl = headings[current];
-            if (currentEl instanceof HTMLElement) {
-                currentEl.style.opacity = "0";
-            }
-
-            setTimeout(() => {
-                current = (current + 1) % headings.length;
-                showHeading(current);
-            }, 750);
-        }, 4500);
-    });
-</script>
