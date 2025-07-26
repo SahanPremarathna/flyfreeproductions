@@ -1,7 +1,7 @@
 export const exploreSections = [
   {
     title: "Beauty of Sri Lanka",
-    msg: "Discover the stories and moments captured through the camera's eye.",
+    msg: "Experience the stunning landscapes and vibrant culture of Sri Lanka.",
     items: [
       {
         title: "Yala National Park",
@@ -64,8 +64,7 @@ export const exploreSections = [
   },
   {
     title: "Behind the Lens (Coming Soon)",
-    msg: "Experience the stunning landscapes and vibrant culture of Sri Lanka.",
-
+    msg: "Discover the stories and moments captured through the camera's eye.",
     items: [
       
     ]
