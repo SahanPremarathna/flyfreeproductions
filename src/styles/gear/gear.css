@@ -1,0 +1,231 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.equipment-content {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    justify-self: center;
+    align-items: center;
+}
+
+.upperBg {
+    width: 100%;
+    /* background-color: rgb(91, 80, 80); */
+    background-image: url("/images/gear/banner.webp");
+    background-size: cover;
+    background-position: center 28%;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upperFader {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.25); */
+    /* backdrop-filter: blur(10px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.equipment-title {
+    font-size: 3rem;
+    margin-top: 0%;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: 
+    0 0 2px #00000022,
+    0 0 4px #00000022,
+    0 0 6px #00000022;
+}
+
+.top-title {
+    font-size: 1em;
+    margin-top: 7vh;
+    color: rgba(0, 0, 0, 0.644);
+    color: white;
+    text-shadow: 
+    0 0 2px #fffbfb4d,
+    0 0 4px #eaeaea35,
+    0 0 6px #f4eaea3c;
+
+}
+
+.our-vision {
+    width: 100%;
+    text-align: center;
+
+}
+
+.our-vision p {
+    height: auto;
+
+    width: 100%;
+    height: 5vh;
+    align-content: center;
+    font-size: 1.1em;
+    line-height: 1.5;
+    background-color: rgba(57, 55, 55, 0.366);
+    backdrop-filter: blur(10px);
+        color: white;
+
+}
+
+.wide-image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5vh;
+}
+
+.our-story {
+    width: 80%;
+    margin-bottom: 5vh;
+}
+
+
+.our-story p {
+    text-align: justify;
+    padding: 3vh;
+    padding-right: 0%;
+    margin-left: 1vh;
+    border-left: 2px solid rgba(0, 0, 0, 0.36);
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.behind-FlyFree {
+    width: 80%;
+    margin-bottom: 5vh;
+}
+
+.behind-FlyFree p {
+    margin-left: 1vh;
+    padding: 3vh;
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding-right: 0%;
+}
+
+.team {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.team .person {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    border-radius: 20px;
+    background-color: rgb(244, 244, 244);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease;
+}
+
+.team .person:hover {
+    transform: scale(1.01);
+}
+
+.person .person-title {
+    margin-bottom: -5%;
+}
+
+.person .person-dp {
+    width: 80%;
+    object-position: center;
+    border-radius: 15px;
+    margin: 2vh;
+}
+
+.person .person-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding-bottom: 3vh;
+    font-size: 1em;
+}
+
+.person-info .name {
+    font-weight: bold;
+}
+
+.whatsnext {
+    width: 80%;
+    margin-bottom: 5vh;
+}
+
+.whatsnext p {
+    padding: 3vh;
+    border-left: 2px solid rgba(0, 0, 0, 0.36);
+    margin-left: 1vh;
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding-right: 0%;
+    text-align: justify;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .upperBg {
+        height: 40vh;
+    }
+
+    .our-vision p {
+        height: auto;
+        padding: 1vh;
+    }
+
+    .our-story p {
+        padding: 0%;
+        padding-right: 0%;
+        margin-left: 0vh;
+        border-left: none;
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    .behind-FlyFree p {
+        padding: 0%;
+        padding-right: 0%;
+        margin-left: 0vh;
+        border-left: none;
+        font-size: 1.1em;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .whatsnext p {
+        padding: 0%;
+        padding-right: 0%;
+        margin-left: 0vh;
+        border-left: none;
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    .team {
+        flex-direction: column;
+        gap: 2vh;
+
+    }
+
+    .team .person {
+        width: 100%;
+        align-self: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+
+    }
+}

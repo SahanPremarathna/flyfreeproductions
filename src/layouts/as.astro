@@ -1,8 +1,8 @@
 ---
 const base = import.meta.env.BASE_URL;
-
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -10,7 +10,16 @@ const base = import.meta.env.BASE_URL;
     <meta name="generator" content={Astro.generator} />
     <title>Home Page</title>
     <link rel="stylesheet" href="/style/as.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/style/transition.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
   </head>
 
   <body id="bg">
@@ -18,31 +27,36 @@ const base = import.meta.env.BASE_URL;
     <div id="bg-fader-2" class="bg-fader"></div>
 
     <div class="content">
-      
-
       <header>
         <img src="/images/black-logo.png" alt="flyfree-logo" id="header-logo" />
-<input type="checkbox" id="menu-toggle" />
+        <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
         <div class="mobile-menu">
           <nav>
             <a href="/">Home</a>
             <a href="/explore/">Our Explorations</a>
-            <a href="#">Equipments</a>
+            <a href="/camera-gear">Our Gear</a>
             <a href="/about-us">About Us</a>
             <a href="/temp">Gallery</a>
           </nav>
         </div>
-        
 
         <nav class="desktop-nav">
           <a href="/">Home</a>
           <a href="/explore/">Our Explorations</a>
-          <a href="#">Equipments</a>
+          <a href="/camera-gear">Our Gear</a>
           <a href="/about-us">About Us</a>
           <a href="/temp">Gallery</a>
         </nav>
+
+        <!-- <nav class="desktop-nav">
+          <a href="/"><strong>Home</strong></a>
+          <a href="/explore/"><strong>Our Explorations</strong></a>
+          <a href="#"><strong>Equipments</strong></a>
+          <a href="/about-us"><strong>About Us</strong></a>
+          <a href="/temp"><strong>Gallery</strong></a>
+        </nav> -->
 
         <div class="head-let-us-know">
           <span>Bird Sightings?</span>
@@ -50,12 +64,9 @@ const base = import.meta.env.BASE_URL;
         </div>
       </header>
 
-      
-
       <slot />
     </div>
 
-  <script src="/scripts/layout/as.js" is:inline></script>
-    
+    <script src="/scripts/layout/as.js" is:inline></script>
   </body>
 </html>

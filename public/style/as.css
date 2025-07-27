@@ -20,6 +20,8 @@ body {
   flex-direction: column;
   align-items: center;
   scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .bg-fader {
@@ -116,8 +118,9 @@ header {
 .head-let-us-know a {
   color: #000;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 0.9rem;
+  align-self: center;
 }
 
 /* ========== MOBILE FULLSCREEN MENU ========== */
