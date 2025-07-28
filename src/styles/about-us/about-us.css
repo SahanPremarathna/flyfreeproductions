@@ -14,7 +14,7 @@ body {
 .upperBg {
     width: 100%;
     /* background-color: rgb(91, 80, 80); */
-    background-image: url("/images/about-us/about-us-img3.webp");
+    background-image: url("/images/about-us/banner.webp");
     background-size: cover;
     background-position: center 28%;
     margin-bottom: 2vh;
