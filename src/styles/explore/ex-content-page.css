@@ -316,6 +316,10 @@
 
 
     @media (max-width: 768px){
+
+        p{
+            text-align: justify;
+        }
         
 
         #title-img-box{
@@ -375,7 +379,8 @@
 
         .steps ul li p{
             line-height: 1.2;
-            text-align:left;
+            /* text-align:justify; */
+            padding-right: 3vh;
             padding: none;
         }
 

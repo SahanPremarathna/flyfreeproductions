@@ -3,13 +3,17 @@ body {
 }
 
 .equipment-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: transparent;
     width: 100%;
     justify-self: center;
     align-items: center;
+
 }
+
+
 
 .upperBg {
     width: 100%;
@@ -21,13 +25,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.4s ease-in-out;
+
+}
+
+
+.upperBg:hover {
+    transform: scale(1.02);
+
 }
 
 .upperFader {
     width: 100%;
     height: 100%;
-    /* background-color: rgba(255, 255, 255, 0.25); */
-    /* backdrop-filter: blur(10px); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,10 +50,10 @@ body {
     margin-top: 0%;
     font-family: Arial, sans-serif;
     color: white;
-    text-shadow: 
-    0 0 2px #00000022,
-    0 0 4px #00000022,
-    0 0 6px #00000022;
+    text-shadow:
+        0 0 2px #00000022,
+        0 0 4px #00000022,
+        0 0 6px #00000022;
 }
 
 .top-title {
@@ -51,10 +61,10 @@ body {
     margin-top: 7vh;
     color: rgba(0, 0, 0, 0.644);
     color: white;
-    text-shadow: 
-    0 0 2px #fffbfb4d,
-    0 0 4px #eaeaea35,
-    0 0 6px #f4eaea3c;
+    text-shadow:
+        0 0 2px #fffbfb4d,
+        0 0 4px #eaeaea35,
+        0 0 6px #f4eaea3c;
 
 }
 
@@ -74,7 +84,7 @@ body {
     line-height: 1.5;
     background-color: rgba(57, 55, 55, 0.366);
     backdrop-filter: blur(10px);
-        color: white;
+    color: white;
 
 }
 
@@ -84,97 +94,186 @@ body {
     margin-bottom: 5vh;
 }
 
-.our-story {
-    width: 80%;
-    margin-bottom: 5vh;
-}
-
-
-.our-story p {
-    text-align: justify;
-    padding: 3vh;
-    padding-right: 0%;
-    margin-left: 1vh;
-    border-left: 2px solid rgba(0, 0, 0, 0.36);
-    font-size: 1.1em;
-    line-height: 1.5;
-}
-
-.behind-FlyFree {
-    width: 80%;
-    margin-bottom: 5vh;
-}
-
-.behind-FlyFree p {
-    margin-left: 1vh;
-    padding: 3vh;
-    font-size: 1.1em;
-    line-height: 1.5;
-    padding-right: 0%;
-}
-
-.team {
+/* calling all the panels */
+.gear-panel-full-bg {
     display: flex;
     width: 100%;
-    justify-content: center;
-}
-
-.team .person {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 5vh;
-    margin-right: 5vh;
-    border-radius: 20px;
     background-color: rgb(244, 244, 244);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transition: 0.2s ease;
+    justify-content: center;
+    margin-bottom: 4vh;
+    padding-top: 5vh;
 }
 
-.team .person:hover {
-    transform: scale(1.01);
-}
-
-.person .person-title {
-    margin-bottom: -5%;
-}
-
-.person .person-dp {
-    width: 80%;
-    object-position: center;
-    border-radius: 15px;
-    margin: 2vh;
-}
-
-.person .person-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vh;
-    padding-bottom: 3vh;
-    font-size: 1em;
-}
-
-.person-info .name {
-    font-weight: bold;
-}
-
-.whatsnext {
+.gear-panels {
     width: 80%;
     margin-bottom: 5vh;
 }
 
-.whatsnext p {
-    padding: 3vh;
-    border-left: 2px solid rgba(0, 0, 0, 0.36);
-    margin-left: 1vh;
-    font-size: 1.1em;
-    line-height: 1.5;
-    padding-right: 0%;
-    text-align: justify;
+.gear-panels .para-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+.gear-panels .main-para {
+    text-align: justify;
+    padding: 3vh;
+    padding-right: 0%;
+    margin-left: 1vh;
+    border-left: 2px solid rgba(0, 0, 0, 0.36);
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.gear-current {
+    margin-top: 2vh;
+}
+
+.gear-current .main-para {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+
+}
+
+.gear-current .imageWrapper {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 60vh;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+}
+
+.gear-current .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-position: center;
+    object-fit: cover;
+
+
+}
+
+
+.gear-main-cam .main-para {
+    margin-bottom: 0%;
+}
+
+.gear-main-cam img {
+    width: 40%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 5px;
+    height: 40vh;
+    object-fit: contain;
+    object-position: center;
+}
+
+.gear-lenses .lens-para-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 2vh;
+}
+
+.gear-lenses .lens-para-wrapper-item {
+    width: 70%;
+}
+
+.gear-lenses .imageWrapper {
+    width: 30%;
+    padding: 3vh;
+}
+
+.gear-lenses .imageWrapper img {
+    border-radius: 5px;
+    width: 100%;
+    height: 25vh;
+    margin-left: 3.5vh;
+    object-fit: contain;
+
+}
+
+.gear-support .support-para-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 2vh;
+}
+
+.gear-support .support-para-wrapper-item {
+    width: 70%;
+}
+
+.gear-support .imageWrapper {
+    width: 25%;
+    padding: 3vh;
+}
+
+.gear-support .imageWrapper img {
+    width: 80%;
+    border-radius: 5px;
+    margin-left: 7vh;
+}
+
+.gear-drones img {
+    width: 55%;
+    height: 50vh;
+    align-self: center;
+    justify-self: center;
+    margin: 2vh;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+}
+
+.gear-software .main-para {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.gear-extra .main-para {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 3vh;
+}
+
+.gear-extra .gear-list {
+    margin: 3vh;
+}
+
+.gear-extra .gear-list li {
+    margin-bottom: 3vh;
+}
+
+.gear-ride .two-img-panel {
+    display: flex;
+    /* background-color: aquamarine; */
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+    gap: 1vh;
+}
+
+.gear-ride img {
+    width: 50%;
+    height: 45vh;
+    align-self: center;
+    justify-self: center;
+    margin: 2vh;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    /* object-fit: contain; */
+
+}
+
+.gear-lenses .para-items-lens .lens-para {
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
 
 
 @media (max-width: 768px) {
@@ -188,7 +287,7 @@ body {
         padding: 1vh;
     }
 
-    .our-story p {
+    .gear-panels .main-para {
         padding: 0%;
         padding-right: 0%;
         margin-left: 0vh;
@@ -197,35 +296,81 @@ body {
         line-height: 1.5;
     }
 
-    .behind-FlyFree p {
-        padding: 0%;
-        padding-right: 0%;
-        margin-left: 0vh;
-        border-left: none;
-        font-size: 1.1em;
-        line-height: 1.5;
-        text-align: justify;
-    }
-
-    .whatsnext p {
-        padding: 0%;
-        padding-right: 0%;
-        margin-left: 0vh;
-        border-left: none;
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-
-    .team {
-        flex-direction: column;
-        gap: 2vh;
-
-    }
-
-    .team .person {
+    .gear-current .imageWrapper {
         width: 100%;
-        align-self: center;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 
     }
+
+    .gear-current .imageWrapper img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .gear-main-cam img {
+        width: 90%;
+
+    }
+
+    .gear-lenses .lens-para-wrapper {
+        flex-direction: column;
+    }
+
+    .gear-lenses .lens-para-wrapper-item {
+        width: 100%;
+    }
+
+    .gear-lenses .imageWrapper {
+        width: 100%;
+        padding: 3vh;
+    }
+
+    .gear-lenses .imageWrapper img {
+        margin-left: 0%;
+    }
+
+    .gear-drones img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .gear-support .support-para-wrapper {
+        flex-direction: column;
+    }
+
+    .gear-support .support-para-wrapper-item {
+        width: 100%;
+    }
+
+    .gear-support .imageWrapper {
+        display: flex;
+        width: 100%;
+        padding: 0%;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 2vh;
+    }
+
+    .gear-support .imageWrapper img {
+        margin-left: 0%;
+        width: 50%;
+    }
+
+    .gear-extra .gear-list {
+        margin: 0;
+    }
+
+    .gear-extra .gear-list li {
+        margin: 0;
+        margin-top: 4vh;
+    }
+
+    .gear-ride .two-img-panel {
+        flex-direction: column;
+    }
+
+    .gear-ride img {
+        width: 100%;
+        height: auto;
+    }
+
 }

@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -8,7 +9,7 @@ const base = import.meta.env.BASE_URL;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Home Page</title>
+    <title>{title ?? "FlyFreeProductions"}</title>
     <link rel="stylesheet" href="/style/as.css" />
     <link rel="stylesheet" href="/style/transition.css" />
     <link
@@ -47,7 +48,7 @@ const base = import.meta.env.BASE_URL;
           <a href="/explore/">Our Explorations</a>
           <a href="/camera-gear">Our Gear</a>
           <a href="/about-us">About Us</a>
-          <a href="/temp">Gallery</a>
+          <!-- <a href="/temp">Gallery</a> -->
         </nav>
 
         <!-- <nav class="desktop-nav">
@@ -60,7 +61,7 @@ const base = import.meta.env.BASE_URL;
 
         <div class="head-let-us-know">
           <span>Bird Sightings?</span>
-          <a href="/temp2">Let us know</a>
+          <a href="/home">Let us know</a>
         </div>
       </header>
 

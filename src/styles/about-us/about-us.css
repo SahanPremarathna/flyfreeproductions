@@ -20,7 +20,13 @@ body {
     margin-bottom: 2vh;
     display: flex;
     align-items: center;
+    transition: 0.4s ease-in-out;
     justify-content: center;
+}
+
+.upperBg:hover{
+    transform: scale(1.02);
+
 }
 
 .upperFader {
@@ -100,6 +106,16 @@ body {
     line-height: 1.5;
 }
 
+.behind-flyfree-full-bg{
+    display: flex;
+    width: 100%;
+    background-color: rgb(244, 244, 244);
+    justify-content: center;
+    margin-bottom: 8vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
 .behind-FlyFree {
     width: 80%;
     margin-bottom: 5vh;
@@ -126,8 +142,8 @@ body {
     align-items: center;
     margin-left: 5vh;
     margin-right: 5vh;
-    border-radius: 20px;
-    background-color: rgb(244, 244, 244);
+    border-radius: 5px;
+    background-color: rgb(254, 254, 254, 0.5);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     transition: 0.2s ease;
 }
@@ -143,7 +159,7 @@ body {
 .person .person-dp {
     width: 80%;
     object-position: center;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 2vh;
 }
 
