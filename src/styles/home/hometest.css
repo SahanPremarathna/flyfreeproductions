@@ -199,15 +199,15 @@ body {
 }
 
 #panel1 {
-    background-image: url('images/home/banner1.webp');
+    background-image: url('/images/home/banner1.webp');
 }
 
 #panel2 {
-    background-image: url('images/home/banner2.webp');
+    background-image: url('/images/home/banner2.webp');
 }
 
 #panel3 {
-    background-image: url('images/home/banner3.webp');
+    background-image: url('/images/home/banner3.webp');
 }
 
 .slide-btn {
