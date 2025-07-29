@@ -1,0 +1,365 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* FULL BLACK SCREEN AT START */
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* MIDDLE LINE */
+.intro-line {
+    position: absolute;
+    width: 3px;
+    height: 0%;
+    background: rgb(56, 66, 56);
+    animation: lineGrow 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* CONTENT */
+.intro-content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    color: white;
+}
+
+/* FlyFree title — start at center, slide LEFT */
+.intro-content .big-title {
+    width: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: right;
+    /* padding-right: 2vh; */
+    transform: translateX(0);
+    opacity: 0;
+    animation: titleSlideLeft 0.9s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Paragraph — start at center, slide RIGHT */
+.intro-content p {
+    width: 50%;
+    /* padding-left: 2vh; */
+    font-size: 1.2em;
+    transform: translateX(0);
+    opacity: 0;
+    animation: paraSlideRight 0.9s ease forwards;
+    animation-delay: 1s;
+
+}
+
+/* Keyframes */
+@keyframes lineGrow {
+    to {
+        height: 50%;
+    }
+}
+
+@keyframes titleSlideLeft {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+}
+
+@keyframes paraSlideRight {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(10%);
+        opacity: 1;
+    }
+}
+
+
+.upperlogo{
+    /* display: flex; */
+    /* width: 60vh; */
+    justify-content: center;
+    align-items: center;
+    /* justify-self: center; */
+    gap: 2vh;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+
+}
+
+/* .barlogo{
+    width: 2px;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+} */
+
+.upperlogo h1{
+    text-align: center;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin: 0%;
+
+}
+
+.upperlogo p{
+    text-align: center;
+    color: white;
+    margin: 0%;
+}
+
+
+
+
+.hero-content {
+    position: relative;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.hero-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50vh;
+    /* border-radius: 5px; */
+    /* padding-bottom: 15vh; */
+    /* z-index: -1; */
+}
+
+.hero-slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-panel {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+
+}
+
+.hero-panel h1 {
+    font-size: 4em;
+    margin: 0%;
+    font-family: Arial, sans-serif;
+}
+
+.hero-panel p {
+    font-size: 1.2em;
+}
+
+.hero-panel a {
+    padding: 2vh;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 1.3em;
+    text-decoration: none;
+    background-color: rgba(24, 101, 21, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    margin-top: 2vh;
+}
+
+#panel1 {
+    background-image: url('images/home/banner1.webp');
+}
+
+#panel2 {
+    background-image: url('images/home/banner2.webp');
+}
+
+#panel3 {
+    background-image: url('images/home/banner3.webp');
+}
+
+.slide-btn {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    /* margin-top: 20vh; */
+}
+
+.slide-btn.left {
+    left: 1rem;
+}
+
+.slide-btn.right {
+    right: 1rem;
+}
+
+
+
+.second-panel {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    width: 80%;
+    justify-self: center;
+    gap: 4vh;
+}
+
+.latest-panel {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-heading{
+    width: 100%;
+}
+.latest-heading h1{
+    width: 100%;
+}
+
+.latest-video {
+    /* display: flex;
+    flex-direction: column; */
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.video-container{
+    width: 100%;
+    background-color: rgb(245, 245, 220);
+    border-radius: 5px;
+
+}
+
+
+
+.video-description {
+    width: 100%;
+    /* padding: 1vh; */
+
+    /* background-color: yellowgreen; */
+}
+
+.video-description p{
+    width: 100%;
+    text-align: justify;
+    /* font-size: 1.1em; */
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5vh;
+    padding-left: 1.5vh;
+}   
+/* .video-description p a {
+    justify-self: end;
+    align-self: flex-end;
+} */
+.black{
+    color: black;
+}
+.external-links{
+    display: flex;
+    justify-self: flex-end;
+    padding-bottom: 2vh;
+    margin-right: 2vh;
+    gap: 2vh;
+}
+
+.current-project {
+    height: 60vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-project h1{
+    
+    /* background-color: rgb(245, 245, 220); */
+    /* border: 3px rgb(44, 41, 41) dotted; */
+    text-align: center;
+
+    padding: 2vh;
+    border-radius: 5px;
+}
+
+.current-project .current-content{
+    /* height: 60vh; */
+    width: 100%;
+    /* background-color: aqua; */
+    background: radial-gradient(rgb(255, 255, 255), rgb(245, 245, 244));
+    border: 2px rgb(44, 41, 41) dotted;
+    border-radius: 20px;
+}
+
+.third-panel{
+    width: 100%;
+    justify-self: center;
+    justify-items: center;
+    background-color: rgba(244,244,244);
+}
+.third-panel-content{
+    width: 80%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        height: 40vh;
+    }
+}

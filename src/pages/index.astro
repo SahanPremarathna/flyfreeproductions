@@ -1,252 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/HomeLayout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/as.astro";
+import "../styles/home/home.css";
 ---
 
-
-
-
 <Layout>
-  <div class="content">
-    <h1>FLYFREE PRODUCTIONS</h1>
-
-    <div class="paragraph-container">
-      <span class="floating-symbol">&#x275B;</span>
+  <div class="home-content">
+    <div class="top-hero">
+      <div class="big-title"><h1>FlyFree Productions</h1></div>
       <p>
-        Discover the beauty of nature through breathtaking moments. From vibrant birds and wild creatures to stunning landscapes captured with passion.
+        Capturing the soul of Sri Lanka’s wilderness, preserving its beauty for
+        all who seek wonder beyond the ordinary.
       </p>
     </div>
 
-    <a href="/explore/" class="button-link">
-      <div class="button-wrapper">
-        <svg viewBox="0 0 600 100" class="cutout-button">
-          <defs>
-            <mask id="text-mask">
-              <rect width="100%" height="100%" fill="white" rx="60" ry="60" />
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-                font-size="55" font-family="'Bebas Neue', sans-serif" fill="black" letter-spacing="4" font-weight="900">
-                Start Exploring
-              </text>
-            </mask>
-          </defs>
-          <rect width="100%" height="100%" fill="white" mask="url(#text-mask)" rx="60" ry="60" />
-        </svg>
+    <!-- <div class="hero-wrapper">
+      <div class="hero-slider">
+        <div class="hero-panel" id="panel1">
+          <h1>Wildlife and Wilderness</h1>
+          <p>
+            Where untamed creatures roam and nature’s raw beauty unfolds, Sri
+            Lanka’s wild heart beats in harmony.
+          </p>
+          <a href="/explore">Explore with us.</a>
+        </div>
+
+        <div class="hero-panel" id="panel3">
+          <h1>The Beauty of Sri Lanka</h1>
+          <p>
+            Experience the stunning landscapes, serene lagoons, and untouched
+            wilderness that make Sri Lanka a true natural paradise.
+          </p>
+        </div>
+
+        <div class="hero-panel" id="panel2">
+          <h1>The Story Behind the Shot</h1>
+          <p>
+            Every frame holds a story — from misty dawns to patient hours in the
+            wild, where FlyFree’s journey truly begins.
+          </p>
+        </div>
       </div>
-    </a>
+
+      <button class="slide-btn left" onclick="slideLeft()">←</button>
+      <button class="slide-btn right" onclick="slideRight()">→</button>
+    </div> -->
+
+
+  <div class="temp" style="height: 100vh; background-color: white"></div>
+
 
     
   </div>
 
-  <section class="video-section">
-      <h2>Our Latest Video</h2>
-      <div class="custom-line"></div>
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/iJ4GDUDwvxU?si=vjiLEAY7IlM1H1Hb"
-          title="YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-  </section>
-  
+
+  <script src="/scripts/home/home.js" is:inline></script>
 </Layout>
-
-<style>
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    /* margin-right: 175px; */
-    padding: 20px;
-  }
-
-  h1 {
-    color: white;
-    font-size: clamp(3em, 5vw, 6em);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    
-  }
-
-  .paragraph-container {
-    position: relative;
-    width: 90%;
-    max-width: 600px;
-    margin-right: 75px;
-    margin-top: 20px;
-    /* margin-bottom: 10PX; */
-  }
-
-  .floating-symbol {
-    position: absolute;
-    top: -40px;
-    left: -50px;
-    font-size: 16em;
-    line-height: 1;
-    z-index: 2;
-    pointer-events: none;
-    color: rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-
-  .paragraph-container:hover .floating-symbol {
-    transform: scale(1.2);
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  .paragraph-container p {
-    color: white;
-    font-size: clamp(1.2em, 2.5vw, 2em);
-    /* text-align: CENTER; */
-    background-color: rgba(75, 65, 53, 0.4);
-    border-radius: 15px;
-    padding: 20px;
-    padding-right: 0px;
-    position: relative;
-    z-index: 1;
-    transition: background-color 0.3s ease;
-  }
-
-  .paragraph-container p:hover {
-    background-color: rgba(75, 65, 53, 0.6);
-  }
-
-  .button-link {
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .button-wrapper {
-    width: 90%;
-    max-width: 600px;
-    height: 100px;
-    margin-top: 45px;
-    margin-right: 70px;
-    border-radius: 60px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .button-wrapper:hover {
-    transform: scale(1.05);
-    box-shadow:
-      0 0 15px rgba(255, 255, 255, 0.15),
-      0 0 30px rgba(255, 255, 255, 0.05);
-  }
-
-  .cutout-button {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 60px;
-  }
-
-  .video-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    padding: 2rem 1rem;
-    text-align: center;
-    color: white;
-    align-self: center;
-    align-items: center;
-    
-  }
-  .video-section h2{
-    font-size: clamp(1.2em, 2.5vw, 3em);
-    margin-bottom: 20px;
-  }
-  .custom-line {
-    width: 80%;
-    height: 5px;
-    background: #fff;
-    margin: -10px auto 20px;
-    border-radius: 2px;
-  }
-
-  .video-container {
-    margin-top: 20px;
-    width: 60%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(10, 5, 5, 0.7);
-  }
-
-  .video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .content {
-      align-items: center;
-      margin-right: 0;
-      padding: 20px;
-    }
-
-    .paragraph-container {
-      margin-right: 0;
-      text-align: center;
-    }
-
-    .paragraph-container p{
-      text-align: center;
-    }
-
-    .floating-symbol {
-      font-size: 8em;
-      top: -20px;
-      left: -30px;
-    }
-
-    .button-wrapper {
-      margin-right: 0;
-      height: 90px;
-    }
-
-    .video-container {
-    margin-top: 10px;
-    width: 80%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: none;
-  }
-    .video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-
-  }
-  }
-
-  @media (max-width: 480px) {
-    .floating-symbol {
-      font-size: 6em;
-      top: -10px;
-      left: -20px;
-    }
-
-    .button-wrapper {
-      height: 80px;
-    }
-  }
-</style>
-
-
-
-
-
-
-
-
-

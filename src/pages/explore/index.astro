@@ -169,8 +169,6 @@ import "../../styles/explore/exTopPanel.css";
             </div>
         </div>
 
-
-
         <div class="all-panel" id="all-panel">
             <h1>Our Explorations</h1>
             <div class="explore-container" id="exploreContainer"></div>
@@ -178,285 +176,275 @@ import "../../styles/explore/exTopPanel.css";
     </div>
 
     <script type="module" src="/scripts/explore/map.js"></script>
-<script type="module" src="/scripts/explore/explore.js"></script>
-<script type="module">
-    import { loadExploreSections } from "/scripts/explore/exp_panell.js";
-    window.addEventListener("DOMContentLoaded", () => {
-        loadExploreSections();
-    });
-</script>
+    <script type="module" src="/scripts/explore/explore.js"></script>
+    <script type="module">
+        import { loadExploreSections } from "/scripts/explore/exp_panell.js";
+        window.addEventListener("DOMContentLoaded", () => {
+            loadExploreSections();
+        });
+    </script>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const headings = Array.from(
-            document.querySelectorAll(".heading-switch"),
-        );
-        let current = 0;
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const headings = Array.from(
+                document.querySelectorAll(".heading-switch"),
+            );
+            let current = 0;
 
-        function showHeading(index: number) {
-            headings.forEach((el, i) => {
-                if (el instanceof HTMLElement) {
-                    el.style.opacity = i === index ? "1" : "0";
-                }
-            });
-        }
-
-        showHeading(current);
-
-        setInterval(() => {
-            const currentEl = headings[current];
-            if (currentEl instanceof HTMLElement) {
-                currentEl.style.opacity = "0";
+            function showHeading(index: number) {
+                headings.forEach((el, i) => {
+                    if (el instanceof HTMLElement) {
+                        el.style.opacity = i === index ? "1" : "0";
+                    }
+                });
             }
 
-            setTimeout(() => {
-                current = (current + 1) % headings.length;
-                showHeading(current);
-            }, 750);
-        }, 4500);
-    });
-</script>
+            showHeading(current);
 
-<style>
-    body {
-        background-color: #ffffff;
-    }
+            setInterval(() => {
+                const currentEl = headings[current];
+                if (currentEl instanceof HTMLElement) {
+                    currentEl.style.opacity = "0";
+                }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        background-color: transparent;
-        height: auto;
-        /* scroll-behavior: smooth; */
-    }
+                setTimeout(() => {
+                    current = (current + 1) % headings.length;
+                    showHeading(current);
+                }, 750);
+            }, 4500);
+        });
+    </script>
 
-    .image-panel {
-        position: relative;
-        margin-top: -100px;
-        width: 100%;
-        height: 75%;
-        overflow: hidden;
-        background-color: #030201;
-    }
-
-    .image-panel img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: 1s ease;
-    }
-    .image-panel img:hover {
-        transform: scale(1.02);
-    }
-
-    .heading-switch {
-        position: absolute;
-        width: 60%;
-        top: 50%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-        font-size: clamp(3em, 5vw, 6em);
-        font-weight: 700;
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-        pointer-events: none;
-    font-family: Arial, sans-serif;
-
-    }
-
-    @media (max-width: 768px) {
-        .content {
-            background-color: transparent;
-            justify-items: center;
-            align-items: center;
-            margin-top: 40%;
+    <style>
+        body {
+            background-color: #ffffff;
         }
 
-        body {
-            background-image: url("/images/explore/sl-yala-tall.webp");
-            background-size: cover;
-            background-position: center top;
-            overscroll-behavior: none;
-            background-attachment: fixed;
+        .content {
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            height: auto;
+            /* scroll-behavior: smooth; */
         }
 
         .image-panel {
-            margin-top: 0%;
-            height: 40%;
-            background-color: transparent;
+            position: relative;
+            margin-top: -100px;
+            width: 100%;
+            height: 75vh;
+            overflow: hidden;
+            background-color: #030201;
         }
 
         .image-panel img {
-            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 1s ease;
+        }
+        .image-panel img:hover {
+            transform: scale(1.02);
         }
 
         .heading-switch {
-            width: 100%;
-            left: 50%;
-            padding: 10px;
-            font-size: clamp(4em, 5vw, 6em);
+            position: absolute;
+            width: 60%;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(3em, 5vw, 6em);
+            font-weight: 700;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            pointer-events: none;
+            font-family: Arial, sans-serif;
         }
-    }
 
-    /* styles for the content inside the content div class */
+        @media (max-width: 768px) {
+            .content {
+                background-color: transparent;
+                justify-items: center;
+                align-items: center;
+                margin-top: 40%;
+            }
 
-    .img-br-line {
-        position: relative;
-        height: 5px;
-        width: 100%;
-        margin-top: 25px;
-        margin-bottom: 40px;
-        background-color: #1b1205;
-        justify-content: center;
-        align-items: center;
-        display: flex;
+            body {
+                background-image: url("/images/explore/sl-yala-tall.webp");
+                background-size: cover;
+                background-position: center top;
+                overscroll-behavior: none;
+                background-attachment: fixed;
+            }
 
-    }
+            .image-panel {
+                margin-top: 0%;
+                height: 40%;
+                background-color: transparent;
+            }
 
-    .img-br-line h2 {
-        width: 400px;
-        position: absolute;
-        text-align: center;
-        background-color: #1b1205;
-        color: white;
-        padding: 10px;
-        border-radius: 20px;
-        transition: 1s ease;
-    font-family: Arial, sans-serif;
+            .image-panel img {
+                display: none;
+            }
 
-    }
-    .img-br-line h2:hover {
-        transform: scale(1.02);
-    }
+            .heading-switch {
+                width: 100%;
+                left: 50%;
+                padding: 10px;
+                font-size: clamp(4em, 5vw, 6em);
+            }
+        }
 
-    .all-panel {
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-self: center;
-        text-align: center;
-        width: 80%;
-        gap: 20px;
-        margin-top: 50px;
-        justify-content: center;
-    }
+        /* styles for the content inside the content div class */
 
-    .explore-container {
-        width: 100%;
-    }
-
-    .map-content {
-        display: flex;
-        flex-direction: column;
-        padding: 1%;
-        width: 100%;
-        height: auto;
-
-        margin-top: 10px;
-        height: 100vh;
-        transition: 0.6s ease;
-        background-color: rgb(255, 239, 239);
-        align-items: center;
-        position: relative;
-    }
-
-    .map-content h1 {
-        font-weight: 700;
-        margin-bottom: 2%;
-        text-align: center;
-        width: 80%;
-    /* font-family: Arial, sans-serif; */
-
-    }
-
-    #map {
-        align-self: center;
-        height: 80vh;
-        width: 80%;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-        transition: 0.3s ease;
-        z-index: 0;
-    }
-
-    #map:hover {
-        transform: scale(1.02);
-    }
-
-    .map-content::before {
-        content: "🧭 Navigate through the map by clicking the pins!";
-        position: absolute;
-        top: 15vh;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(255, 255, 255, 0.95);
-        color: #333;
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-size: 1rem;
-        z-index: 10;
-        transition: opacity 0.4s ease;
-        pointer-events: none;
-    }
-
-    /* Disappear on hover */
-    .map-content.hide-instruction::before {
-        opacity: 0;
-    }
-
-    /* mobile styles for the content that are inside the div class */
-
-    @media (max-width: 768px) {
         .img-br-line {
-            display: none;
+            position: relative;
+            height: 5px;
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 40px;
+            background-color: #1b1205;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .img-br-line h2 {
+            width: 400px;
+            position: absolute;
+            text-align: center;
+            background-color: #1b1205;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            transition: 1s ease;
+            font-family: Arial, sans-serif;
+        }
+        .img-br-line h2:hover {
+            transform: scale(1.02);
         }
 
         .all-panel {
-            width: 95%;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-self: center;
+            text-align: center;
+            width: 80%;
+            gap: 20px;
+            margin-top: 50px;
+            justify-content: center;
         }
 
         .explore-container {
-            background-color: transparent;
-        }
-
-        .subinfopanel1 .latest-exp h2 {
-            color: #000000;
-        }
-
-        .subinfopanel1 .hi-li-exp h2 {
-            color: #000000;
+            width: 100%;
         }
 
         .map-content {
+            display: flex;
+            flex-direction: column;
+            padding: 1%;
             width: 100%;
-            height: 70vh;
-            border-radius: 15px;
-            margin: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            background-color: rgb(255, 255, 255, 0.2);
+            height: auto;
+
+            margin-top: 10px;
+            height: 100vh;
+            transition: 0.6s ease;
+            background-color: rgb(255, 239, 239);
+            align-items: center;
+            position: relative;
         }
 
         .map-content h1 {
-            align-self: center;
-            color: white;
+            font-weight: 700;
+            margin-bottom: 2%;
+            text-align: center;
+            width: 80%;
+            /* font-family: Arial, sans-serif; */
         }
-    }
-</style>
 
+        #map {
+            align-self: center;
+            height: 80vh;
+            width: 80%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            transition: 0.3s ease;
+            z-index: 0;
+        }
 
+        #map:hover {
+            transform: scale(1.02);
+        }
+
+        .map-content::before {
+            content: "🧭 Navigate through the map by clicking the pins!";
+            position: absolute;
+            top: 15vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+            z-index: 10;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        /* Disappear on hover */
+        .map-content.hide-instruction::before {
+            opacity: 0;
+        }
+
+        /* mobile styles for the content that are inside the div class */
+
+        @media (max-width: 768px) {
+            .img-br-line {
+                display: none;
+            }
+
+            .all-panel {
+                width: 95%;
+                border-radius: 15px;
+                background-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px);
+            }
+
+            .explore-container {
+                background-color: transparent;
+            }
+
+            .subinfopanel1 .latest-exp h2 {
+                color: #000000;
+            }
+
+            .subinfopanel1 .hi-li-exp h2 {
+                color: #000000;
+            }
+
+            .map-content {
+                width: 100%;
+                height: 70vh;
+                border-radius: 15px;
+                margin: 20px;
+                border-radius: 15px;
+                backdrop-filter: blur(10px);
+                background-color: rgb(255, 255, 255, 0.2);
+            }
+
+            .map-content h1 {
+                align-self: center;
+                color: white;
+            }
+        }
+    </style>
 </Layout>
-
-
-
-
