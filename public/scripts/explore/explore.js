@@ -34,39 +34,39 @@ window.addEventListener('scroll', () => {
 
 
 
-// body bg img change when hovering
+// // body bg img change when hovering
 
-const wild = document.getElementById("wild-exp-bg");
-const waterfall = document.getElementById("waterfall-exp-bg");
-const beach = document.getElementById("beach-exp-bg");
-const topImg = document.getElementById("top-img");
-const panels = document.getElementById("all-panel");
+// const wild = document.getElementById("wild-exp-bg");
+// const waterfall = document.getElementById("waterfall-exp-bg");
+// const beach = document.getElementById("beach-exp-bg");
+// const topImg = document.getElementById("top-img");
+// const panels = document.getElementById("all-panel");
 
 
 
-const fader1 = document.getElementById('bg-fader-1');
-const fader2 = document.getElementById('bg-fader-2');
+// const fader1 = document.getElementById('bg-fader-1');
+// const fader2 = document.getElementById('bg-fader-2');
 
-let activeFader = fader1;
+// let activeFader = fader1;
 
-function crossfadeBackground(imageUrl) {
-  const nextFader = activeFader === fader1 ? fader2 : fader1;
+// function crossfadeBackground(imageUrl) {
+//   const nextFader = activeFader === fader1 ? fader2 : fader1;
 
-  nextFader.style.backgroundImage = imageUrl
-    ? `url('${imageUrl}')`
-    : 'linear-gradient(135deg, #ffffffff, #ffffff)';
-    // :'white';
+//   nextFader.style.backgroundImage = imageUrl
+//     ? `url('${imageUrl}')`
+//     : 'linear-gradient(135deg, #ffffffff, #ffffff)';
+//     // :'white';
 
-  nextFader.style.opacity = '1';
-  activeFader.style.opacity = '0';
+//   nextFader.style.opacity = '1';
+//   activeFader.style.opacity = '0';
 
-  activeFader = nextFader;
-}
+//   activeFader = nextFader;
+// }
 
-function clearBackground() {
-  fader1.style.opacity = '0';
-  fader2.style.opacity = '0';
-}
+// function clearBackground() {
+//   fader1.style.opacity = '0';
+//   fader2.style.opacity = '0';
+// }
 
 // wild.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/wild.webp'));
 // waterfall.addEventListener("mouseenter", () => crossfadeBackground('/images/explore/waterfall.webp'));
@@ -90,15 +90,15 @@ function clearBackground() {
 
 // mobile body bg changing js
 
-const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+// const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-topImg.addEventListener("mouseenter", () => {
-  if (isMobile) {
-    crossfadeBackground('/images/explore/sl-yala-tall.webp');
-  } else {
-    crossfadeBackground();
-  }
-});
+// topImg.addEventListener("mouseenter", () => {
+//   if (isMobile) {
+//     crossfadeBackground('/images/explore/sl-yala-tall.webp');
+//   } else {
+//     crossfadeBackground();
+//   }
+// });
 
 
 
@@ -108,13 +108,13 @@ topImg.addEventListener("mouseenter", () => {
 
 // screen top default bg mobile
 
-if (isMobile) {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY === 0) {
-      crossfadeBackground('/images/explore/sl-yala-tall.webp');
-    }
-  });
-}
+// if (isMobile) {
+//   window.addEventListener("scroll", () => {
+//     if (window.scrollY === 0) {
+//       crossfadeBackground('/images/explore/sl-yala-tall.webp');
+//     }
+//   });
+// }
 
 
 // width of the map adjusting in pc
