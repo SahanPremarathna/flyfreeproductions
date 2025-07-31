@@ -1,3 +1,48 @@
+// window.addEventListener("load", () => {
+//   // Check if intro was already shown
+//   if (sessionStorage.getItem("flyfreeIntroPlayed")) {
+//     // document.getElementById("intro-screen").remove();
+//     return; // Skip animation
+//   }
+
+//   // Mark intro as played
+//   sessionStorage.setItem("flyfreeIntroPlayed", "true");
+
+//   // Animation sequence
+//   setTimeout(() => {
+//     const intro = document.getElementById("intro-screen");
+//     intro.style.transition = "transform 1s ease, opacity 0.8s ease";
+//     intro.style.transform = "translateY(-100%)";
+//     intro.style.opacity = "0";
+
+//     setTimeout(() => intro.remove(), 1200);
+//   }, 4000);
+// });
+
+window.addEventListener("load", () => {
+    // Skip if already played
+    if (sessionStorage.getItem("flyfreeIntroPlayed")) {
+        document.getElementById("intro-screen").remove();
+        return;
+    }
+
+    // Mark as played
+    sessionStorage.setItem("flyfreeIntroPlayed", "true");
+
+    // Fade out after logo shows for 2 seconds
+    setTimeout(() => {
+        document.getElementById("intro-screen").style.opacity = "0";
+    }, 2000);
+
+    // Remove from DOM after fade completes
+    setTimeout(() => {
+        document.getElementById("intro-screen").remove();
+    }, 3000);
+});
+
+
+
+
 let currentSlide = 0;
 const slider = document.querySelector('.hero-slider');
 const totalSlides = document.querySelectorAll('.hero-panel').length;
@@ -19,18 +64,18 @@ function slideRight() {
 }
 
 // Auto-slide every 3 seconds (move panel left — next)
-let autoSlide = setInterval(slideLeft, 5000);
+let autoSlide = setInterval(slideLeft, 4600);
 
 // Left button: move panel left (previous slide)
 document.querySelector('.slide-btn.left').addEventListener('click', () => {
   clearInterval(autoSlide);
   slideLeft();
-  autoSlide = setInterval(slideLeft, 5000);
+  autoSlide = setInterval(slideLeft, 4600);
 });
 
 // Right button: move panel right (next slide)
 document.querySelector('.slide-btn.right').addEventListener('click', () => {
   clearInterval(autoSlide);
   slideRight();
-  autoSlide = setInterval(slideLeft, 5000);
+  autoSlide = setInterval(slideLeft, 4600);
 });

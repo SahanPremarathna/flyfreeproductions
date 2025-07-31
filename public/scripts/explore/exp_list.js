@@ -1,5 +1,38 @@
 export const exploreSections = [
   {
+    title: "Everything in One Place",
+    // msg: "Experience the stunning landscapes and vibrant culture of Sri Lanka.",
+    items: [
+      {
+        title: "Yala National Park",
+        image: "/images/bg1-tall.webp",
+        link: "/explore/flamingos-2025"
+      },
+      {
+        title: "Sigiriya Rock",
+        image: "/images/bg2-tall.webp",
+        link: "/explore/flamingos-2025"
+      },
+      {
+        title: "The Pink Spectacle - Flamingos Sri Lanka 2025",
+        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        link: "/explore/flamingos-2025"
+      },
+      {
+        title: "The Rhythm of VANKALAI - Where Wings Carve Stories",
+        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        link: "/explore/rhythm-of-vankalai"
+      },
+      {
+        title: "Winged Neighbours - Always Around Yet Never Truly Seen",
+        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        link: "/explore/winged-neighbours"
+      },
+      
+      
+    ]
+  },
+  {
     title: "Beauty of Sri Lanka",
     msg: "Experience the stunning landscapes and vibrant culture of Sri Lanka.",
     items: [
@@ -13,36 +46,7 @@ export const exploreSections = [
         image: "/images/bg2-tall.webp",
         link: "/explore/flamingos-2025"
       },
-      {
-        title: "Sigiriya Rock",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
-      {
-        title: "Sigiriya Rock",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
-      {
-        title: "Sigiriya Rock",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
-      {
-        title: "Sigiriya Rock",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
-      {
-        title: "Sigiriya Rock",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
-      {
-        title: "Sigiriya Rock",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
-      },
+      
       
     ]
   },
@@ -51,14 +55,19 @@ export const exploreSections = [
     msg: "Explore the untamed beauty and incredible creatures of nature.",
     items: [
       {
-        title: "Wilpattu Safari",
-        image: "/images/explore/sl-yala-tall.webp",
+        title: "The Pink Spectacle - Flamingos Sri Lanka 2025",
+        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
         link: "/explore/flamingos-2025"
       },
       {
-        title: "Minneriya Elephants",
-        image: "/images/bg2-tall.webp",
-        link: "/explore/flamingos-2025"
+        title: "The Rhythm of VANKALAI - Where Wings Carve Stories",
+        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        link: "/explore/rhythm-of-vankalai"
+      },
+      {
+        title: "Winged Neighbours - Always Around Yet Never Truly Seen",
+        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        link: "/explore/winged-neighbours"
       },
     ]
   },

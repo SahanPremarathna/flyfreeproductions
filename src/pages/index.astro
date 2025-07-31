@@ -1,57 +1,209 @@
 ---
 import Layout from "../layouts/as.astro";
 import "../styles/home/home.css";
+import "../styles/home/active-btn.css";
 ---
 
 <Layout>
-  <div class="home-content">
-    <div class="top-hero">
-      <div class="big-title"><h1>FlyFree Productions</h1></div>
-      <p>
-        Capturing the soul of Sri Lanka’s wilderness, preserving its beauty for
-        all who seek wonder beyond the ordinary.
-      </p>
+    <div id="intro-screen">
+        <img
+            src="/images/white-logo.png"
+            alt="FlyFree Logo"
+            class="intro-logo"
+        />
     </div>
 
-    <!-- <div class="hero-wrapper">
-      <div class="hero-slider">
-        <div class="hero-panel" id="panel1">
-          <h1>Wildlife and Wilderness</h1>
-          <p>
-            Where untamed creatures roam and nature’s raw beauty unfolds, Sri
-            Lanka’s wild heart beats in harmony.
-          </p>
-          <a href="/explore">Explore with us.</a>
+    <div class="hero-content">
+        <div class="hero-wrapper">
+            <div class="hero-slider">
+                <div class="hero-panel" id="panel1">
+                    <h1>Wildlife and Wilderness</h1>
+                    <!-- <p>
+                        Where untamed creatures roam and nature’s raw beauty
+                        unfolds, Sri Lanka’s wild heart beats in harmony.
+                    </p> -->
+                    <a href="/explore">Explore with us.</a>
+                </div>
+
+                <div class="hero-panel" id="panel3">
+                    <h1>The Beauty of Sri Lanka</h1>
+                    <!-- <p>
+                        Experience the stunning landscapes, serene lagoons, and
+                        untouched wilderness that make Sri Lanka a true natural
+                        paradise.
+                    </p> -->
+                    <a href="/explore">Explore with us.</a>
+                </div>
+
+                <div class="hero-panel" id="panel2">
+                    <h1>The Story Behind the Shot</h1>
+                    <!-- <p>
+                        Every frame holds a story — from misty dawns to patient
+                        hours in the wild, where FlyFree’s journey truly begins.
+                    </p> -->
+                    <a href="/explore">Explore with us.</a>
+                </div>
+            </div>
+
+            <button class="slide-btn left" onclick="slideLeft()">←</button>
+            <button class="slide-btn right" onclick="slideRight()">→</button>
         </div>
 
-        <div class="hero-panel" id="panel3">
-          <h1>The Beauty of Sri Lanka</h1>
-          <p>
-            Experience the stunning landscapes, serene lagoons, and untouched
-            wilderness that make Sri Lanka a true natural paradise.
-          </p>
+        <div
+            class="temp"
+            style="height: 2vh; background-color: rgb(244, 244, 244)"
+        >
+        </div>
+    </div>
+
+    <div class="second-panel">
+        <div class="latest-panel">
+            <div class="latest-heading">
+                <h1>Check out our Latest Exploration</h1>
+            </div>
+            <div class="latest-video">
+                <h2>The Rhythm of Vankalai</h2>
+
+                <div class="video-container">
+                    <a href="/explore/rhythm-of-vankalai" class="vid-link">
+                        <div class="thumbnail-wrapper">
+                            <img
+                                src="/images/explore/flamingos-2025/flamingo-banner.webp"
+                                alt="Rhythm of Vankalai Thumbnail"
+                                class="thumbnail-img"
+                            />
+                            <div class="vid-overlay">
+                                <div class="vid-text">
+                                    Read the full Exploration...
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="video-description">
+                        <p>
+                            The Rhythm of Vankalai is a poetic short documentary
+                            that captures the tranquil beauty of birdlife in the
+                            Vankalei Lagoon, Mannar. Set against the calm
+                            backdrop of still waters and golden morning light,
+                            the film highlights the graceful movements and
+                            natural rhythm of the lagoon’s winged residents. The
+                            following bird species are featured in this visual
+                            journey.
+                        </p>
+                        <div class="external-links">
+                            <a href="/explore/rhythm-of-vankalai" class="black"
+                                >Read our full Exploration</a
+                            >
+                            <a
+                                href="https://www.youtube.com/watch?v=f5ZqP-a70VA"
+                                class="black"
+                                target="_blank"
+                                rel="noopener noreferrer">Watch Youtube Video</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="hero-panel" id="panel2">
-          <h1>The Story Behind the Shot</h1>
-          <p>
-            Every frame holds a story — from misty dawns to patient hours in the
-            wild, where FlyFree’s journey truly begins.
-          </p>
+        <div class="current-project">
+            <h1>Stories in Motion</h1>
+
+            <div class="current-panel">
+                <h2>What's Happening Now</h2>
+                <div class="current-content">
+                    <ul>
+                        <li>hi</li>
+                        <li>hi</li>
+                        <li>hi</li>
+                    </ul>
+                </div>
+                <h2>What's Coming Next</h2>
+                <div class="current-content">
+                    <ul>
+                        <li>hi</li>
+                        <li>hi</li><li>hi</li>
+                        <li>hi</li><li>hi</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <button class="slide-btn left" onclick="slideLeft()">←</button>
-      <button class="slide-btn right" onclick="slideRight()">→</button>
-    </div> -->
+    <div class="third-panel">
+        <section class="latest-tips">
+            <div class="latest-header">
+                <h2>Latest from Behind the Lens</h2>
+                <a href="/blog" class="view-all">View All →</a>
+            </div>
 
+            <div class="latest-grid">
+                <!-- Tip Card -->
+                <article class="tip-card">
+                    <!-- <img src="/images/sample-tip-1.jpg" alt="Bird photography tip"> -->
+                    <img
+                        src="/images/blog/How-to-Capture-Birds-in-Flight-Like-a-Pro/img3.webp"
+                        alt="Bird photography tip"
+                    />
 
-  <div class="temp" style="height: 100vh; background-color: white"></div>
+                    <div class="tip-content">
+                        <span class="category">Wildlife Photography</span>
+                        <h3>
+                            <a
+                                href="/blog/How-to-Capture-Birds-in-Flight-Like-a-Pro"
+                                >How to Capture Birds in Flight Like a Pro</a
+                            >
+                        </h3>
+                    </div>
+                </article>
 
+                <!-- Tip Card -->
+                <article class="tip-card">
+                    <!-- <img src="/images/sample-tip-2.jpg" alt="Drone video tip"> -->
+                    <img
+                        src="/images/blog/3-Ways-to-Get-Smooth-Cinematic-Drone-Shots/img3.webp"
+                        alt="Drone video tip"
+                    />
+                    <div class="tip-content">
+                        <span class="category">Drone Videography</span>
+                        <h3>
+                            <a
+                                href="/blog/3-Ways-to-Get-Smooth-Cinematic-Drone-Shots"
+                                >3 Ways to Get Smooth Cinematic Drone Shots</a
+                            >
+                        </h3>
+                    </div>
+                </article>
 
-    
-  </div>
+                <!-- Tip Card -->
+                <article class="tip-card">
+                    <!-- <img src="/images/sample-tip-3.jpg" alt="Editing workflow"> -->
+                    <img
+                        src="/images/blog/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve/img3.webp"
+                        alt="Editing workflow"
+                    />
 
+                    <div class="tip-content">
+                        <span class="category">Editing</span>
+                        <h3>
+                            <a
+                                href="/blog/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve"
+                                >Beginner's Guide to Color Grading Nature
+                                Footage in DaVinci Resolve</a
+                            >
+                        </h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
 
-  <script src="/scripts/home/home.js" is:inline></script>
+    <div
+        class="footer"
+        style="height: 20vh; background-color: rgb(244, 244, 244)"
+    >
+    </div>
+<script src="/scripts/home/home.js" is:inline></script>
+
 </Layout>
+
