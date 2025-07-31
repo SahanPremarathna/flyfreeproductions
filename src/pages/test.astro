@@ -5,7 +5,7 @@ import "../styles/home/active-btn.css";
 ---
 
 <Layout>
-    <div id="intro-screen">
+    <!-- <div id="intro-screen">
         <div class="intro-line"></div>
         <div class="intro-content">
             <div class="big-title"><h1>FlyFree Productions</h1></div>
@@ -14,6 +14,31 @@ import "../styles/home/active-btn.css";
                 its beauty for all who seek wonder beyond the ordinary.
             </p>
         </div>
+    </div> -->
+    <!-- <div id="intro-screen">
+        <div class="intro-line"></div>
+        <div class="intro-line-mobile"></div>
+
+        <div class="intro-content">
+            <div class="big-title">
+                <h1>
+                    <span class="flyfree-text">FLYFREE</span>
+                    <span class="productions-text">Productions</span>
+                </h1>
+            </div>
+            <p>
+                Capturing the soul of Sri Lanka’s wilderness. <br />Preserving
+                its beauty for all who seek wonder beyond the ordinary.
+            </p>
+        </div>
+    </div> -->
+
+    <div id="intro-screen">
+        <img
+            src="/images/white-logo.png"
+            alt="FlyFree Logo"
+            class="intro-logo"
+        />
     </div>
 
     <div class="hero-content">
@@ -65,68 +90,22 @@ import "../styles/home/active-btn.css";
     </div>
 
     <div class="second-panel">
-        <!-- <div class="latest-panel">
-            <div class="title-with-vid">
-                <h1>Our Latest Video</h1>
-                <div class="latest-video">
-                    <a
-                        href="https://www.youtube.com/watch?v=f5ZqP-a70VA"
-                        class="yt-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="thumbnail-wrapper">
-                            <img
-                                src="https://img.youtube.com/vi/f5ZqP-a70VA/maxresdefault.jpg"
-                                alt="Rhythm of Vankalai Thumbnail"
-                                class="thumbnail-img"
-                            />
-                            <div class="yt-overlay">
-                                <div class="yt-triangle"></div>
-                                <div class="yt-text">Watch on YouTube</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="latest-description">
-                <p>
-                    The Rhythm of Vankalai is a poetic short documentary that
-                    captures the tranquil beauty of birdlife in the Vankalei
-                    Lagoon, Mannar. Set against the calm backdrop of still
-                    waters and golden morning light, the film highlights the
-                    graceful movements and natural rhythm of the lagoon’s winged
-                    residents. The following bird species are featured in this
-                    visual journey
-                </p>
-            </div>
-        </div>
-        <div class="current-project"></div> -->
-
         <div class="latest-panel">
             <div class="latest-heading">
                 <h1>Check out our Latest Exploration</h1>
             </div>
             <div class="latest-video">
-                <a href="/explore/flamingos-2025">
-                    <h2 class="black">The Rhythm of Vankalai</h2></a
-                >
+                <h2>The Rhythm of Vankalai</h2>
+
                 <div class="video-container">
                     <a href="/explore/flamingos-2025" class="vid-link">
                         <div class="thumbnail-wrapper">
-                            <!-- <img
-                                src="https://img.youtube.com/vi/f5ZqP-a70VA/maxresdefault.jpg"
-                                alt="Rhythm of Vankalai Thumbnail"
-                                class="thumbnail-img"
-                            /> -->
                             <img
                                 src="/images/flamingo/flamingo-banner.webp"
                                 alt="Rhythm of Vankalai Thumbnail"
                                 class="thumbnail-img"
                             />
                             <div class="vid-overlay">
-                                <!-- <div class="yt-triangle"></div>
-                                <div>📖</div> -->
                                 <div class="vid-text">
                                     Read the full Exploration...
                                 </div>
@@ -143,11 +122,6 @@ import "../styles/home/active-btn.css";
                             natural rhythm of the lagoon’s winged residents. The
                             following bird species are featured in this visual
                             journey.
-                            <!-- <br><br><a href="/explore/flamingos-2025"
-                                ><span class="black"
-                                    > Read our full Exploration</span
-                                ></a
-                            >  -->
                         </p>
                         <div class="external-links">
                             <a href="/explore/flamingos-2025" class="black"
@@ -162,32 +136,29 @@ import "../styles/home/active-btn.css";
                         </div>
                     </div>
                 </div>
-                <!-- <div class="video-description">
-                    <h3>Description</h3>
-                    <p>
-                        The Rhythm of Vankalai is a poetic short documentary
-                        that captures the tranquil beauty of birdlife in the
-                        Vankalei Lagoon, Mannar. Set against the calm backdrop
-                        of still waters and golden morning light, the film
-                        highlights the graceful movements and natural rhythm of
-                        the lagoon’s winged residents. The following bird
-                        species are featured in this visual journey
-                    </p>
-                </div> -->
             </div>
         </div>
+
         <div class="current-project">
-            <h1>What's Happening Now</h1>
-            <div class="current-content">
-                <ul>
-                    <li>hi</li>
-                </ul>
-            </div>
-            <h1>What's Coming Next</h1>
-            <div class="current-content">
-                <ul>
-                    <li>hi</li>
-                </ul>
+            <h1>Stories in Motion</h1>
+
+            <div class="current-panel">
+                <h2>What's Happening Now</h2>
+                <div class="current-content">
+                    <ul>
+                        <li>hi</li>
+                        <li>hi</li>
+                        <li>hi</li>
+                    </ul>
+                </div>
+                <h2>What's Coming Next</h2>
+                <div class="current-content">
+                    <ul>
+                        <li>hi</li>
+                        <li>hi</li><li>hi</li>
+                        <li>hi</li><li>hi</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -215,8 +186,10 @@ import "../styles/home/active-btn.css";
                     <div class="tip-content">
                         <span class="category">Wildlife Photography</span>
                         <h3>
-                            <a href="/blog/bird-photography-tips"
-                                >How to Capture Birds in Flight Like a Pro</a>
+                            <a
+                                href="/blog/How-to-Capture-Birds-in-Flight-Like-a-Pro"
+                                >How to Capture Birds in Flight Like a Pro</a
+                            >
                         </h3>
                     </div>
                 </article>
@@ -231,8 +204,10 @@ import "../styles/home/active-btn.css";
                     <div class="tip-content">
                         <span class="category">Drone Videography</span>
                         <h3>
-                            <a href="/blog/smooth-drone-shots"
-                                >3 Ways to Get Smooth Cinematic Drone Shots</a>
+                            <a
+                                href="/blog/3-Ways-to-Get-Smooth-Cinematic-Drone-Shots"
+                                >3 Ways to Get Smooth Cinematic Drone Shots</a
+                            >
                         </h3>
                     </div>
                 </article>
@@ -248,8 +223,11 @@ import "../styles/home/active-btn.css";
                     <div class="tip-content">
                         <span class="category">Editing</span>
                         <h3>
-                            <a href="/blog/color-grading-nature"
-                                >Color Grading Nature Footage in DaVinci Resolve</a>
+                            <a
+                                href="/blog/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve"
+                                >Beginner's Guide to Color Grading Nature
+                                Footage in DaVinci Resolve</a
+                            >
                         </h3>
                     </div>
                 </article>

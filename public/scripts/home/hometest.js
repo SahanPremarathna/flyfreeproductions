@@ -1,23 +1,45 @@
+// window.addEventListener("load", () => {
+//   // Check if intro was already shown
+//   if (sessionStorage.getItem("flyfreeIntroPlayed")) {
+//     // document.getElementById("intro-screen").remove();
+//     return; // Skip animation
+//   }
+
+//   // Mark intro as played
+//   sessionStorage.setItem("flyfreeIntroPlayed", "true");
+
+//   // Animation sequence
+//   setTimeout(() => {
+//     const intro = document.getElementById("intro-screen");
+//     intro.style.transition = "transform 1s ease, opacity 0.8s ease";
+//     intro.style.transform = "translateY(-100%)";
+//     intro.style.opacity = "0";
+
+//     setTimeout(() => intro.remove(), 1200);
+//   }, 4000);
+// });
+
 window.addEventListener("load", () => {
-  // Check if intro was already shown
-  if (sessionStorage.getItem("flyfreeIntroPlayed")) {
-    document.getElementById("intro-screen").remove();
-    return; // Skip animation
-  }
+    // Skip if already played
+    if (sessionStorage.getItem("flyfreeIntroPlayed")) {
+        document.getElementById("intro-screen").remove();
+        return;
+    }
 
-  // Mark intro as played
-  sessionStorage.setItem("flyfreeIntroPlayed", "true");
+    // Mark as played
+    sessionStorage.setItem("flyfreeIntroPlayed", "true");
 
-  // Animation sequence
-  setTimeout(() => {
-    const intro = document.getElementById("intro-screen");
-    intro.style.transition = "transform 1s ease, opacity 0.8s ease";
-    intro.style.transform = "translateY(-100%)";
-    intro.style.opacity = "0";
+    // Fade out after logo shows for 2 seconds
+    setTimeout(() => {
+        document.getElementById("intro-screen").style.opacity = "0";
+    }, 2000);
 
-    setTimeout(() => intro.remove(), 1200);
-  }, 4000);
+    // Remove from DOM after fade completes
+    setTimeout(() => {
+        document.getElementById("intro-screen").remove();
+    }, 3000);
 });
+
 
 
 
