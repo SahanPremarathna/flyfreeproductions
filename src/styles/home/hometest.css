@@ -359,11 +359,16 @@ body {
 
     .current-project {
         display: flex;
-        width: 100%;
+        width: 90%;
         align-items: center;
         justify-content: center;
+        align-self: center;
+        padding: 0%;
         margin: auto;
-        /* margin-top: -10vh; */
+    }
+
+    .current-panel{
+        width: 100%;
     }
 
     .current-content {
