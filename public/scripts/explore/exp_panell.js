@@ -1,4 +1,4 @@
-    import { exploreSections } from './exp_list.js';
+import { exploreSections } from './exp_list.js';
 
 
 
@@ -13,8 +13,16 @@ export function loadExploreSections() {
     const sectionDiv = document.createElement("div");
     sectionDiv.classList.add("category-section");
 
+    // const title = document.createElement("h2");
+    // title.textContent = section.title;
+    // sectionDiv.appendChild(title);
     const title = document.createElement("h2");
     title.textContent = section.title;
+
+    // Generate a clean ID for anchor navigation
+    const sectionId = section.title.toLowerCase().replace(/[^\w]+/g, '-').replace(/^-+|-+$/g, '');
+    title.id = sectionId;
+
     sectionDiv.appendChild(title);
 
     const message = document.createElement("p");

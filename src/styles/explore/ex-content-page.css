@@ -42,7 +42,7 @@
         }
 
         body{
-            background-image: url("/images/flamingo/flamingo-banner.webp");
+            /* background-image: url("/images/explore/flamingos-2025/flamingo-banner.webp"); */
             background-size: cover;
             background-position: center top;
             overscroll-behavior: none;
@@ -83,10 +83,17 @@
     #title-img-box h1{
         border: 2px solid rgb(240, 240, 240);
         backdrop-filter: blur(10px);
-        padding: 5px;
+        padding: 2vh;
         font-size: clamp(2em, 1vw, 3em);;
     font-family: Arial, sans-serif;
+        line-height: 0.7;
+        border-radius: 5px;
 
+
+    }
+
+    #title-img-box h1 span{
+        font-size: 0.6em;
     }
 
     p{
@@ -341,6 +348,7 @@
             background-color: transparent;
             border-radius: 10px;
             padding: 5px;
+            line-height: 1.2;
         }
 
         .mainpara{

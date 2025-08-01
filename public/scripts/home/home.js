@@ -19,6 +19,12 @@
 //   }, 4000);
 // });
 
+const latestPanel = document.getElementById("latest-vid-panel");
+latestPanel.addEventListener("click", () =>{
+  window.location.href = "explore/rhythm-of-vankalai";
+});
+
+
 window.addEventListener("load", () => {
     // Skip if already played
     if (sessionStorage.getItem("flyfreeIntroPlayed")) {

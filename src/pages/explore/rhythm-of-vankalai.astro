@@ -1,117 +1,606 @@
 ---
-import Layout from '../../layouts/as.astro';
+import Layout from "../../layouts/as.astro";
 import "../../styles/explore/ex-content-page.css";
+import "../../styles/explore/animalsPanels.css";
 ---
 
-<Layout title="Flamingos - 2025">
+<Layout title="The Rhythm of Vankalai - 2025">
     <div class="ex-content">
+        <!-- Banner -->
         <div id="title-img-box">
-            <img src="/images/flamingo/flamingo-banner.webp" alt="banner">
-            <h1>The Rhythm Of Vankalai - Where Wings Carve Stories</h1>
+            <img
+                src="/images/explore/rhythm-of-vankalai/vankalai-banner.webp"
+                alt="Vankalai Lagoon Banner"
+            />
+            <h1>THE RHYTHM OF VANKALAI <br> <span>Where Wings Carve Stories</span></h1>
         </div>
 
-    
+        <!-- Intro -->
         <div class="mainpara">
-
-            <p >
-            Flamingos are iconic birds that migrate to Sri Lanka every year,
-            arriving between November and April to the northern region of Mannar.
-            This area is one of the few places where you can see them in their natural habitat.
-            In 2025, we had the amazing chance to film these elegant birds up close
-            for our very first wildlife documentary. A journey full of learning and inspiration.
+            <p>
+                <em>The Rhythm of Vankalai</em> is a poetic short documentary capturing
+                the tranquil beauty of birdlife in the Vankalai Lagoon, Mannar —
+                a Ramsar Wetland of International Importance. Against still waters
+                and golden morning light, the lagoon’s winged residents move in harmony,
+                creating a timeless dance of nature. This sanctuary is home to both
+                resident and migratory birds, offering a glimpse into a world where
+                peace still lingers.
             </p>
         </div>
-        
 
-        <a href="https://www.youtube.com/watch?v=f5ZqP-a70VA" target="_blank" rel="noopener" class="subscribe-link" id="sub">
+        <!-- Subscribe -->
+        <a
+            href="https://www.youtube.com/watch?v=iJ4GDUDwvxU"
+            target="_blank"
+            rel="noopener"
+            class="subscribe-link"
+            id="sub"
+        >
             <div class="subscribe">
                 <span class="subscribe-btn">Add a Like & Subscribe</span>
-                <svg width="70" height="46" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 10px;">
-                <rect x="0" y="0" width="100" height="70" rx="15" ry="15" fill="white" />
-                <polygon points="40,20 70,35 40,50" fill="#FF0000" />
+                <svg
+                    width="70"
+                    height="46"
+                    viewBox="0 0 100 70"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="vertical-align: middle; margin-left: 10px;"
+                >
+                    <rect
+                        x="0"
+                        y="0"
+                        width="100"
+                        height="70"
+                        rx="15"
+                        ry="15"
+                        fill="white"></rect>
+                    <polygon points="40,20 70,35 40,50" fill="#FF0000"
+                    ></polygon>
                 </svg>
             </div>
         </a>
 
+        <!-- Featured Birds -->
+        <section class="featured-birds">
+            <h2>Featured Birds of Vankalai</h2>
+            <!-- <div class="bird-grid">
+                <div
+                    class="bird-card"
+                    data-name="Great Egret"
+                    data-desc="A tall, elegant wader with striking white plumage, often seen fishing in shallow waters."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/greategret.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@vincentvanzalinge?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" >Vincent van Zalinge</a> on <a href="https://unsplash.com/photos/shallow-photography-of-white-bird-QVZwcdN_hNg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/greategret-small.webp"
+                        alt="Great Egret"
+                    />
+                    <span>Great Egret</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Grey Heron"
+                    data-desc="A large, long-legged heron that patiently stalks fish in the lagoon’s calm edges."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/greyheron.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@puck06?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Anne Zwagers</a> on <a href="https://unsplash.com/photos/gray-and-white-crane-bird-qEhP2A3wNYM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/greyheron-small.webp"
+                        alt="Grey Heron"
+                    />
+                    <span>Grey Heron</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Little Egret"
+                    data-desc="Small and agile, with fine black legs and bright yellow feet, known for quick movements."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/littleegret.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@brewbottle?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bob Brewer</a> on <a href="https://unsplash.com/photos/white-bird-flying-over-body-of-water-during-daytime-yKyxRKjLJ2E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/littleegret-small.webp"
+                        alt="Little Egret"
+                    />
+                    <span>Little Egret</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black-winged Stilt"
+                    data-desc="Graceful wader with long pink legs and contrasting black-and-white plumage."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/stilt.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@mooncolonytn60?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Niranjan Venkatesh</a> on <a href="https://unsplash.com/photos/white-and-black-bird-on-body-of-water-during-daytime-J0MOOC7wh9Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/stilt-small.webp"
+                        alt="Black-winged Stilt"
+                    />
+                    <span>Black-winged Stilt</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Spot-billed Duck"
+                    data-desc="A dabbling duck with a distinctive yellow-tipped bill and soft brown plumage."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/spotbilled.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@_am?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">A M</a> on <a href="https://unsplash.com/photos/a-duck-floating-on-top-of-a-body-of-water-aPq9penJngo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/spotbilled-small.webp"
+                        alt="Spot-billed Duck"
+                    />
+                    <span>Spot-billed Duck</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Lesser Whistling Duck"
+                    data-desc="A warm-brown duck that makes a soft whistling call while flying in flocks."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/lesserwhistling.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@arnab_dey_photography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arnab Dey</a> on <a href="https://unsplash.com/photos/a-couple-of-ducks-standing-on-top-of-a-grass-covered-field-Z-xp81Kyf_A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/lesserwhistling-small.webp"
+                        alt="Lesser Whistling Duck"
+                    />
+                    <span>Lesser Whistling Duck</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black-headed Ibis"
+                    data-desc="A striking bird with a bare black head and long, downward-curved bill."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/ibis.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@sonika_agarwal?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sonika Agarwal</a> on <a href="https://unsplash.com/photos/white-stork-on-water-during-daytime-pXRAUkxc79A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/ibis-small.webp"
+                        alt="Black-headed Ibis"
+                    />
+                    <span>Black-headed Ibis</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Eurasian Spoonbill"
+                    data-desc="Easily identified by its spoon-shaped bill used for sweeping through water for prey."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/spoonbill.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> on <a href="https://unsplash.com/photos/three-white-birds-are-standing-in-the-water-aVMMlnCu6Cw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/spoonbill-small.webp"
+                        alt="Eurasian Spoonbill"
+                    />
+                    <span>Eurasian Spoonbill</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Painted Stork"
+                    data-desc="A colourful stork with pink tertial feathers and a long yellow bill. "
+                    data-img="/images/explore/rhythm-of-vankalai/birds/painted.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@mhphotography13?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer">Mosharraf Hossain</a> on <a href="https://unsplash.com/photos/a-bird-with-a-long-neck-standing-in-a-body-of-water-6Rk2Blq5IIM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/painted-small.webp"
+                        alt="Painted Stork"
+                    />
+                    <span>Painted Stork</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Spot-billed Pelican"
+                    data-desc="Large pelican with a greyish-white body and a huge bill for scooping fish."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/pelican.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@mhphotography13?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mosharraf Hossain</a> on <a href="https://unsplash.com/photos/a-bird-with-a-long-beak-sitting-on-top-of-a-tree-m3dana7PJX4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/pelican-small.webp"
+                        alt="Spot-billed Pelican"
+                    />
+                    <span>Spot-billed Pelican</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Brown-headed Gull"
+                    data-desc="A migratory gull with a chocolate-brown head in breeding season."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/brownheadedgull.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@rtromp17?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">fred tromp</a> on <a href="https://unsplash.com/photos/a-large-white-bird-flying-through-a-blue-sky-FrQTmKCNEr8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/brownheadedgull-small.webp"
+                        alt="Brown-headed Gull"
+                    />
+                    <span>Brown-headed Gull</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Wood Sandpiper"
+                    data-desc="Small wader with long legs, often seen actively foraging in shallow waters."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/woodsandpiper.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@kadava?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lukáš Kadava</a> on <a href="https://unsplash.com/photos/a-couple-of-birds-standing-on-top-of-a-body-of-water--2NWHHcJw_U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/woodsandpiper-small.webp"
+                        alt="Wood Sandpiper"
+                    />
+                    <span>Wood Sandpiper</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Indian Cormorant"
+                    data-desc="A diving bird with a hooked bill, often seen drying its wings in the sun."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/indiancormorant.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@shijinkamalon?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Shijin K</a> on <a href="https://unsplash.com/photos/a-bird-with-wings-spread-on-water-fL2IRuyvVr0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      '
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/indiancormorant-small.webp"
+                        alt="Indian Cormorant"
+                    />
+                    <span>Indian Cormorant</span>
+                </div>
+            </div> -->
+            <div class="bird-grid">
+                <div
+                    class="bird-card"
+                    data-name="Great Egret"
+                    data-desc="A tall, elegant wader with striking white plumage, often seen fishing in shallow waters."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/greategret.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@vincentvanzalinge" target="_blank" rel="noopener">Vincent van Zalinge</a> on <a href="https://unsplash.com/photos/shallow-photography-of-white-bird-QVZwcdN_hNg" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/greategret-small.webp"
+                        alt="Great Egret"
+                    />
+                    <span>Great Egret</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Grey Heron"
+                    data-desc="A large, long-legged heron that patiently stalks fish in the lagoon’s calm edges."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/greyheron.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@puck06" target="_blank" rel="noopener">Anne Zwagers</a> on <a href="https://unsplash.com/photos/gray-and-white-crane-bird-qEhP2A3wNYM" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/greyheron-small.webp"
+                        alt="Grey Heron"
+                    />
+                    <span>Grey Heron</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Little Egret"
+                    data-desc="Small and agile, with fine black legs and bright yellow feet, known for quick movements."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/littleegret.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@brewbottle" target="_blank" rel="noopener">Bob Brewer</a> on <a href="https://unsplash.com/photos/white-bird-flying-over-body-of-water-during-daytime-yKyxRKjLJ2E" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/littleegret-small.webp"
+                        alt="Little Egret"
+                    />
+                    <span>Little Egret</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black-winged Stilt"
+                    data-desc="Graceful wader with long pink legs and contrasting black-and-white plumage."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/stilt.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@mooncolonytn60" target="_blank" rel="noopener">Niranjan Venkatesh</a> on <a href="https://unsplash.com/photos/white-and-black-bird-on-body-of-water-during-daytime-J0MOOC7wh9Y" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/stilt-small.webp"
+                        alt="Black-winged Stilt"
+                    />
+                    <span>Black-winged Stilt</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Spot-billed Duck"
+                    data-desc="A dabbling duck with a distinctive yellow-tipped bill and soft brown plumage."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/spotbilled.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@_am" target="_blank" rel="noopener">A M</a> on <a href="https://unsplash.com/photos/a-duck-floating-on-top-of-a-body-of-water-aPq9penJngo" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/spotbilled-small.webp"
+                        alt="Spot-billed Duck"
+                    />
+                    <span>Spot-billed Duck</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Lesser Whistling Duck"
+                    data-desc="A warm-brown duck that makes a soft whistling call while flying in flocks."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/lesserwhistling.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@arnab_dey_photography" target="_blank" rel="noopener">Arnab Dey</a> on <a href="https://unsplash.com/photos/a-couple-of-ducks-standing-on-top-of-a-grass-covered-field-Z-xp81Kyf_A" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/lesserwhistling-small.webp"
+                        alt="Lesser Whistling Duck"
+                    />
+                    <span>Lesser Whistling Duck</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black-headed Ibis"
+                    data-desc="A striking bird with a bare black head and long, downward-curved bill."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/ibis.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@sonika_agarwal" target="_blank" rel="noopener">Sonika Agarwal</a> on <a href="https://unsplash.com/photos/white-stork-on-water-during-daytime-pXRAUkxc79A" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/ibis-small.webp"
+                        alt="Black-headed Ibis"
+                    />
+                    <span>Black-headed Ibis</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Eurasian Spoonbill"
+                    data-desc="Easily identified by its spoon-shaped bill used for sweeping through water for prey."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/spoonbill.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@anniespratt" target="_blank" rel="noopener">Annie Spratt</a> on <a href="https://unsplash.com/photos/three-white-birds-are-standing-in-the-water-aVMMlnCu6Cw" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/spoonbill-small.webp"
+                        alt="Eurasian Spoonbill"
+                    />
+                    <span>Eurasian Spoonbill</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Painted Stork"
+                    data-desc="A colourful stork with pink tertial feathers and a long yellow bill. "
+                    data-img="/images/explore/rhythm-of-vankalai/birds/painted.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@mhphotography13" target="_blank" rel="noopener">Mosharraf Hossain</a> on <a href="https://unsplash.com/photos/a-bird-with-a-long-neck-standing-in-a-body-of-water-6Rk2Blq5IIM" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/painted-small.webp"
+                        alt="Painted Stork"
+                    />
+                    <span>Painted Stork</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Spot-billed Pelican"
+                    data-desc="Large pelican with a greyish-white body and a huge bill for scooping fish."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/pelican.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@mhphotography13" target="_blank" rel="noopener">Mosharraf Hossain</a> on <a href="https://unsplash.com/photos/a-bird-with-a-long-beak-sitting-on-top-of-a-tree-m3dana7PJX4" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/pelican-small.webp"
+                        alt="Spot-billed Pelican"
+                    />
+                    <span>Spot-billed Pelican</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Brown-headed Gull"
+                    data-desc="A migratory gull with a chocolate-brown head in breeding season."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/brownheadedgull.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@rtromp17" target="_blank" rel="noopener">fred tromp</a> on <a href="https://unsplash.com/photos/a-large-white-bird-flying-through-a-blue-sky-FrQTmKCNEr8" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/brownheadedgull-small.webp"
+                        alt="Brown-headed Gull"
+                    />
+                    <span>Brown-headed Gull</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Wood Sandpiper"
+                    data-desc="Small wader with long legs, often seen actively foraging in shallow waters."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/woodsandpiper.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@kadava" target="_blank" rel="noopener">Lukáš Kadava</a> on <a href="https://unsplash.com/photos/a-couple-of-birds-standing-on-top-of-a-body-of-water--2NWHHcJw_U" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/woodsandpiper-small.webp"
+                        alt="Wood Sandpiper"
+                    />
+                    <span>Wood Sandpiper</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Indian Cormorant"
+                    data-desc="A diving bird with a hooked bill, often seen drying its wings in the sun."
+                    data-img="/images/explore/rhythm-of-vankalai/birds/indiancormorant.webp"
+                    data-credit='Photo by <a href="https://unsplash.com/@shijinkamalon" target="_blank" rel="noopener">Shijin K</a> on <a href="https://unsplash.com/photos/a-bird-with-wings-spread-on-water-fL2IRuyvVr0" target="_blank" rel="noopener">Unsplash</a>'
+                >
+                    <img
+                        src="/images/explore/rhythm-of-vankalai/birds/indiancormorant-small.webp"
+                        alt="Indian Cormorant"
+                    />
+                    <span>Indian Cormorant</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="bird-lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <button class="lightbox-prev">&#10094;</button>
+                <div class="lightbox-image-container">
+                    <img id="lightbox-img" src="" alt="" />
+                    <div class="lightbox-caption">
+                        <h3 id="lightbox-title"></h3>
+                        <p id="lightbox-desc"></p>
+                        <div id="lightbox-credit" class="photo-credit"></div>
+                    </div>
+                </div>
+                <button class="lightbox-next">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Visit Tips -->
         <div class="steps">
             <div class="contentSteps">
-                <h2>Planning Your Flamingo Visit to Mannar?</h2>
-                <p id="stepsPara">If you're heading to Mannar to witness the flamingos, 
-                    here are a few key things to keep in mind for a successful and respectful experience:
+                <h2>Planning Your Visit to Vankalai Lagoon?</h2>
+                <p id="stepsPara">
+                    Whether you’re a photographer, filmmaker, or nature lover,
+                    these tips will help you enjoy the lagoon while protecting
+                    its fragile ecosystem:
                 </p>
                 <ul>
                     <li>
-                        <h4>Arrive Early, Before Sunrise</h4>
-                        <p>Be there by <strong>5:00 AM</strong> at the latest. Flamingos are early risers, and the golden morning light creates a magical atmosphere over the lagoon, perfect for viewing and photography.</p>
+                        <h4>Arrive Before Sunrise</h4>
+                        <p>
+                            The first light of day casts a magical golden glow
+                            over the lagoon, with calm winds and active
+                            birdlife. Aim to be there by <strong>5:00 AM</strong
+                            >.
+                        </p>
                     </li>
-                    
                     <li>
-                        <h4>Do Your Research</h4>
-                        <p>Learn about flamingo behavior before your visit. These birds tend to follow consistent routines, and understanding their patterns will greatly improve your chances of spotting them without causing disruption.</p>
+                        <h4>Research Bird Behavior</h4>
+                        <p>
+                            Understanding species habits helps you anticipate
+                            their movements without disturbing them.
+                        </p>
                     </li>
-                    
                     <li>
-                        <h4>Consider Hiring a Local Guide</h4>
-                        <p>Local guides are familiar with the best access points to the lagoon banks and understand the movement patterns of the flamingos. A guide can greatly enhance your experience while helping minimize disturbance to the birds.</p>
+                        <h4>Hire a Local Guide</h4>
+                        <p>
+                            Guides know the best spots and can share insights
+                            about the lagoon’s wildlife and history.
+                        </p>
                     </li>
-                    
                     <li>
-                        <h4>Be Patient and Respectful</h4>
-                        <p>Flamingos are highly sensitive to their environment. If they sense human presence too closely, they may retreat to the middle of the lagoon and remain there for the entire day. It's better to wait patiently than to disturb them. <br>Protecting their peace should always come first.</p>
+                        <h4>Keep a Respectful Distance</h4>
+                        <p>
+                            Birds may retreat to the middle of the lagoon if
+                            they feel threatened. Your patience is key to
+                            witnessing natural behavior.
+                        </p>
                     </li>
-                    
                     <li>
                         <h4>Be Prepared</h4>
-                        <p>Bring plenty of water if you plan to stay for a while. A pair of boots is also helpful, especially when crossing muddy patches near the lagoon.</p>
+                        <p>
+                            Bring water, sun protection, and boots for muddy
+                            terrain near the water’s edge.
+                        </p>
                     </li>
                 </ul>
-
-                
             </div>
 
             <div class="map-container">
-                <!-- Google Maps Embed -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31532.948827882698!2d79.9198291803887!3d8.915003122506828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afdd13d4989f86d%3A0x94480956b0bb98bf!2sVankalai%20Bird%20Sanctuary!5e0!3m2!1sen!2slk!4v1752402852038!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31532.948827882698!2d79.9198291803887!3d8.915003122506828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afdd13d4989f86d%3A0x94480956b0bb98bf!2sVankalai%20Bird%20Sanctuary!5e0!3m2!1sen!2slk!4v1752402852038!5m2!1sen!2slk"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"></iframe>
             </div>
         </div>
 
+        <!-- Experience -->
         <div class="experience">
             <h2>Our Experience</h2>
-            
-            <p>Our journey to see the flamingos in Mannar wasn't a success on the first try. During our initial visit, 
-                we had done research on the bird itself but not enough about the lagoon, their local routines, or the specific behavior of flamingos in Mannar. 
-                As a result, we missed the opportunity to see them up close.
-                However, our second visit was a completely different story. This time, we went better prepared and had the support of a knowledgeable local guide. 
-                With his insights and familiarity with the area, we finally had a chance to witness the flamingos in their natural setting, resulting in some truly incredible shots and unforgettable memories.
+            <p>
+                Filming at Vankalai Lagoon was a journey of patience and
+                learning. The first attempt brought challenges — strong winds,
+                shy birds, and the realization that nature rewards those who
+                wait. The second visit, with careful planning and guidance from
+                a local expert, revealed the lagoon’s full magic. Through the
+                Sony FX30’s lens, we captured rare reflections, harmonious
+                flocks, and the serenity that defines this wetland.
             </p>
-            <div class="ex-gallery">
-                <img src="/images/flamingo/flamingo-img1.webp" alt="img1">
-                <img src="/images/flamingo/flamingo-img2.webp" alt="img2">
-                <img src="/images/flamingo/flamingo-img3.webp" alt="img3">
-                <img src="/images/flamingo/flamingo-img4.webp" alt="img4">
-                <img src="/images/flamingo/flamingo-img5.webp" alt="img5">
 
+            <!-- Gallery -->
+            <div class="ex-gallery">
+                <img
+                    src="/images/explore/rhythm-of-vankalai/vankalai1.webp"
+                    alt="img1"
+                />
+                <img
+                    src="/images/explore/rhythm-of-vankalai/vankalai2.webp"
+                    alt="img2"
+                />
+                <img
+                    src="/images/explore/rhythm-of-vankalai/vankalai3.webp"
+                    alt="img3"
+                />
+                <img
+                    src="/images/explore/rhythm-of-vankalai/vankalai4.webp"
+                    alt="img4"
+                />
+                
             </div>
 
-
+            <!-- Carousel -->
             <div class="carousel-wrapper">
                 <button class="arr left" id="leftBtn">&#8592;</button>
-
                 <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img1.webp" alt="img1"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img2.webp" alt="img2"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img3.webp" alt="img3"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img4.webp" alt="img4"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img5.webp" alt="img5"></div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/rhythm-of-vankalai/vankalai1.webp"
+                            alt="img1"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/rhythm-of-vankalai/vankalai2.webp"
+                            alt="img2"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/rhythm-of-vankalai/vankalai3.webp"
+                            alt="img3"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/rhythm-of-vankalai/vankalai4.webp"
+                            alt="img4"
+                        />
+                    </div>
+                    
                 </div>
-
                 <button class="arr right" id="rightBtn">&#8594;</button>
             </div>
-
         </div>
     </div>
 
-<script src="/scripts/explore/pageGallery.js" is:inline></script>
+    <style>
+        @media (max-width: 768px){
+       
 
+        body{
+            background-image: url("/images/explore/rhythm-of-vankalai/vankalai-banner.webp");
+            
+        }
+        
+    }
+    </style>
 
+    <script src="/scripts/explore/pageGallery.js" is:inline></script>
+    <script src="/scripts/explore/bird_light_box.js" is:inline></script>
 </Layout>
