@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/as.astro";
+import "../styles/letusknow/letusknow.css";
+---
+
+<Layout>
+  <!-- <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdYADW9QE-SAYSnyrbs64sYGvcdXWmzOTY5e0p7ya7GjRZ8JA/viewform?embedded=true"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    scrolling="yes"
+  ></iframe> -->
+
+  <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYADW9QE-SAYSnyrbs64sYGvcdXWmzOTY5e0p7ya7GjRZ8JA/viewform?embedded=true" width="640" height="1613" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+
+  <form name="sightings" data-netlify="true" enctype="multipart/form-data">
+  <input type="hidden" name="form-name" value="sightings">
+
+  <p>
+    <label>Type of Animal:
+      <select name="type" required>
+        <option value="">Select type</option>
+        <option value="Bird">Bird</option>
+        <option value="Mammal">Mammal</option>
+        <option value="Reptile">Reptile</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>Name of Animal:
+      <input type="text" name="name" required>
+    </label>
+  </p>
+
+  <p>
+    <label>How was the encounter?<br>
+      <textarea name="encounter" required></textarea>
+    </label>
+  </p>
+
+  <p>
+    <label>General Behaviors<br>
+      <textarea name="behavior" required></textarea>
+    </label>
+  </p>
+
+  <p>
+    <label>Location of the sighting:
+      <input type="text" name="location" required>
+    </label>
+  </p>
+
+  <p>
+    <label>Telephone (for confirmation):
+      <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="0771234567" required>
+    </label>
+  </p>
+
+  <p>
+    <label>Additional Information<br>
+      <textarea name="additional"></textarea>
+    </label>
+  </p>
+
+  <p>
+    <label>Upload an Image (optional):
+      <input type="file" name="image">
+    </label>
+  </p>
+
+  <p>
+    <button type="submit">Submit Sighting</button>
+  </p>
+</form>
+
+
+  <script src="/scripts/letusknow/letusknow.js" is:inline></script>
+</Layout>

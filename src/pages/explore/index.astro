@@ -2,6 +2,7 @@
 import Layout from "../../layouts/as.astro";
 import "../../styles/explore/ex.css";
 import "../../styles/explore/exTopPanel.css";
+import "../../styles/explore/mapContent.css";
 ---
 
 <Layout title="Explore">
@@ -352,7 +353,7 @@ import "../../styles/explore/exTopPanel.css";
             width: 100%;
         }
 
-        .map-content {
+        /* .map-content {
             display: flex;
             flex-direction: column;
             padding: 1%;
@@ -367,17 +368,16 @@ import "../../styles/explore/exTopPanel.css";
 
             align-items: center;
             position: relative;
-        }
+        } */
 
-        .map-content h1 {
+        /* .map-content h1 {
             font-weight: 700;
             margin-bottom: 2%;
             text-align: center;
             width: 80%;
-            /* font-family: Arial, sans-serif; */
-        }
+        } */
 
-        #map {
+        /* #map {
             align-self: center;
             height: 80vh;
             width: 80%;
@@ -389,9 +389,9 @@ import "../../styles/explore/exTopPanel.css";
 
         #map:hover {
             transform: scale(1.02);
-        }
+        } */
 
-        .map-content::before {
+        /* .map-content::before {
             content: "🧭 Navigate through the map by clicking the pins!";
             position: absolute;
             top: 15vh;
@@ -405,12 +405,12 @@ import "../../styles/explore/exTopPanel.css";
             z-index: 10;
             transition: opacity 0.4s ease;
             pointer-events: none;
-        }
+        } */
 
         /* Disappear on hover */
-        .map-content.hide-instruction::before {
+        /* .map-content.hide-instruction::before {
             opacity: 0;
-        }
+        } */
 
         /* mobile styles for the content that are inside the div class */
 
@@ -438,16 +438,14 @@ import "../../styles/explore/exTopPanel.css";
                 color: #000000;
             }
 
-            .map-content {
+            /* .map-content {
                 width: 100%;
                 height: 70vh;
                 border-radius: 15px;
                 margin: 0%;
-                /* margin: 20px; */
                 border-radius: 15px;
                 backdrop-filter: blur(10px);
                 background-color: rgb(244, 244, 244, 01);
-                /* background-color: rgba(245, 245, 230, 0.779); */
             }
 
             .map-content h1 {
@@ -457,7 +455,7 @@ import "../../styles/explore/exTopPanel.css";
 
             #map{
                 width: 90%;
-            }
+            } */
         }
     </style>
 </Layout>
