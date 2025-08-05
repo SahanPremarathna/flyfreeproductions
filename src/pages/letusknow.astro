@@ -4,68 +4,100 @@ import "../styles/letusknow/letusknow.css";
 ---
 
 <Layout>
-  
-  <form name="sightings" data-netlify="true" enctype="multipart/form-data">
-  <input type="hidden" name="form-name" value="sightings">
+  <section class="letusknow-container">
+    <h1>Let Us Know About a Sighting</h1>
+    <p class="intro">
+      Have you spotted a rare bird or animal? Share your encounter with us so we
+      can document and help protect our wildlife.
+    </p>
 
-  <p>
-    <label>Type of Animal:
-      <select name="type" required>
-        <option value="">Select type</option>
-        <option value="Bird">Bird</option>
-        <option value="Mammal">Mammal</option>
-        <option value="Reptile">Reptile</option>
-      </select>
-    </label>
-  </p>
+    <form name="sightings" data-netlify="true" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="sightings" />
 
-  <p>
-    <label>Name of Animal:
-      <input type="text" name="name" required>
-    </label>
-  </p>
+      <label>
+        Type of Animal:
+        <select name="type" required>
+          <option value="">Select type</option>
+          <option value="Bird">Bird</option>
+          <option value="Mammal">Mammal</option>
+          <option value="Reptile">Reptile</option>
+        </select>
+      </label>
 
-  <p>
-    <label>How was the encounter?<br>
-      <textarea name="encounter" required></textarea>
-    </label>
-  </p>
+      <label>
+        Name of Animal:
+        <input type="text" name="name" required />
+      </label>
 
-  <p>
-    <label>General Behaviors<br>
-      <textarea name="behavior" required></textarea>
-    </label>
-  </p>
+      <label>
+        How was the encounter?
+        <textarea name="encounter" required></textarea>
+      </label>
 
-  <p>
-    <label>Location of the sighting:
-      <input type="text" name="location" required>
-    </label>
-  </p>
+      <label>
+        General Behaviors
+        <textarea name="behavior" required></textarea>
+      </label>
 
-  <p>
-    <label>Telephone (for confirmation):
-      <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="0771234567" required>
-    </label>
-  </p>
+      <label>
+        Location of the sighting:
+        <input type="text" name="location" required />
+      </label>
 
-  <p>
-    <label>Additional Information<br>
-      <textarea name="additional"></textarea>
-    </label>
-  </p>
+      <label>
+        Telephone (for confirmation):
+        <input
+          type="tel"
+          name="phone"
+          pattern="[0-9]{10}"
+          placeholder="0771234567"
+          required
+        />
+      </label>
 
-  <p>
-    <label>Upload an Image (optional):
-      <input type="file" name="image">
-    </label>
-  </p>
+      <label>
+        Additional Information
+        <textarea name="additional"></textarea>
+      </label>
 
-  <p>
-    <button type="submit">Submit Sighting</button>
-  </p>
-</form>
+      
+        
+      <label class="file-upload">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="#00b894"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+            stroke="#00b894"
+            stroke-width="2"
+            fill="none"></path>
+          <polyline
+            points="17 8 12 3 7 8"
+            stroke="#00b894"
+            stroke-width="2"
+            fill="none"></polyline>
+          <line x1="12" y1="3" x2="12" y2="15" stroke="#00b894" stroke-width="2"
+          ></line>
+        </svg>
+        <span>Upload an Image (optional)</span>
+        <input type="file" name="image" />
+      </label>
 
+      <button type="submit">Submit Sighting</button>
+    </form>
+
+    <p class="contact-note">
+      We might need to contact you for more details about your sighting. This
+      helps us verify the authenticity of rare encounters and ensures the
+      information is accurate for our records. Please provide a working phone
+      number so we can reach you if needed. Your contribution plays a big role
+      in protecting and understanding our wildlife. 🐦🌿
+    </p>
+  </section>
 
   <script src="/scripts/letusknow/letusknow.js" is:inline></script>
 </Layout>
