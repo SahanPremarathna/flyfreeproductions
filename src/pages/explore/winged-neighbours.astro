@@ -1,125 +1,556 @@
 ---
-import Layout from '../../layouts/as.astro';
+import Layout from "../../layouts/as.astro";
 import "../../styles/explore/ex-content-page.css";
+import "../../styles/explore/animalsPanels.css";
 ---
 
 <Layout title="Flamingos - 2025">
     <div class="ex-content">
         <div id="title-img-box">
-            <img src="/images/flamingo/flamingo-banner.webp" alt="banner">
-            <h1>Winged Neighbours - Always Around Yet Never Truly Seen</h1>
+            <img
+                src="/images/explore/winged-neighbours/winged-neighbours-banner.webp"
+                alt="banner"
+            />
+            <h1>
+                Winged Neighbours <br />
+                <span>Always Around Yet Never Truly Seen</span>
+            </h1>
         </div>
 
-    
         <div class="mainpara">
-
-            <p >
-            Flamingos are iconic birds that migrate to Sri Lanka every year,
-            arriving between November and April to the northern region of Mannar.
-            This area is one of the few places where you can see them in their natural habitat.
-            In 2025, we had the amazing chance to film these elegant birds up close
-            for our very first wildlife documentary. A journey full of learning and inspiration.
+            <p>
+                Nestled in the quiet suburbs of Kadawatha, Sri Lanka, our home
+                garden is a vibrant haven for a rich variety of bird species.
+                From familiar visitors to seasonal migrants like the Indian
+                Paradise Flycatcher, each adds its own unique charm to this
+                peaceful neighbourhood. In 2025, we created our very first
+                documentary, filming these birds up close and capturing their
+                beauty without disturbing their daily lives. It was a journey
+                filled with discovery, patience, and the joy of seeing wildlife
+                thrive right at our doorstep.
             </p>
         </div>
-        
 
-        <a href="https://www.youtube.com/watch?v=f5ZqP-a70VA" target="_blank" rel="noopener" class="subscribe-link" id="sub">
+        <a
+            href="https://www.youtube.com/watch?v=LuAZX0c4etE"
+            target="_blank"
+            rel="noopener"
+            class="subscribe-link"
+            id="sub"
+        >
             <div class="subscribe">
                 <span class="subscribe-btn">Add a Like & Subscribe</span>
-                <svg width="70" height="46" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 10px;">
-                <rect x="0" y="0" width="100" height="70" rx="15" ry="15" fill="white" />
-                <polygon points="40,20 70,35 40,50" fill="#FF0000" />
+                <svg
+                    width="70"
+                    height="46"
+                    viewBox="0 0 100 70"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="vertical-align: middle; margin-left: 10px;"
+                >
+                    <rect
+                        x="0"
+                        y="0"
+                        width="100"
+                        height="70"
+                        rx="15"
+                        ry="15"
+                        fill="white"></rect>
+                    <polygon points="40,20 70,35 40,50" fill="#FF0000"
+                    ></polygon>
                 </svg>
             </div>
         </a>
 
-        <div class="steps">
+        <!-- <div class="steps">
             <div class="contentSteps">
                 <h2>Planning Your Flamingo Visit to Mannar?</h2>
-                <p id="stepsPara">If you're heading to Mannar to witness the flamingos, 
-                    here are a few key things to keep in mind for a successful and respectful experience:
+                <p id="stepsPara">
+                    If you're heading to Mannar to witness the flamingos, here
+                    are a few key things to keep in mind for a successful and
+                    respectful experience:
                 </p>
                 <ul>
                     <li>
                         <h4>Arrive Early, Before Sunrise</h4>
-                        <p>Be there by <strong>5:00 AM</strong> at the latest. Flamingos are early risers, and the golden morning light creates a magical atmosphere over the lagoon, perfect for viewing and photography.</p>
+                        <p>
+                            Be there by <strong>5:00 AM</strong> at the latest. Flamingos
+                            are early risers, and the golden morning light creates
+                            a magical atmosphere over the lagoon, perfect for viewing
+                            and photography.
+                        </p>
                     </li>
-                    
+
                     <li>
                         <h4>Do Your Research</h4>
-                        <p>Learn about flamingo behavior before your visit. These birds tend to follow consistent routines, and understanding their patterns will greatly improve your chances of spotting them without causing disruption.</p>
+                        <p>
+                            Learn about flamingo behavior before your visit.
+                            These birds tend to follow consistent routines, and
+                            understanding their patterns will greatly improve
+                            your chances of spotting them without causing
+                            disruption.
+                        </p>
                     </li>
-                    
+
                     <li>
                         <h4>Consider Hiring a Local Guide</h4>
-                        <p>Local guides are familiar with the best access points to the lagoon banks and understand the movement patterns of the flamingos. A guide can greatly enhance your experience while helping minimize disturbance to the birds.</p>
+                        <p>
+                            Local guides are familiar with the best access
+                            points to the lagoon banks and understand the
+                            movement patterns of the flamingos. A guide can
+                            greatly enhance your experience while helping
+                            minimize disturbance to the birds.
+                        </p>
                     </li>
-                    
+
                     <li>
                         <h4>Be Patient and Respectful</h4>
-                        <p>Flamingos are highly sensitive to their environment. If they sense human presence too closely, they may retreat to the middle of the lagoon and remain there for the entire day. It's better to wait patiently than to disturb them. <br>Protecting their peace should always come first.</p>
+                        <p>
+                            Flamingos are highly sensitive to their environment.
+                            If they sense human presence too closely, they may
+                            retreat to the middle of the lagoon and remain there
+                            for the entire day. It's better to wait patiently
+                            than to disturb them. <br />Protecting their peace
+                            should always come first.
+                        </p>
                     </li>
-                    
+
                     <li>
                         <h4>Be Prepared</h4>
-                        <p>Bring plenty of water if you plan to stay for a while. A pair of boots is also helpful, especially when crossing muddy patches near the lagoon.</p>
+                        <p>
+                            Bring plenty of water if you plan to stay for a
+                            while. A pair of boots is also helpful, especially
+                            when crossing muddy patches near the lagoon.
+                        </p>
                     </li>
                 </ul>
-
-                
             </div>
 
             <div class="map-container">
-                <!-- Google Maps Embed -->
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d61553.472590959645!2d79.93302777598873!3d8.920018387979175!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afdd181d51b2fd9%3A0xe53d38b825bb959b!2sFlamingos%20Watching%20Area!5e0!3m2!1sen!2slk!4v1754068358631!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31679.981678743457!2d79.93943552662479!3d7.009551101470053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f86bd75870f7%3A0xee362e29dbc079a6!2sKadawatha!5e0!3m2!1sen!2slk!4v1754411877750!5m2!1sen!2slk"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div> -->
+
+        <section class="featured-birds">
+            <h2>Our Winged Neighbours</h2>
+
+            <div class="bird-grid">
+                <div
+                    class="bird-card"
+                    data-name="Yellow-billed Babbler"
+                    data-desc="Small, social bird with a yellow bill, often seen in noisy flocks."
+                    data-img="https://placehold.co/600x400?text=Yellow-billed%20Babbler"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Yellow-billed%20Babbler"
+                        alt="Yellow-billed Babbler"
+                    />
+                    <span>Yellow-billed Babbler</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Red-vented Bulbul"
+                    data-desc="Medium-sized bird with a red vent and distinctive crest."
+                    data-img="https://placehold.co/600x400?text=Red-vented%20Bulbul"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Red-vented%20Bulbul"
+                        alt="Red-vented Bulbul"
+                    />
+                    <span>Red-vented Bulbul</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black Drongo"
+                    data-desc="Glossy black bird with a deeply forked tail."
+                    data-img="https://placehold.co/600x400?text=Black%20Drongo"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Black%20Drongo"
+                        alt="Black Drongo"
+                    />
+                    <span>Black Drongo</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Common Myna"
+                    data-desc="Familiar brown bird with bright yellow bill and eye patch."
+                    data-img="https://placehold.co/600x400?text=Common%20Myna"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Common%20Myna"
+                        alt="Common Myna"
+                    />
+                    <span>Common Myna</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Spotted Dove"
+                    data-desc="Gentle dove with a spotted collar around its neck."
+                    data-img="https://placehold.co/600x400?text=Spotted%20Dove"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Spotted%20Dove"
+                        alt="Spotted Dove"
+                    />
+                    <span>Spotted Dove</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black-hooded Oriole"
+                    data-desc="Bright yellow bird with a striking black head."
+                    data-img="https://placehold.co/600x400?text=Black-hooded%20Oriole"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Black-hooded%20Oriole"
+                        alt="Black-hooded Oriole"
+                    />
+                    <span>Black-hooded Oriole</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Parrots"
+                    data-desc="Green-feathered birds with curved bills and loud calls."
+                    data-img="https://placehold.co/600x400?text=Parrots"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Parrots"
+                        alt="Parrots"
+                    />
+                    <span>Parrots</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Paradise Flycatcher (Male)"
+                    data-desc="Long-tailed, elegant male with striking white plumage."
+                    data-img="https://placehold.co/600x400?text=Paradise%20Flycatcher%20Male"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Paradise%20Flycatcher%20Male"
+                        alt="Paradise Flycatcher Male"
+                    />
+                    <span>Paradise Flycatcher (Male)</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Paradise Flycatcher (Female)"
+                    data-desc="Rusty brown female with a graceful tail."
+                    data-img="https://placehold.co/600x400?text=Paradise%20Flycatcher%20Female"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Paradise%20Flycatcher%20Female"
+                        alt="Paradise Flycatcher Female"
+                    />
+                    <span>Paradise Flycatcher (Female)</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Sunbirds"
+                    data-desc="Tiny nectar-feeding birds with iridescent feathers."
+                    data-img="https://placehold.co/600x400?text=Sunbirds"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Sunbirds"
+                        alt="Sunbirds"
+                    />
+                    <span>Sunbirds</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="White-browed Bulbul"
+                    data-desc="Olive-brown bird with a prominent white eyebrow."
+                    data-img="https://placehold.co/600x400?text=White-browed%20Bulbul"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=White-browed%20Bulbul"
+                        alt="White-browed Bulbul"
+                    />
+                    <span>White-browed Bulbul</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Black-headed Munia"
+                    data-desc="Small finch-like bird with a black head and brown body."
+                    data-img="https://placehold.co/600x400?text=Black-headed%20Munia"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Black-headed%20Munia"
+                        alt="Black-headed Munia"
+                    />
+                    <span>Black-headed Munia</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Oriental Magpie Robin"
+                    data-desc="Small bird with black and white plumage and a melodious song."
+                    data-img="https://placehold.co/600x400?text=Oriental%20Magpie%20Robin"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Oriental%20Magpie%20Robin"
+                        alt="Oriental Magpie Robin"
+                    />
+                    <span>Oriental Magpie Robin</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Kingfishers"
+                    data-desc="Brightly colored birds that dive into water for fish."
+                    data-img="https://placehold.co/600x400?text=Kingfishers"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Kingfishers"
+                        alt="Kingfishers"
+                    />
+                    <span>Kingfishers</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Greater Coucal"
+                    data-desc="Large, crow-like bird with chestnut wings and deep calls."
+                    data-img="https://placehold.co/600x400?text=Greater%20Coucal"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Greater%20Coucal"
+                        alt="Greater Coucal"
+                    />
+                    <span>Greater Coucal</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Blue-winged Leafbird"
+                    data-desc="Bright green bird with vivid blue wings."
+                    data-img="https://placehold.co/600x400?text=Blue-winged%20Leafbird"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Blue-winged%20Leafbird"
+                        alt="Blue-winged Leafbird"
+                    />
+                    <span>Blue-winged Leafbird</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Asian Koel"
+                    data-desc="Famous for its loud, melodious 'koo-ooo' calls."
+                    data-img="https://placehold.co/600x400?text=Asian%20Koel"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Asian%20Koel"
+                        alt="Asian Koel"
+                    />
+                    <span>Asian Koel</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Woodpeckers"
+                    data-desc="Known for drumming on tree trunks to find insects."
+                    data-img="https://placehold.co/600x400?text=Woodpeckers"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Woodpeckers"
+                        alt="Woodpeckers"
+                    />
+                    <span>Woodpeckers</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Peacock"
+                    data-desc="Large, colorful bird with an extravagant tail display."
+                    data-img="https://placehold.co/600x400?text=Peacock"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Peacock"
+                        alt="Peacock"
+                    />
+                    <span>Peacock</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Imperial Pigeon"
+                    data-desc="Large forest pigeon with greenish plumage."
+                    data-img="https://placehold.co/600x400?text=Imperial%20Pigeon"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Imperial%20Pigeon"
+                        alt="Imperial Pigeon"
+                    />
+                    <span>Imperial Pigeon</span>
+                </div>
+
+                <div
+                    class="bird-card"
+                    data-name="Indian Scops Owl"
+                    data-desc="Small owl with well-camouflaged plumage and ear tufts."
+                    data-img="https://placehold.co/600x400?text=Indian%20Scops%20Owl"
+                    data-credit="FLYFREE PRODUCTIONS"
+                >
+                    <img
+                        src="https://placehold.co/300x200?text=Indian%20Scops%20Owl"
+                        alt="Indian Scops Owl"
+                    />
+                    <span>Indian Scops Owl</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="bird-lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <button class="lightbox-prev">&#10094;</button>
+                <div class="lightbox-image-container">
+                    <img id="lightbox-img" src="" alt="" />
+                    <div class="lightbox-caption">
+                        <h3 id="lightbox-title"></h3>
+                        <p id="lightbox-desc"></p>
+                        <div id="lightbox-credit" class="photo-credit"></div>
+                    </div>
+                </div>
+                <button class="lightbox-next">&#10095;</button>
             </div>
         </div>
 
         <div class="experience">
             <h2>Our Experience</h2>
-            
-            <p>Our journey to see the flamingos in Mannar wasn't a success on the first try. During our initial visit, 
-                we had done research on the bird itself but not enough about the lagoon, their local routines, or the specific behavior of flamingos in Mannar. 
-                As a result, we missed the opportunity to see them up close.
-                However, our second visit was a completely different story. This time, we went better prepared and had the support of a knowledgeable local guide. 
-                With his insights and familiarity with the area, we finally had a chance to witness the flamingos in their natural setting, resulting in some truly incredible shots and unforgettable memories.
+
+            <p>
+                Creating this documentary was more than just a filming project.
+                It was a journey of growth. Through the process, we learned the
+                fundamentals of photography and videography, and with regular
+                practice, we became one with the camera. Filming often helped us
+                reduce hand micro-shakes and improved our control over each
+                shot. <br /><br /> Spending time with these birds also deepened our
+                connection with nature. We learned to patiently observe their behaviour,
+                anticipate their movements, and adjust our filming techniques accordingly.
+                This project marks a major step forward in our skills and understanding,
+                both as filmmakers and as nature enthusiasts.
             </p>
             <div class="ex-gallery">
-                <img src="/images/flamingo/flamingo-img1.webp" alt="img1">
-                <img src="/images/flamingo/flamingo-img2.webp" alt="img2">
-                <img src="/images/flamingo/flamingo-img3.webp" alt="img3">
-                <img src="/images/flamingo/flamingo-img4.webp" alt="img4">
-                <img src="/images/flamingo/flamingo-img5.webp" alt="img5">
-
+                <img
+                    src="/images/explore/winged-neighbours/wn-img1.webp"
+                    alt="img1"
+                />
+                <img
+                    src="/images/explore/winged-neighbours/wn-img2.webp"
+                    alt="img2"
+                />
+                <img
+                    src="/images/explore/winged-neighbours/wn-img3.webp"
+                    alt="img3"
+                />
+                <img
+                    src="/images/explore/winged-neighbours/wn-img4.webp"
+                    alt="img4"
+                />
+                <img
+                    src="/images/explore/winged-neighbours/wn-img5.webp"
+                    alt="img5"
+                />
+                
+                <!-- <img src="/images/flamingo/flamingo-img2.webp" alt="img2" />
+                <img src="/images/flamingo/flamingo-img3.webp" alt="img3" />
+                <img src="/images/flamingo/flamingo-img4.webp" alt="img4" />
+                <img src="/images/flamingo/flamingo-img5.webp" alt="img5" /> -->
             </div>
-
 
             <div class="carousel-wrapper">
                 <button class="arr left" id="leftBtn">&#8592;</button>
 
                 <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img1.webp" alt="img1"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img2.webp" alt="img2"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img3.webp" alt="img3"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img4.webp" alt="img4"></div>
-                    <div class="carousel-slide"><img src="/images/flamingo/flamingo-img5.webp" alt="img5"></div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/winged-neighbours/wn-img1.webp"
+                            alt="img1"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/winged-neighbours/wn-img2.webp"
+                            alt="img2"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/winged-neighbours/wn-img3.webp"
+                            alt="img3"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/winged-neighbours/wn-img4.webp"
+                            alt="img4"
+                        />
+                    </div>
+                    <div class="carousel-slide">
+                        <img
+                            src="/images/explore/winged-neighbours/wn-img5.webp"
+                            alt="img5"
+                        />
+                    </div>
                 </div>
 
                 <button class="arr right" id="rightBtn">&#8594;</button>
             </div>
-
         </div>
     </div>
 
     <style>
-        @media (max-width: 768px){
-        body{
-            background-image: url("/images/explore/flamingos-2025/flamingo-banner.webp");
+        #title-img-box img {
+            /* object-position : top; */
+            /* object-fit: contain; */
         }
-    }
+
+        @media (max-width: 768px) {
+            body {
+                background-image: url("/images/explore/flamingos-2025/flamingo-banner.webp");
+            }
+        }
     </style>
 
-<script src="/scripts/explore/pageGallery.js" is:inline></script>
-
-
+    <script src="/scripts/explore/pageGallery.js" is:inline></script>
+    <script src="/scripts/explore/bird_light_box.js" is:inline></script>
 </Layout>

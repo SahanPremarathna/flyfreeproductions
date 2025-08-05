@@ -1,3 +1,9 @@
+body{
+  background: radial-gradient(rgba(0, 255, 0, 0.099), rgb(255, 255, 255));
+  background-attachment: fixed;
+  
+}
+
 .letusknow-container {
   max-width: 800px;
   margin: auto;
@@ -63,7 +69,6 @@ textarea {
 
 button {
   margin-top: 1.5rem;
-
   background: #00b894;
   color: white;
   padding: 0.9rem;
@@ -87,18 +92,17 @@ button:hover {
   border-left: 4px solid #00b894;
   border-radius: 6px;
   line-height: 1.5;
+  text-align: center;
 }
-
 
 .file-upload {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
+  padding: 10px;
+  border: 2px dashed #00b894;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: white;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -107,12 +111,16 @@ button:hover {
   box-shadow: 0 0 5px rgba(0, 184, 148, 0.3);
 }
 
+.file-upload.dragover {
+  background-color: #e0f8f3;
+}
+
 .file-upload svg {
   flex-shrink: 0;
 }
 
 .file-upload input[type="file"] {
-  display: none; /* hide default file input */
+  display: none;
 }
 
 .file-upload span {

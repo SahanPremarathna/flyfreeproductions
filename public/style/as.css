@@ -60,8 +60,16 @@ header {
 
 }
 
+#logo-contaiiner{
+  height: 100%;
+}
+
 #header-logo {
   height: 100%;
+  transition: 0.2s ease-in-out;
+}
+#header-logo:hover {
+  transform: scale(1.02);
 }
 
 /* Hide checkbox */

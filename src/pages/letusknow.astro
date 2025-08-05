@@ -60,9 +60,7 @@ import "../styles/letusknow/letusknow.css";
         <textarea name="additional"></textarea>
       </label>
 
-      
-        
-      <label class="file-upload">
+      <!-- <label class="file-upload">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -85,18 +83,56 @@ import "../styles/letusknow/letusknow.css";
         </svg>
         <span>Upload an Image (optional)</span>
         <input type="file" name="image" />
+      </label> -->
+
+      <label class="file-upload" id="drop-zone">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="#00b894"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+            stroke="#00b894"
+            stroke-width="2"
+            fill="none"></path>
+          <polyline
+            points="17 8 12 3 7 8"
+            stroke="#00b894"
+            stroke-width="2"
+            fill="none"></polyline>
+          <line x1="12" y1="3" x2="12" y2="15" stroke="#00b894" stroke-width="2"
+          ></line>
+        </svg>
+        <span>Upload Images (optional)</span>
+        <input
+          type="file"
+          name="images"
+          id="file-input"
+          accept="image/*"
+          multiple
+        />
       </label>
+
+      <!-- Multiple image previews -->
+      <div
+        id="preview-container"
+        style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 10px;"
+      >
+      </div>
+
+      <p class="contact-note">
+        We might need to contact you for more details about your sighting. This
+        helps us verify the authenticity of rare encounters and ensures the
+        information is accurate for our records. Please provide a working phone
+        number so we can reach you if needed. Your contribution plays a big role
+        in protecting and understanding our wildlife. 🐦🌿
+      </p>
 
       <button type="submit">Submit Sighting</button>
     </form>
-
-    <p class="contact-note">
-      We might need to contact you for more details about your sighting. This
-      helps us verify the authenticity of rare encounters and ensures the
-      information is accurate for our records. Please provide a working phone
-      number so we can reach you if needed. Your contribution plays a big role
-      in protecting and understanding our wildlife. 🐦🌿
-    </p>
   </section>
 
   <script src="/scripts/letusknow/letusknow.js" is:inline></script>

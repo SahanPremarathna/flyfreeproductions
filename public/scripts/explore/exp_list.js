@@ -56,17 +56,17 @@ export const exploreSections = [
     items: [
       {
         title: "The Pink Spectacle - Flamingos Sri Lanka 2025",
-        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        image: "/images/explore/flamingos-2025/flamingo-banner-small.webp",
         link: "/explore/flamingos-2025"
       },
       {
         title: "The Rhythm of VANKALAI - Where Wings Carve Stories",
-        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        image: "/images/explore/rhythm-of-vankalai/vankalai-banner-small.webp",
         link: "/explore/rhythm-of-vankalai"
       },
       {
         title: "Winged Neighbours - Always Around Yet Never Truly Seen",
-        image: "/images/explore/flamingos-2025/flamingo-banner.webp",
+        image: "/images/explore/winged-neighbours/winged-neighbours-banner-small.webp",
         link: "/explore/winged-neighbours"
       },
     ]

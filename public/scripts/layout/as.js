@@ -15,6 +15,8 @@
 //   lastScrollY = currentScrollY;
 // });
 
+
+
 window.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname;
 
@@ -32,35 +34,8 @@ window.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
+
+  
 });
 
 
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const body = document.body;
-//     body.classList.add("page-transition");
-    
-//     requestAnimationFrame(() => {
-//       body.classList.add("page-visible"); // triggers fade-in
-//     });
-
-//     // Add transition to links
-//     const links = document.querySelectorAll("a[href]");
-//     links.forEach(link => {
-//       link.addEventListener("click", (e) => {
-//         const href = link.getAttribute("href");
-//         if (
-//           href.startsWith("http") ||
-//           href.startsWith("#") ||
-//           link.target === "_blank"
-//         ) return;
-
-//         e.preventDefault();
-//         body.classList.remove("page-visible"); // triggers fade-out
-
-//         setTimeout(() => {
-//           window.location = href;
-//         }, 400); // slightly longer than transition
-//       });
-//     });
-//   });
