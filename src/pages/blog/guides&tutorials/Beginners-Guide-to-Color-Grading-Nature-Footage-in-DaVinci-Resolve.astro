@@ -6,87 +6,132 @@ import "../../../styles/blog/blog-page.css";
 <Layout>
     <article class="blog-post">
         <header class="post-header">
-            <h1>Beginner's Guide to Color Grading Nature Footage in DaVinci Resolve</h1>
+            <h1>
+                Beginner's Guide to Color Grading Nature Footage in DaVinci
+                Resolve
+            </h1>
             <time datetime="2025-07-28">July 28, 2025</time>
             <p class="post-intro">
-                This step-by-step guide is designed for complete beginners using the free version of DaVinci Resolve. 
-                We'll break the entire color grading process into five main stages, each handled on a separate serial node, 
-                to help you achieve clean, cinematic results for wildlife and nature videos.
+                This step-by-step guide is designed for complete beginners using
+                the free version of DaVinci Resolve. We'll break the entire
+                color grading process into five main stages, each handled on a
+                separate serial node, to help you achieve clean, cinematic
+                results for wildlife and nature videos.
             </p>
         </header>
 
         <figure class="post-image">
-            <img src="/images/blog/guides&tutorials/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve/img1.webp" alt="DaVinci Resolve Color Wheels" />
-            <figcaption>DaVinci Resolve workspace for color grading.</figcaption>
+            <img
+                src="/images/blog/guides&tutorials/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve/img1.webp"
+                alt="DaVinci Resolve Color Wheels"
+            />
+            <figcaption>
+                DaVinci Resolve workspace for color grading.
+            </figcaption>
         </figure>
 
         <section class="post-content">
             <h2>1. Controlling the Light</h2>
             <p>
-                The first node focuses on adjusting the amount of light in your footage. For wildlife content, it’s often best to leave a little extra brightness, as this gives you more flexibility in the final step. 
-                Use the lift, gamma, and gain controls to calm overly bright highlights and gently brighten shadows. 
-                Always preview the entire clip while making adjustments, as these controls are sensitive and can introduce noise if pushed too far.
+                The first node focuses on adjusting the amount of light in your
+                footage. For wildlife content, it's often best to leave a little
+                extra brightness, as this gives you more flexibility in the
+                final step. Use the lift, gamma, and gain controls to calm
+                overly bright highlights and gently brighten shadows. Always
+                preview the entire clip while making adjustments, as these
+                controls are sensitive and can introduce noise if pushed too
+                far.
             </p>
             <p>
-                Enable the <strong>waveform</strong> panel to fine-tune highlights and shadows. As a general guide, keep clean highlights under <em>[insert ideal waveform value]</em> and shadows around <em>[insert value]</em> to maintain detail.
+                Enable the <strong>waveform</strong> panel to fine-tune highlights
+                and shadows. As a general guide, keep clean highlights under <em
+                    >[insert ideal waveform value]</em
+                > and shadows around <em>[insert value]</em> to maintain detail.
             </p>
 
             <h2>2. Adjusting the Tone (White Balance)</h2>
             <p>
-                The second node is all about tone, which is controlled through white balance. 
-                Think back to the actual lighting conditions when filming—your goal is to recreate the mood of that moment, not to change it entirely. 
-                If you used an ND filter, make sure to also adjust the <strong>tint</strong> for accurate color reproduction. 
-                If you did not use ND filters, leave the tint untouched to avoid unnecessary color shifts.
+                The second node is all about tone, which is controlled through
+                white balance. Think back to the actual lighting conditions when
+                filming—your goal is to recreate the mood of that moment, not to
+                change it entirely. If you used an ND filter, make sure to also
+                adjust the <strong>tint</strong> for accurate color reproduction.
+                If you did not use ND filters, leave the tint untouched to avoid
+                unnecessary color shifts.
             </p>
 
             <h2>3. Enhancing Basic Colors</h2>
             <p>
-                In the third node, we work on contrast, saturation, and color boost—three settings that can dramatically improve your footage when used carefully. 
-                Start with a contrast value around <strong>1.5</strong> (adjust up or down depending on how much separation you want between subject and background). 
-                Keep in mind that too much contrast can increase noise in both shadows and highlights.
+                In the third node, we work on contrast, saturation, and color
+                boost—three settings that can dramatically improve your footage
+                when used carefully. Start with a contrast value around <strong
+                    >1.5</strong
+                > (adjust up or down depending on how much separation you want between
+                subject and background). Keep in mind that too much contrast can
+                increase noise in both shadows and highlights.
             </p>
             <p>
-                For wildlife content, subtlety is key—preserve the original colors as much as possible. 
-                A good starting point is <strong>saturation: 54–56</strong> and <strong>color boost: 4–8</strong>, but these values can be tweaked to match your creative vision.
+                For wildlife content, subtlety is key—preserve the original
+                colors as much as possible. A good starting point is <strong
+                    >saturation: 54-56</strong
+                > and <strong>color boost: 4-8</strong>, but these values can be
+                tweaked to match your creative vision.
             </p>
 
             <h2>4. Selective Color Grading (Optional)</h2>
             <p>
-                This step is optional for beginners but can make a huge difference in professional work. 
-                Using qualifiers and power windows, you can isolate specific colors or areas in the frame and adjust them independently. 
-                Depending on the complexity of your shot, this can range from one node to over 20 nodes.
+                This step is optional for beginners but can make a huge
+                difference in professional work. Using qualifiers and power
+                windows, you can isolate specific colors or areas in the frame
+                and adjust them independently. Depending on the complexity of
+                your shot, this can range from one node to over 20 nodes.
             </p>
             <p>
-                Since this topic is more advanced, we’ll cover selective grading in detail in a future guide.
+                Since this topic is more advanced, we'll cover selective grading
+                in detail in a future guide.
             </p>
 
             <h2>5. Applying CST (For LOG Footage)</h2>
             <p>
-                If you’ve recorded in a LOG format using professional gear, add a CST (Color Space Transform) node before the final grading step. 
-                You can find it in the <strong>Effects</strong> panel—drag it onto your node, select your camera manufacturer, and apply the correct input/output color spaces.
+                If you've recorded in a LOG format using professional gear, add
+                a CST (Color Space Transform) node before the final grading
+                step. You can find it in the <strong>Effects</strong> panel—drag
+                it onto your node, select your camera manufacturer, and apply the
+                correct input/output color spaces.
             </p>
 
             <h2>6. The Finishing Touch</h2>
             <p>
-                The final node is where we give the footage a cinematic polish using the custom curves tool. 
-                Imagine the curve divided into two halves by a middle point (X). 
-                From X to the right (highlights), lift the curve slightly. From X to the left (shadows), lower it slightly. 
-                This creates a gentle S-curve, adding depth and richness to your image.
+                The final node is where we give the footage a cinematic polish
+                using the custom curves tool. Imagine the curve divided into two
+                halves by a middle point (X). From X to the right (highlights),
+                lift the curve slightly. From X to the left (shadows), lower it
+                slightly. This creates a gentle S-curve, adding depth and
+                richness to your image.
             </p>
 
             <figure class="post-image">
-                <img src="/images/blog/guides&tutorials/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve/img2.webp" alt="Custom Curves for Cinematic Look" />
-                <figcaption>Applying a subtle S-curve for a cinematic feel.</figcaption>
+                <img
+                    src="/images/blog/guides&tutorials/Beginners-Guide-to-Color-Grading-Nature-Footage-in-DaVinci-Resolve/img2.webp"
+                    alt="Custom Curves for Cinematic Look"
+                />
+                <figcaption>
+                    Applying a subtle S-curve for a cinematic feel.
+                </figcaption>
             </figure>
 
             <h2>Final Thoughts</h2>
             <p>
-                These steps form a solid foundation for beginners, but remember—color grading is both a technical and creative process. 
-                The exact settings will vary depending on your footage, and there’s no single “correct” way to grade. 
-                The more you practice on different types of footage, the more you’ll develop your own style and intuition.
+                These steps form a solid foundation for beginners, but
+                remember—color grading is both a technical and creative process.
+                The exact settings will vary depending on your footage, and
+                there's no single “correct” way to grade. The more you practice
+                on different types of footage, the more you'll develop your own
+                style and intuition.
             </p>
             <p>
-                Use this structure as a starting point, experiment, and most importantly—enjoy the process.
+                Use this structure as a starting point, experiment, and most
+                importantly—enjoy the process.
             </p>
         </section>
     </article>

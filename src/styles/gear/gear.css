@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    width: 100%;
+    width: 70%;
     justify-self: center;
     align-items: center;
 
@@ -24,6 +24,7 @@ body {
     margin-bottom: 2vh;
     display: flex;
     align-items: center;
+    border-radius: 5px;
     justify-content: center;
     transition: 0.4s ease-in-out;
 
@@ -50,6 +51,7 @@ body {
     margin-top: 0%;
     font-family: Arial, sans-serif;
     color: white;
+    /* justify-self: center; */
     text-shadow:
         0 0 2px #00000022,
         0 0 4px #00000022,
@@ -99,6 +101,8 @@ body {
     display: flex;
     width: 100%;
     background-color: rgb(244, 244, 244);
+    border-radius: 5px;
+
     justify-content: center;
     margin-bottom: 4vh;
     padding-top: 5vh;
@@ -260,7 +264,8 @@ body {
 
 .gear-ride img {
     width: 50%;
-    height: 45vh;
+
+    height: 35vh;
     align-self: center;
     justify-self: center;
     margin: 2vh;
@@ -275,19 +280,29 @@ body {
     padding-bottom: 0%;
 }
 
-img{
+img {
     transition: 0.3s ease;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.02);
 }
 
 
 @media (max-width: 768px) {
 
+    .equipment-content {
+        width: 100%;
+    }
+
+    .equipment-title {
+        text-align: center;
+    }
+
+
     .upperBg {
         height: 40vh;
+        border-radius: 0%;
     }
 
     .our-vision p {
