@@ -52,6 +52,11 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.small-img{
+  width: 70%;
+  margin: auto;
+}
+
 .post-image figcaption {
   font-size: 0.85rem;
   color: #666;
